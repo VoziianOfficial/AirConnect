@@ -253,7 +253,7 @@ h6 {
 }
 
 .page {
-    min-height: 100vh;
+    padding-top: 1px;
 }
 
 .container,
@@ -604,8 +604,10 @@ button.btn {
    ========================= */
 
 .site-header-shell {
-    position: sticky;
+    position: fixed;
     top: 14px;
+    left: 0;
+    right: 0;
     z-index: 900;
     width: 100%;
     padding: 0 18px;
@@ -1567,6 +1569,8 @@ select.form-control option {
 
     .site-header-shell {
         top: 10px;
+        left: 0;
+        right: 0;
         padding-inline: 10px;
     }
 
@@ -1694,5 +1698,30 @@ select.form-control option {
 
     .policy-banner-actions {
         grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   FIXED HEADER OFFSET
+   ========================= */
+
+.home-hero,
+.services-hero,
+.about-hero,
+.contact-hero,
+.service-hero,
+.legal-hero {
+    padding-top: 150px;
+}
+
+@media (max-width: 860px) {
+
+    .home-hero,
+    .services-hero,
+    .about-hero,
+    .contact-hero,
+    .service-hero,
+    .legal-hero {
+        padding-top: 116px;
     }
 }
