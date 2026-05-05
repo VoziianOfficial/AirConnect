@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#10171A"/>
+      <stop offset="1" stop-color="#05090B"/>
+    </linearGradient>
+
+    <linearGradient id="air" x1="16" y1="20" x2="48" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7FE8F2"/>
+      <stop offset="1" stop-color="#38C8D8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#bg)"/>
+  <rect x="4.5" y="4.5" width="55" height="55" rx="15.5" stroke="#223138" stroke-opacity="0.85"/>
+
+  <!-- airflow lines -->
+  <path d="M16 23C20 20 24 19 28 20C31 20.8 33.4 22.4 36.2 22.7C40 23.1 43.4 21.8 48 18.8C46.2 23.8 42.5 27.2 37.8 28.1C34.4 28.7 31.5 27.9 28.5 27C25.2 26.1 21.8 25.7 16 29V23Z" fill="url(#air)"/>
+
+  <path d="M16 32C19.8 29.3 23.6 28.5 27.7 29.2C30.5 29.7 32.8 31 35.2 31.2C38.5 31.5 41.5 30.6 45.7 28.3C44 32.8 40.6 35.9 36.2 36.7C33.1 37.2 30.4 36.5 27.7 35.8C24.7 35 21.6 34.8 16 37.7V32Z" fill="url(#air)" opacity="0.92"/>
+
+  <path d="M16 41C19.3 38.8 22.6 38.2 26.2 38.7C28.7 39.1 30.6 40.1 32.8 40.3C35.7 40.6 38.4 39.9 42 38C40.4 41.9 37.5 44.7 33.7 45.4C31 45.9 28.7 45.3 26.4 44.7C23.8 44 21.1 43.8 16 46V41Z" fill="url(#air)" opacity="0.78"/>
+
+  <!-- accent dot -->
+  <circle cx="45.5" cy="44.5" r="3.5" fill="#B7FF2A"/>
+</svg>
