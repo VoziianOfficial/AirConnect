@@ -7001,3 +7001,83 @@
     }
 }
 
+/* ==========================================================
+   PROOF CLEAN — BLACK GRADIENT + IMAGE SHIFT RIGHT
+   MUST BE LAST
+   ========================================================== */
+
+.proof-clean-card {
+    background:
+        radial-gradient(circle at 14% 18%,
+            rgba(56, 200, 216, 0.14),
+            transparent 28%),
+
+        linear-gradient(90deg,
+            rgba(3, 7, 10, 0.96) 0%,
+            rgba(3, 7, 10, 0.9) 34%,
+            rgba(3, 7, 10, 0.76) 50%,
+            rgba(3, 7, 10, 0.42) 68%,
+            rgba(3, 7, 10, 0.14) 84%,
+            rgba(3, 7, 10, 0.04) 100%),
+
+        url("../assets/images/home/why-hvac.jpg") calc(100% + 180px) center / cover no-repeat !important;
+}
+
+.proof-clean-card:hover {
+    border-color: rgba(56, 200, 216, 0.16) !important;
+
+    background:
+        radial-gradient(circle at 14% 18%,
+            rgba(56, 200, 216, 0.18),
+            transparent 28%),
+
+        linear-gradient(90deg,
+            rgba(3, 7, 10, 0.94) 0%,
+            rgba(3, 7, 10, 0.86) 34%,
+            rgba(3, 7, 10, 0.68) 50%,
+            rgba(3, 7, 10, 0.34) 68%,
+            rgba(3, 7, 10, 0.1) 84%,
+            rgba(3, 7, 10, 0.02) 100%),
+
+        url("../assets/images/home/why-hvac.jpg") calc(100% + 48px) center / cover no-repeat !important;
+
+    box-shadow:
+        0 32px 92px rgba(0, 0, 0, 0.34),
+        0 0 0 1px rgba(56, 200, 216, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+.proof-clean-copy h2,
+.proof-clean-item h3 {
+    color: #f7faf8 !important;
+}
+
+.proof-clean-lead,
+.proof-clean-item p {
+    color: rgba(247, 250, 248, 0.72) !important;
+}
+
+.proof-clean-kicker {
+    color: #38c8d8 !important;
+}
+
+.proof-clean-item {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    background: rgba(255, 255, 255, 0.055) !important;
+    box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+.proof-clean-item:hover {
+    background: rgba(255, 255, 255, 0.085) !important;
+    border-color: rgba(56, 200, 216, 0.24) !important;
+}
+
+.proof-clean-item:hover h3 {
+    color: #ffffff !important;
+}
+
+.proof-clean-item:hover p {
+    color: rgba(247, 250, 248, 0.86) !important;
+}
