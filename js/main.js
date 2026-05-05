@@ -213,12 +213,23 @@ function renderHeader() {
                     ${navHtml}
                 </nav>
 
-                <div class="header-actions">
-                    <a class="btn btn-primary" href="contact.html">
-                        <span>${escapeHtml(config.phoneLabel || "Start request")}</span>
-                        ${createIcon("arrow-right")}
-                    </a>
-                </div>
+            <div class="header-actions header-icon-actions">
+    <a class="header-icon-btn header-phone-btn"
+        href="tel:${escapeHtml(config.phoneHref || config.phone || "")}"
+        data-phone-link
+        aria-label="Call ${escapeHtml(config.companyName || "AirConnect")}"
+        title="Call ${escapeHtml(config.companyName || "AirConnect")}">
+        ${createIcon("phone")}
+    </a>
+
+    <a class="header-icon-btn header-mail-btn"
+        href="mailto:${escapeHtml(config.email || "")}"
+        data-email-link
+        aria-label="Email ${escapeHtml(config.companyName || "AirConnect")}"
+        title="Email ${escapeHtml(config.companyName || "AirConnect")}">
+        ${createIcon("mail")}
+    </a>
+</div>
 
                 <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-mobile-menu-open>
                     ${createIcon("menu")}
