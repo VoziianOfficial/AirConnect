@@ -1,0 +1,574 @@
+/* ==========================================================
+   AIRCONNECT — SERVICE PAGE
+   File: /css/service-page.css
+   Dark HVAC service template
+   ========================================================== */
+
+.service-hero {
+    position: relative;
+    padding: 140px 0 76px;
+    overflow: hidden;
+    background: transparent;
+}
+
+.service-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 16% 16%, rgba(56, 200, 216, 0.12), transparent 28%),
+        radial-gradient(circle at 84% 18%, rgba(22, 70, 92, 0.14), transparent 30%),
+        radial-gradient(circle at 72% 82%, rgba(244, 184, 74, 0.045), transparent 24%);
+}
+
+.service-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(420px, 0.82fr);
+    gap: clamp(34px, 5vw, 72px);
+    align-items: center;
+}
+
+.service-hero-copy {
+    display: grid;
+    gap: 24px;
+    max-width: 780px;
+}
+
+.service-hero-copy h1 {
+    text-transform: uppercase;
+}
+
+.service-hero-copy h1 span {
+    color: var(--color-cool);
+}
+
+.service-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.service-hero-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.service-hero-media {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: 38px;
+    background:
+        linear-gradient(180deg, rgba(14, 24, 29, 0.96), rgba(5, 10, 13, 0.98));
+    box-shadow: 0 28px 86px rgba(0, 0, 0, 0.48);
+}
+
+.service-hero-media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(1.02) contrast(1.08) brightness(0.84);
+}
+
+.service-hero-media::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(90deg, rgba(3, 7, 10, 0.74), rgba(3, 7, 10, 0.16) 54%, rgba(3, 7, 10, 0.62)),
+        linear-gradient(180deg, rgba(3, 7, 10, 0.12), rgba(3, 7, 10, 0.78));
+}
+
+.service-hero-media::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    z-index: 3;
+    border-radius: 37px;
+    pointer-events: none;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.12),
+        inset 0 -90px 130px rgba(0, 0, 0, 0.46);
+}
+
+.service-media-badge {
+    position: absolute;
+    z-index: 4;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 42px;
+    padding: 0 14px;
+    border: 1px solid rgba(56, 200, 216, 0.3);
+    border-radius: var(--radius-full);
+    background: rgba(56, 200, 216, 0.1);
+    color: var(--color-cool);
+    font-size: 0.84rem;
+    font-weight: 800;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.34);
+}
+
+.service-media-badge svg {
+    width: 16px;
+    height: 16px;
+}
+
+.service-media-badge.one {
+    top: 28px;
+    left: 28px;
+}
+
+.service-media-badge.two {
+    right: 28px;
+    bottom: 28px;
+    border-color: rgba(183, 255, 42, 0.3);
+    background: rgba(183, 255, 42, 0.08);
+    color: var(--color-accent);
+}
+
+.service-media-panel {
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+    z-index: 4;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.service-media-stat {
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: 18px;
+    background: rgba(4, 9, 12, 0.72);
+    backdrop-filter: blur(16px);
+}
+
+.service-media-stat span {
+    display: block;
+    color: var(--color-muted);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.service-media-stat strong {
+    display: block;
+    margin-top: 4px;
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    letter-spacing: -0.03em;
+}
+
+/* =========================
+   SERVICE INTRO STRIP
+   ========================= */
+
+.service-intro-strip {
+    margin-top: -26px;
+    padding-top: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.service-intro-panel {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: 30px;
+    background:
+        linear-gradient(180deg, rgba(14, 24, 29, 0.94), rgba(5, 10, 13, 0.96));
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+}
+
+.service-intro-item {
+    display: grid;
+    gap: 10px;
+    min-height: 140px;
+    padding: 24px;
+}
+
+.service-intro-item:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.service-intro-icon {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 1px solid rgba(56, 200, 216, 0.24);
+    border-radius: 15px;
+    background: rgba(56, 200, 216, 0.08);
+    color: var(--color-cool);
+}
+
+.service-intro-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.service-intro-item span {
+    color: var(--color-muted);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.service-intro-item strong {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: 1.06rem;
+    line-height: 1.16;
+    letter-spacing: -0.03em;
+}
+
+/* =========================
+   SERVICE DETAIL
+   ========================= */
+
+.service-detail {
+    background: transparent;
+}
+
+.service-detail-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.82fr) minmax(380px, 0.76fr);
+    gap: clamp(30px, 5vw, 70px);
+    align-items: start;
+}
+
+.service-detail-copy {
+    display: grid;
+    gap: 22px;
+}
+
+.service-detail-copy h2 {
+    max-width: 760px;
+}
+
+.service-detail-copy p {
+    max-width: 680px;
+}
+
+.service-check-panel {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    gap: 12px;
+    padding: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 32px;
+    background:
+        radial-gradient(circle at 16% 0%, rgba(56, 200, 216, 0.08), transparent 32%),
+        linear-gradient(180deg, rgba(14, 24, 29, 0.94), rgba(6, 12, 15, 0.98));
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+}
+
+.service-check-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.055);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.service-check-icon {
+    display: grid;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(56, 200, 216, 0.09);
+    color: var(--color-cool);
+}
+
+.service-check-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.service-check-item p {
+    color: var(--color-heading);
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+/* =========================
+   SERVICE PROCESS
+   ========================= */
+
+.service-process {
+    background: transparent;
+}
+
+.service-process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.service-process-card {
+    display: grid;
+    gap: 18px;
+    min-height: 260px;
+    padding: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.065);
+    border-radius: 28px;
+    background:
+        linear-gradient(180deg, rgba(14, 24, 29, 0.94), rgba(6, 12, 15, 0.98));
+    box-shadow: 0 20px 54px rgba(0, 0, 0, 0.36);
+}
+
+.service-process-number {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--color-cool);
+    color: #031014;
+    font-family: var(--font-heading);
+    font-weight: 800;
+}
+
+.service-process-card:nth-child(2) .service-process-number {
+    background: var(--color-accent);
+}
+
+.service-process-card:nth-child(3) .service-process-number {
+    background: var(--color-warm);
+}
+
+.service-process-card h3 {
+    font-size: 1.45rem;
+}
+
+.service-process-card p {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}
+
+/* =========================
+   SERVICE PHOTO CTA
+   ========================= */
+
+.service-photo-band {
+    padding: 0;
+    background: transparent;
+}
+
+.service-photo-card {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: 38px;
+    background:
+        linear-gradient(180deg, rgba(14, 24, 29, 0.96), rgba(5, 10, 13, 0.98));
+    box-shadow: 0 28px 86px rgba(0, 0, 0, 0.48);
+}
+
+.service-photo-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.98) contrast(1.07) brightness(0.8);
+}
+
+.service-photo-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(90deg, rgba(3, 7, 10, 0.9), rgba(3, 7, 10, 0.52) 50%, rgba(3, 7, 10, 0.2)),
+        linear-gradient(180deg, rgba(3, 7, 10, 0.08), rgba(3, 7, 10, 0.82));
+}
+
+.service-photo-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 22px;
+    max-width: 650px;
+    padding: clamp(28px, 5vw, 58px);
+}
+
+/* =========================
+   SERVICE FORM SECTION
+   ========================= */
+
+.service-form-section {
+    background: transparent;
+}
+
+.service-form-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.76fr) minmax(420px, 0.82fr);
+    gap: clamp(30px, 5vw, 70px);
+    align-items: start;
+}
+
+.service-form-copy {
+    display: grid;
+    gap: 22px;
+}
+
+.service-form-list {
+    display: grid;
+    gap: 12px;
+}
+
+.service-form-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+.service-form-list li::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: var(--color-cool);
+    box-shadow: 0 0 16px rgba(56, 200, 216, 0.52);
+}
+
+/* =========================
+   SERVICE FAQ
+   ========================= */
+
+.service-faq-section {
+    background: transparent;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1100px) {
+
+    .service-hero-inner,
+    .service-detail-layout,
+    .service-form-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .service-hero-media {
+        min-height: 500px;
+    }
+
+    .service-intro-panel {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-intro-item:nth-child(2) {
+        border-right: 0;
+    }
+
+    .service-intro-item:nth-child(-n + 2) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+    }
+
+    .service-process-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .service-hero {
+        padding: 108px 0 56px;
+    }
+
+    .service-hero-media {
+        min-height: 420px;
+        border-radius: 30px;
+    }
+
+    .service-hero-media::after {
+        border-radius: 29px;
+    }
+
+    .service-media-badge {
+        min-height: 36px;
+        padding-inline: 11px;
+        font-size: 0.76rem;
+    }
+
+    .service-media-badge.one {
+        top: 16px;
+        left: 16px;
+    }
+
+    .service-media-badge.two {
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .service-media-panel {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        grid-template-columns: 1fr;
+    }
+
+    .service-media-badge.two {
+        display: none;
+    }
+
+    .service-intro-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .service-intro-item {
+        border-right: 0 !important;
+    }
+
+    .service-intro-item:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+    }
+
+    .service-check-panel {
+        padding: 18px;
+        border-radius: 26px;
+    }
+
+    .service-photo-card {
+        min-height: 560px;
+        border-radius: 30px;
+    }
+
+    .service-photo-card::before {
+        background:
+            linear-gradient(180deg, rgba(3, 7, 10, 0.84), rgba(3, 7, 10, 0.44) 48%, rgba(3, 7, 10, 0.86));
+    }
+
+    .service-photo-content {
+        padding: 26px;
+    }
+}

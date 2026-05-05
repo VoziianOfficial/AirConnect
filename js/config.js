@@ -246,7 +246,7 @@ window.SITE_CONFIG = {
             eyebrow: "Independent HVAC provider matching",
             title: "Compare HVAC providers for cleaner comfort.",
             text:
-                "AirConnect helps homeowners start a structured HVAC request and compare independent local provider options for cooling, heating, ventilation, maintenance, and indoor air quality projects.",
+                "AirConnect helps homeowners start a structured HVAC request and compare independent local provider options for AC repair, cooling installation, heating repair, and ventilation projects.",
             primaryCta: "Start request",
             secondaryCta: "View services",
             trustText: "Independent HVAC provider matching across the U.S."
