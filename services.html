@@ -20,71 +20,154 @@
         <div data-site-header></div>
 
         <main class="main" id="main">
-            <!-- ================= SERVICES HERO ================= -->
-            <section class="services-hero" aria-labelledby="servicesHeroTitle">
-                <div class="container-wide">
-                    <div class="services-hero-inner">
-                        <div class="services-hero-copy reveal-up">
-                            <div>
-                                <p class="eyebrow">HVAC provider matching</p>
-                                <h1 id="servicesHeroTitle">
-                                    Compare HVAC categories before <span>choosing a provider.</span>
-                                </h1>
-                            </div>
-
-                            <p class="lead">
-                                <span data-company-name>AirConnect</span> helps homeowners start a structured HVAC
-                                request and compare independent local provider options for AC repair, cooling
-                                installation, heating repair, and ventilation needs.
-                            </p>
-
-                            <div class="home-hero-actions">
-                                <a class="btn btn-primary" href="contact.html">
-                                    <span>Start request</span>
-                                    <i data-lucide="arrow-right" aria-hidden="true"></i>
-                                </a>
-
-                                <a class="btn btn-secondary" href="#serviceDirectory">
-                                    <span>View service paths</span>
-                                    <i data-lucide="arrow-down" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <aside class="services-hero-panel reveal-up" aria-label="HVAC comparison reminders">
-                            <div class="services-panel-list">
-                                <div class="services-panel-item">
-                                    <span class="services-panel-icon cool">
-                                        <i data-lucide="snowflake" aria-hidden="true"></i>
-                                    </span>
-                                    <span>Cooling and AC requests</span>
-                                </div>
-
-                                <div class="services-panel-item">
-                                    <span class="services-panel-icon warm">
-                                        <i data-lucide="flame" aria-hidden="true"></i>
-                                    </span>
-                                    <span>Heating and furnace concerns</span>
-                                </div>
-
-                                <div class="services-panel-item">
-                                    <span class="services-panel-icon cool">
-                                        <i data-lucide="wind" aria-hidden="true"></i>
-                                    </span>
-                                    <span>Ventilation and airflow notes</span>
-                                </div>
-
-                                <div class="services-panel-item">
-                                    <span class="services-panel-icon">
-                                        <i data-lucide="shield-check" aria-hidden="true"></i>
-                                    </span>
-                                    <span>Quote and credential reminders</span>
-                                </div>
-                            </div>
-                        </aside>
+    <!-- ================= SERVICES HERO ================= -->
+    <section class="services-hero services-hero-reference" aria-labelledby="servicesHeroTitle">
+        <div class="container-wide">
+            <div class="services-hero-inner">
+                <div class="services-hero-copy reveal-up">
+                    <p class="eyebrow">HVAC provider matching</p>
+    
+                    <h1 id="servicesHeroTitle">
+                        <span>Compare HVAC</span>
+                        <span>categories before</span>
+                        <span>choosing a provider.</span>
+                    </h1>
+    
+                    <p class="lead">
+                        <span data-company-name>AirConnect</span> helps homeowners start a structured HVAC request and
+                        compare independent local provider options for AC repair, cooling installation, heating repair,
+                        and ventilation needs.
+                    </p>
+    
+                    <div class="home-hero-actions">
+                        <a class="btn btn-primary" href="contact.html">
+                            <span>Start request</span>
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </a>
+    
+                        <a class="btn btn-secondary" href="#serviceDirectory">
+                            <span>View service paths</span>
+                            <i data-lucide="arrow-down" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
-            </section>
+    
+                <aside class="services-hero-panel reveal-up" aria-label="HVAC service shortcuts">
+                    <div class="services-panel-list">
+                        <a class="services-panel-item tone-cool" href="ac-repair.html">
+                            <span class="services-panel-icon">
+                                <i data-lucide="snowflake" aria-hidden="true"></i>
+                            </span>
+    
+                            <span class="services-panel-text">
+                                <strong>AC Repair</strong>
+                                <small>Cooling issues</small>
+                            </span>
+    
+                            <i class="services-panel-arrow" data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+    
+                        <a class="services-panel-item tone-lime" href="cooling-installation.html">
+                            <span class="services-panel-icon">
+                                <i data-lucide="fan" aria-hidden="true"></i>
+                            </span>
+    
+                            <span class="services-panel-text">
+                                <strong>Installation</strong>
+                                <small>Cooling systems</small>
+                            </span>
+    
+                            <i class="services-panel-arrow" data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+    
+                        <a class="services-panel-item tone-warm" href="heating-repair.html">
+                            <span class="services-panel-icon">
+                                <i data-lucide="flame" aria-hidden="true"></i>
+                            </span>
+    
+                            <span class="services-panel-text">
+                                <strong>Heating</strong>
+                                <small>Furnace repair</small>
+                            </span>
+    
+                            <i class="services-panel-arrow" data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+    
+                        <a class="services-panel-item tone-air" href="ventilation.html">
+                            <span class="services-panel-icon">
+                                <i data-lucide="wind" aria-hidden="true"></i>
+                            </span>
+    
+                            <span class="services-panel-text">
+                                <strong>Ventilation</strong>
+                                <small>Airflow notes</small>
+                            </span>
+    
+                            <i class="services-panel-arrow" data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+                <!-- ================= MATCHING PROCESS ================= -->
+                <section class="services-matching section" aria-labelledby="servicesMatchingTitle">
+                    <div class="container-wide">
+                        <div class="services-matching-layout">
+                            <div class="services-matching-copy reveal-up">
+                                <p class="section-kicker">Platform flow</p>
+                                <h2 id="servicesMatchingTitle">
+                                    Built for comparison, not direct HVAC work.
+                                </h2>
+                                <p class="lead">
+                                    A homeowner request becomes easier to review when service type, ZIP code, timing,
+                                    system notes, and project expectations are organized before provider follow-up.
+                                </p>
+                
+                                <a class="btn btn-primary" href="contact.html">
+                                    <span>Prepare request</span>
+                                    <i data-lucide="arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                
+                            <div class="matching-stack">
+                                <article class="matching-stack-card reveal-up">
+                                    <span class="matching-stack-number">1</span>
+                                    <div>
+                                        <h3>Start with the service type</h3>
+                                        <p>
+                                            Select AC repair, cooling installation, heating repair, or ventilation so the
+                                            request has the right context.
+                                        </p>
+                                    </div>
+                                </article>
+                
+                                <article class="matching-stack-card reveal-up">
+                                    <span class="matching-stack-number">2</span>
+                                    <div>
+                                        <h3>Share local project details</h3>
+                                        <p>
+                                            Add ZIP code, timing, system age, airflow notes, urgency, or other information
+                                            that may affect provider availability.
+                                        </p>
+                                    </div>
+                                </article>
+                
+                                <article class="matching-stack-card reveal-up">
+                                    <span class="matching-stack-number">3</span>
+                                    <div>
+                                        <h3>Compare before choosing</h3>
+                                        <p>
+                                            Review quote scope, credentials, reviews, warranty terms, timelines, and service
+                                            details before hiring any provider.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
             <!-- ================= SERVICES DIRECTORY ================= -->
             <section class="services-directory section" id="serviceDirectory" aria-labelledby="serviceDirectoryTitle">
@@ -116,63 +199,7 @@
                 </div>
             </section>
 
-            <!-- ================= MATCHING PROCESS ================= -->
-            <section class="services-matching section" aria-labelledby="servicesMatchingTitle">
-                <div class="container-wide">
-                    <div class="services-matching-layout">
-                        <div class="services-matching-copy reveal-up">
-                            <p class="section-kicker">Platform flow</p>
-                            <h2 id="servicesMatchingTitle">
-                                Built for comparison, not direct HVAC work.
-                            </h2>
-                            <p class="lead">
-                                A homeowner request becomes easier to review when service type, ZIP code, timing,
-                                system notes, and project expectations are organized before provider follow-up.
-                            </p>
 
-                            <a class="btn btn-primary" href="contact.html">
-                                <span>Prepare request</span>
-                                <i data-lucide="arrow-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-
-                        <div class="matching-stack">
-                            <article class="matching-stack-card reveal-up">
-                                <span class="matching-stack-number">1</span>
-                                <div>
-                                    <h3>Start with the service type</h3>
-                                    <p>
-                                        Select AC repair, cooling installation, heating repair, or ventilation so the
-                                        request has the right context.
-                                    </p>
-                                </div>
-                            </article>
-
-                            <article class="matching-stack-card reveal-up">
-                                <span class="matching-stack-number">2</span>
-                                <div>
-                                    <h3>Share local project details</h3>
-                                    <p>
-                                        Add ZIP code, timing, system age, airflow notes, urgency, or other information
-                                        that may affect provider availability.
-                                    </p>
-                                </div>
-                            </article>
-
-                            <article class="matching-stack-card reveal-up">
-                                <span class="matching-stack-number">3</span>
-                                <div>
-                                    <h3>Compare before choosing</h3>
-                                    <p>
-                                        Review quote scope, credentials, reviews, warranty terms, timelines, and service
-                                        details before hiring any provider.
-                                    </p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!-- ================= CHECKLIST SECTION ================= -->
             <section class="services-check-section section" aria-labelledby="servicesCheckTitle">
@@ -219,50 +246,57 @@
                 </div>
             </section>
 
-            <!-- ================= FAQ ================= -->
-            <section class="section-sm" aria-labelledby="servicesFaqTitle">
-                <div class="container-narrow">
-                    <div class="section-heading center reveal-up">
-                        <p class="section-kicker">FAQ</p>
-                        <h2 id="servicesFaqTitle">
-                            Service matching questions.
-                        </h2>
-                    </div>
-
-                    <div class="faq-list reveal-up" data-faq-list></div>
-                    <script type="application/ld+json" data-faq-schema></script>
+        <!-- ================= FAQ ================= -->
+        <section class="services-faq-section section-sm" aria-labelledby="servicesFaqTitle">
+            <div class="container-narrow">
+                <div class="section-heading center reveal-up">
+                    <p class="section-kicker">FAQ</p>
+                    <h2 id="servicesFaqTitle">
+                        Service matching questions.
+                    </h2>
                 </div>
-            </section>
+        
+                <div class="faq-list reveal-up" data-faq-list></div>
+                <script type="application/ld+json" data-faq-schema></script>
+            </div>
+        </section>
 
-            <!-- ================= CTA ================= -->
-            <section class="services-cta section-sm" aria-labelledby="servicesCtaTitle">
-                <div class="container-wide">
-                    <div class="services-cta-card reveal-up">
-                        <div class="services-cta-content">
-                            <p class="section-kicker">Start request</p>
-                            <h2 id="servicesCtaTitle">
-                                Start your HVAC provider matching request.
-                            </h2>
-                            <p class="lead">
-                                Choose the closest service category and prepare a cleaner request before comparing
-                                independent local provider options.
-                            </p>
-                        </div>
-
-                        <div class="services-cta-actions">
-                            <a class="btn btn-primary" href="contact.html">
+        <!-- ================= CTA ================= -->
+        <section class="services-cta services-final-ribbon final-ribbon section-sm" aria-labelledby="servicesCtaTitle">
+            <div class="container-wide">
+                <div class="services-final-ribbon-card final-ribbon-card reveal-up">
+                    <div class="services-final-ribbon-content final-ribbon-content">
+                        <p class="section-kicker">Start request</p>
+        
+                        <h2 id="servicesCtaTitle">
+                            Ready to compare HVAC provider options?
+                        </h2>
+        
+                        <p>
+                            Choose the closest HVAC category and prepare a cleaner request before comparing independent local
+                            provider options.
+                        </p>
+        
+                        <div class="services-final-ribbon-actions final-ribbon-actions">
+                            <a class="btn btn-primary services-final-ribbon-btn" href="contact.html">
                                 <span>Compare HVAC providers</span>
                                 <i data-lucide="arrow-right" aria-hidden="true"></i>
                             </a>
-
-                            <p class="services-cta-disclaimer" data-disclaimer>
-                                AirConnect is an independent HVAC provider matching platform. AirConnect does not
-                                perform HVAC work directly.
-                            </p>
+        
+                            <a class="services-final-ribbon-phone" href="tel:+18886142096" data-phone-link>
+                                <i data-lucide="phone" aria-hidden="true"></i>
+                                <span data-phone-text>Compare HVAC Providers</span>
+                            </a>
                         </div>
+        
+                        <small class="services-final-ribbon-disclaimer" data-disclaimer>
+                            AirConnect is an independent HVAC provider matching platform. AirConnect does not perform HVAC work
+                            directly.
+                        </small>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
         </main>
 
         <div data-site-footer></div>

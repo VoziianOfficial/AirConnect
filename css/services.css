@@ -67,17 +67,6 @@
     box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
 }
 
-.services-hero-panel::before {
-    content: "";
-    position: absolute;
-    right: 22px;
-    top: 22px;
-    width: 90px;
-    height: 90px;
-    border: 1px solid rgba(56, 200, 216, 0.16);
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(56, 200, 216, 0.12), transparent 62%);
-}
 
 .services-panel-list {
     position: relative;
@@ -433,5 +422,2233 @@
 
     .services-cta-card {
         border-radius: 30px;
+    }
+}
+
+/* ==========================================================
+   SERVICES HERO PANEL — COMPACT PHOTO VERSION
+   MUST BE LAST IN services.css
+   ========================================================== */
+
+.services-hero-inner {
+    align-items: center !important;
+}
+
+.services-hero-panel {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    min-height: 390px !important;
+    padding: 18px !important;
+
+    display: flex !important;
+    align-items: flex-end !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.09) !important;
+    border-radius: 28px !important;
+
+    background:
+        radial-gradient(circle at 18% 12%,
+            rgba(56, 200, 216, 0.16),
+            transparent 30%),
+
+        linear-gradient(90deg,
+            rgba(3, 7, 10, 0.95) 0%,
+            rgba(3, 7, 10, 0.82) 34%,
+            rgba(3, 7, 10, 0.48) 62%,
+            rgba(3, 7, 10, 0.12) 100%),
+
+        url("../assets/images/services/services-hero-panel.jpg") 76% center / cover no-repeat !important;
+
+    box-shadow:
+        0 24px 72px rgba(0, 0, 0, 0.46),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+
+    transition:
+        border-color 280ms ease,
+        box-shadow 280ms ease,
+        background 280ms ease !important;
+}
+
+.services-hero-panel::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+
+    background:
+        linear-gradient(180deg,
+            rgba(3, 7, 10, 0.02) 0%,
+            rgba(3, 7, 10, 0.18) 48%,
+            rgba(3, 7, 10, 0.72) 100%),
+        radial-gradient(circle at 84% 20%,
+            rgba(183, 255, 42, 0.08),
+            transparent 28%) !important;
+}
+
+.services-hero-panel:hover {
+    border-color: rgba(56, 200, 216, 0.18) !important;
+
+    background:
+        radial-gradient(circle at 18% 12%,
+            rgba(56, 200, 216, 0.2),
+            transparent 30%),
+
+        linear-gradient(90deg,
+            rgba(3, 7, 10, 0.92) 0%,
+            rgba(3, 7, 10, 0.74) 34%,
+            rgba(3, 7, 10, 0.36) 62%,
+            rgba(3, 7, 10, 0.06) 100%),
+
+        url("../assets/images/services/services-hero-panel.jpg") 80% center / cover no-repeat !important;
+
+    box-shadow:
+        0 30px 86px rgba(0, 0, 0, 0.54),
+        0 0 0 1px rgba(56, 200, 216, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* list */
+.services-panel-list {
+    position: relative !important;
+    z-index: 2 !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 9px !important;
+
+    width: 100% !important;
+    max-width: 390px !important;
+}
+
+/* clickable card */
+.services-panel-item {
+    position: relative !important;
+    overflow: hidden !important;
+
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr) auto !important;
+    align-items: center !important;
+    gap: 11px !important;
+
+    min-height: 64px !important;
+    padding: 10px 12px !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.11) !important;
+    border-radius: 18px !important;
+
+    background: rgba(3, 7, 10, 0.58) !important;
+    color: #f7faf8 !important;
+
+    text-decoration: none !important;
+    backdrop-filter: blur(16px) !important;
+
+    box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+
+    transition:
+        transform 260ms ease,
+        border-color 260ms ease,
+        background 260ms ease,
+        box-shadow 260ms ease !important;
+}
+
+.services-panel-item::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    transition: opacity 260ms ease !important;
+}
+
+.services-panel-item.tone-cool::before {
+    background: linear-gradient(90deg, rgba(56, 200, 216, 0.2), transparent 70%) !important;
+}
+
+.services-panel-item.tone-lime::before {
+    background: linear-gradient(90deg, rgba(183, 255, 42, 0.18), transparent 70%) !important;
+}
+
+.services-panel-item.tone-warm::before {
+    background: linear-gradient(90deg, rgba(244, 184, 74, 0.2), transparent 70%) !important;
+}
+
+.services-panel-item.tone-air::before {
+    background: linear-gradient(90deg, rgba(127, 232, 242, 0.18), transparent 70%) !important;
+}
+
+/* icon */
+.services-panel-icon {
+    position: relative !important;
+    z-index: 1 !important;
+
+    display: grid !important;
+    width: 40px !important;
+    height: 40px !important;
+    place-items: center !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 14px !important;
+
+    background: rgba(255, 255, 255, 0.055) !important;
+    color: var(--color-cool) !important;
+
+    transition:
+        transform 260ms ease,
+        background 260ms ease,
+        color 260ms ease,
+        border-color 260ms ease,
+        box-shadow 260ms ease !important;
+}
+
+.services-panel-icon svg {
+    width: 19px !important;
+    height: 19px !important;
+    transition: transform 260ms ease !important;
+}
+
+/* text */
+.services-panel-text {
+    position: relative !important;
+    z-index: 1 !important;
+
+    display: grid !important;
+    gap: 3px !important;
+    min-width: 0 !important;
+}
+
+.services-panel-text strong {
+    color: #f7faf8 !important;
+    font-size: 0.92rem !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.services-panel-text small {
+    color: rgba(247, 250, 248, 0.58) !important;
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+.services-panel-arrow {
+    position: relative !important;
+    z-index: 1 !important;
+
+    width: 16px !important;
+    height: 16px !important;
+
+    color: rgba(247, 250, 248, 0.42) !important;
+
+    transition:
+        transform 260ms ease,
+        color 260ms ease !important;
+}
+
+/* hover colors */
+.services-panel-item:hover {
+    transform: translateY(-2px) !important;
+    border-color: rgba(56, 200, 216, 0.28) !important;
+    background: rgba(3, 7, 10, 0.72) !important;
+
+    box-shadow:
+        0 18px 46px rgba(0, 0, 0, 0.34),
+        0 0 0 1px rgba(56, 200, 216, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.11) !important;
+}
+
+.services-panel-item:hover::before {
+    opacity: 1 !important;
+}
+
+.services-panel-item:hover .services-panel-icon {
+    transform: translateY(-1px) !important;
+}
+
+.services-panel-item.tone-cool:hover .services-panel-icon {
+    background: #38c8d8 !important;
+    color: #031014 !important;
+    border-color: rgba(56, 200, 216, 0.55) !important;
+    box-shadow: 0 12px 26px rgba(56, 200, 216, 0.24) !important;
+}
+
+.services-panel-item.tone-lime:hover .services-panel-icon {
+    background: #b7ff2a !important;
+    color: #061004 !important;
+    border-color: rgba(183, 255, 42, 0.55) !important;
+    box-shadow: 0 12px 26px rgba(183, 255, 42, 0.22) !important;
+}
+
+.services-panel-item.tone-warm:hover .services-panel-icon {
+    background: #f4b84a !important;
+    color: #2a1700 !important;
+    border-color: rgba(244, 184, 74, 0.55) !important;
+    box-shadow: 0 12px 26px rgba(244, 184, 74, 0.22) !important;
+}
+
+.services-panel-item.tone-air:hover .services-panel-icon {
+    background: #7fe8f2 !important;
+    color: #031014 !important;
+    border-color: rgba(127, 232, 242, 0.55) !important;
+    box-shadow: 0 12px 26px rgba(127, 232, 242, 0.2) !important;
+}
+
+.services-panel-item:hover .services-panel-icon svg {
+    transform: scale(1.08) rotate(-5deg) !important;
+}
+
+.services-panel-item:hover .services-panel-arrow {
+    transform: translate(3px, -3px) !important;
+    color: var(--color-accent) !important;
+}
+
+.services-panel-item:hover small {
+    color: rgba(247, 250, 248, 0.82) !important;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1080px) {
+    .services-hero-inner {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+    }
+
+    .services-hero-panel {
+        min-height: 300px !important;
+        padding: 16px !important;
+        border-radius: 24px !important;
+
+        background:
+            radial-gradient(circle at 18% 12%,
+                rgba(56, 200, 216, 0.15),
+                transparent 30%),
+
+            linear-gradient(90deg,
+                rgba(3, 7, 10, 0.96) 0%,
+                rgba(3, 7, 10, 0.78) 40%,
+                rgba(3, 7, 10, 0.36) 70%,
+                rgba(3, 7, 10, 0.08) 100%),
+
+            url("../assets/images/services/services-hero-panel.jpg") 76% center / cover no-repeat !important;
+    }
+
+    .services-panel-list {
+        max-width: 100% !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .services-panel-item {
+        min-height: 62px !important;
+    }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 720px) {
+    .services-hero-inner {
+        gap: 22px !important;
+    }
+
+    .services-hero-panel {
+        min-height: 260px !important;
+        padding: 12px !important;
+        border-radius: 20px !important;
+
+        background:
+            linear-gradient(180deg,
+                rgba(3, 7, 10, 0.34) 0%,
+                rgba(3, 7, 10, 0.72) 52%,
+                rgba(3, 7, 10, 0.96) 100%),
+
+            url("../assets/images/services/services-hero-panel.jpg") 74% center / cover no-repeat !important;
+    }
+
+    .services-panel-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+    }
+
+    .services-panel-item {
+        grid-template-columns: auto minmax(0, 1fr) !important;
+        min-height: 74px !important;
+        padding: 10px !important;
+        border-radius: 16px !important;
+        gap: 9px !important;
+    }
+
+    .services-panel-icon {
+        width: 34px !important;
+        height: 34px !important;
+        border-radius: 12px !important;
+    }
+
+    .services-panel-icon svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    .services-panel-text strong {
+        font-size: 0.78rem !important;
+    }
+
+    .services-panel-text small {
+        font-size: 0.62rem !important;
+    }
+
+    .services-panel-arrow {
+        display: none !important;
+    }
+}
+
+/* VERY SMALL MOBILE */
+@media (max-width: 420px) {
+    .services-hero-panel {
+        min-height: 240px !important;
+        padding: 10px !important;
+    }
+
+    .services-panel-list {
+        gap: 7px !important;
+    }
+
+    .services-panel-item {
+        min-height: 68px !important;
+        padding: 9px !important;
+    }
+
+    .services-panel-icon {
+        width: 31px !important;
+        height: 31px !important;
+    }
+
+    .services-panel-icon svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+    .services-panel-text strong {
+        font-size: 0.72rem !important;
+    }
+
+    .services-panel-text small {
+        font-size: 0.56rem !important;
+    }
+}
+
+/* ==========================================================
+   SERVICES HERO PANEL — CENTER CONTENT FIX
+   MUST BE LAST IN services.css
+   ========================================================== */
+
+.services-hero-panel {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.services-panel-list {
+    width: min(100%, 390px) !important;
+    max-width: 390px !important;
+    margin: auto !important;
+}
+
+/* сами карточки внутри тоже ровнее */
+.services-panel-item {
+    align-items: center !important;
+}
+
+.services-panel-icon {
+    align-self: center !important;
+}
+
+.services-panel-text {
+    align-self: center !important;
+}
+
+.services-panel-arrow {
+    align-self: center !important;
+}
+
+/* TABLET */
+@media (max-width: 1080px) {
+    .services-hero-panel {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .services-panel-list {
+        width: min(100%, 720px) !important;
+        max-width: 720px !important;
+        margin: auto !important;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 720px) {
+    .services-hero-panel {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .services-panel-list {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: auto !important;
+    }
+
+    .services-panel-item {
+        align-items: center !important;
+    }
+}
+
+
+/* ==========================================================
+   SERVICES HERO — FULL REBUILD LIKE HOME HERO REFERENCE
+   MUST BE LAST IN services.css
+   ========================================================== */
+
+.services-hero.services-hero-reference {
+    position: relative !important;
+    padding: 112px 0 28px !important;
+    overflow: visible !important;
+    background: transparent !important;
+}
+
+.services-hero.services-hero-reference::before,
+.services-hero.services-hero-reference::after {
+    display: none !important;
+}
+
+/* большая фото-секция как home hero */
+.services-hero-reference>.container-wide {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    width: min(calc(100% - 32px), 1460px) !important;
+    min-height: 690px !important;
+    padding: 72px 78px 38px !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.075) !important;
+    border-radius: 16px !important;
+
+    background:
+        radial-gradient(circle at 18% 14%,
+            rgba(56, 200, 216, 0.16),
+            transparent 28%),
+
+        radial-gradient(circle at 82% 18%,
+            rgba(183, 255, 42, 0.08),
+            transparent 26%),
+
+        linear-gradient(90deg,
+            rgba(3, 7, 10, 0.99) 0%,
+            rgba(3, 7, 10, 0.96) 30%,
+            rgba(3, 7, 10, 0.78) 50%,
+            rgba(3, 7, 10, 0.34) 72%,
+            rgba(3, 7, 10, 0.08) 100%),
+
+        url("../assets/images/services/services-hero-panel.jpg") 80% center / cover no-repeat !important;
+
+    box-shadow:
+        0 38px 120px rgba(0, 0, 0, 0.66),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+
+    transition:
+        border-color 300ms ease,
+        box-shadow 300ms ease,
+        background 300ms ease !important;
+}
+
+.services-hero-reference>.container-wide::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+
+    background:
+        linear-gradient(180deg,
+            rgba(3, 7, 10, 0.04) 0%,
+            rgba(3, 7, 10, 0.12) 42%,
+            rgba(3, 7, 10, 0.68) 100%),
+        radial-gradient(circle at 74% 12%,
+            rgba(56, 200, 216, 0.14),
+            transparent 26%) !important;
+}
+
+.services-hero-reference>.container-wide::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    border-radius: inherit !important;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.045),
+        inset 0 -120px 180px rgba(0, 0, 0, 0.7),
+        inset 0 80px 130px rgba(0, 0, 0, 0.18) !important;
+}
+
+/* hover всей секции */
+.services-hero-reference>.container-wide:hover {
+    border-color: rgba(56, 200, 216, 0.18) !important;
+
+    background:
+        radial-gradient(circle at 18% 14%,
+            rgba(56, 200, 216, 0.2),
+            transparent 28%),
+
+        radial-gradient(circle at 82% 18%,
+            rgba(183, 255, 42, 0.1),
+            transparent 26%),
+
+        linear-gradient(90deg,
+            rgba(3, 7, 10, 0.98) 0%,
+            rgba(3, 7, 10, 0.94) 30%,
+            rgba(3, 7, 10, 0.68) 50%,
+            rgba(3, 7, 10, 0.24) 72%,
+            rgba(3, 7, 10, 0.04) 100%),
+
+        url("../assets/images/services/services-hero-panel.jpg") 84% center / cover no-repeat !important;
+
+    box-shadow:
+        0 44px 132px rgba(0, 0, 0, 0.72),
+        0 0 0 1px rgba(56, 200, 216, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* layout внутри */
+.services-hero-reference .services-hero-inner {
+    position: relative !important;
+    z-index: 3 !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr auto !important;
+    gap: 34px !important;
+
+    min-height: calc(690px - 110px) !important;
+    align-items: stretch !important;
+}
+
+.services-hero-reference .services-hero-copy {
+    display: grid !important;
+    align-content: start !important;
+    gap: 22px !important;
+
+    width: min(880px, 64vw) !important;
+    max-width: 880px !important;
+}
+
+/* заголовок — строго 3 строки */
+.services-hero-reference #servicesHeroTitle {
+    display: grid !important;
+    gap: 0 !important;
+
+    max-width: 880px !important;
+    margin: 0 !important;
+
+    color: #f7faf8 !important;
+    font-family: var(--font-heading) !important;
+    font-size: clamp(4rem, 5vw, 6rem) !important;
+    font-weight: 700 !important;
+    line-height: 0.96 !important;
+    letter-spacing: -0.065em !important;
+    text-transform: none !important;
+}
+
+.services-hero-reference #servicesHeroTitle span {
+    display: block !important;
+    color: inherit !important;
+    text-shadow: none !important;
+}
+
+.services-hero-reference #servicesHeroTitle span:nth-child(3) {
+    color: var(--color-cool) !important;
+    text-shadow: 0 0 34px rgba(56, 200, 216, 0.16) !important;
+}
+
+.services-hero-reference .services-hero-copy .lead {
+    max-width: 600px !important;
+    color: rgba(247, 250, 248, 0.76) !important;
+    font-size: 1.08rem !important;
+    line-height: 1.55 !important;
+}
+
+/* actions */
+.services-hero-reference .home-hero-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+}
+
+/* панель теперь не отдельная карточка, а нижняя плашка */
+.services-hero-reference .services-hero-panel,
+.services-hero-reference .services-hero-panel:hover {
+    position: relative !important;
+    z-index: 3 !important;
+    isolation: isolate !important;
+    overflow: visible !important;
+
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: auto !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+}
+
+.services-hero-reference .services-hero-panel::before,
+.services-hero-reference .services-hero-panel::after {
+    display: none !important;
+}
+
+/* одна линия внизу */
+.services-hero-reference .services-panel-list {
+    position: relative !important;
+    z-index: 3 !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+
+    padding: 12px !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.09) !important;
+    border-radius: 24px !important;
+
+    background: rgba(3, 7, 10, 0.56) !important;
+    backdrop-filter: blur(20px) !important;
+
+    box-shadow:
+        0 18px 54px rgba(0, 0, 0, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+/* сервисные плашки */
+.services-hero-reference .services-panel-item {
+    position: relative !important;
+    overflow: hidden !important;
+
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr) auto !important;
+    align-items: center !important;
+    gap: 10px !important;
+
+    min-height: 62px !important;
+    padding: 10px 11px !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.095) !important;
+    border-radius: 17px !important;
+
+    background: rgba(255, 255, 255, 0.055) !important;
+    color: #f7faf8 !important;
+    text-decoration: none !important;
+
+    box-shadow:
+        0 10px 26px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07) !important;
+
+    transition:
+        transform 260ms ease,
+        border-color 260ms ease,
+        background 260ms ease,
+        box-shadow 260ms ease !important;
+}
+
+.services-hero-reference .services-panel-item::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    transition: opacity 260ms ease !important;
+}
+
+.services-hero-reference .services-panel-item.tone-cool::before {
+    background: linear-gradient(90deg, rgba(56, 200, 216, 0.2), transparent 70%) !important;
+}
+
+.services-hero-reference .services-panel-item.tone-lime::before {
+    background: linear-gradient(90deg, rgba(183, 255, 42, 0.18), transparent 70%) !important;
+}
+
+.services-hero-reference .services-panel-item.tone-warm::before {
+    background: linear-gradient(90deg, rgba(244, 184, 74, 0.2), transparent 70%) !important;
+}
+
+.services-hero-reference .services-panel-item.tone-air::before {
+    background: linear-gradient(90deg, rgba(127, 232, 242, 0.18), transparent 70%) !important;
+}
+
+.services-hero-reference .services-panel-icon {
+    position: relative !important;
+    z-index: 1 !important;
+
+    display: grid !important;
+    width: 38px !important;
+    height: 38px !important;
+    place-items: center !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 13px !important;
+
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: var(--color-cool) !important;
+
+    transition:
+        transform 260ms ease,
+        background 260ms ease,
+        color 260ms ease,
+        border-color 260ms ease,
+        box-shadow 260ms ease !important;
+}
+
+.services-hero-reference .services-panel-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    transition: transform 260ms ease !important;
+}
+
+.services-hero-reference .services-panel-text {
+    position: relative !important;
+    z-index: 1 !important;
+
+    display: grid !important;
+    gap: 3px !important;
+    min-width: 0 !important;
+}
+
+.services-hero-reference .services-panel-text strong {
+    color: #f7faf8 !important;
+    font-size: 0.86rem !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.services-hero-reference .services-panel-text small {
+    color: rgba(247, 250, 248, 0.58) !important;
+    font-size: 0.62rem !important;
+    font-weight: 700 !important;
+    line-height: 1.18 !important;
+}
+
+.services-hero-reference .services-panel-arrow {
+    position: relative !important;
+    z-index: 1 !important;
+
+    width: 15px !important;
+    height: 15px !important;
+    color: rgba(247, 250, 248, 0.44) !important;
+
+    transition:
+        transform 260ms ease,
+        color 260ms ease !important;
+}
+
+/* hovers */
+.services-hero-reference .services-panel-item:hover {
+    transform: translateY(-3px) !important;
+    border-color: rgba(56, 200, 216, 0.28) !important;
+    background: rgba(3, 7, 10, 0.72) !important;
+
+    box-shadow:
+        0 18px 46px rgba(0, 0, 0, 0.34),
+        0 0 0 1px rgba(56, 200, 216, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.11) !important;
+}
+
+.services-hero-reference .services-panel-item:hover::before {
+    opacity: 1 !important;
+}
+
+.services-hero-reference .services-panel-item.tone-cool:hover .services-panel-icon {
+    background: #38c8d8 !important;
+    color: #031014 !important;
+    border-color: rgba(56, 200, 216, 0.55) !important;
+    box-shadow: 0 12px 26px rgba(56, 200, 216, 0.24) !important;
+}
+
+.services-hero-reference .services-panel-item.tone-lime:hover .services-panel-icon {
+    background: #b7ff2a !important;
+    color: #061004 !important;
+    border-color: rgba(183, 255, 42, 0.55) !important;
+    box-shadow: 0 12px 26px rgba(183, 255, 42, 0.22) !important;
+}
+
+.services-hero-reference .services-panel-item.tone-warm:hover .services-panel-icon {
+    background: #f4b84a !important;
+    color: #2a1700 !important;
+    border-color: rgba(244, 184, 74, 0.55) !important;
+    box-shadow: 0 12px 26px rgba(244, 184, 74, 0.22) !important;
+}
+
+.services-hero-reference .services-panel-item.tone-air:hover .services-panel-icon {
+    background: #7fe8f2 !important;
+    color: #031014 !important;
+    border-color: rgba(127, 232, 242, 0.55) !important;
+    box-shadow: 0 12px 26px rgba(127, 232, 242, 0.2) !important;
+}
+
+.services-hero-reference .services-panel-item:hover .services-panel-icon svg {
+    transform: scale(1.08) rotate(-5deg) !important;
+}
+
+.services-hero-reference .services-panel-item:hover .services-panel-arrow {
+    transform: translate(3px, -3px) !important;
+    color: var(--color-accent) !important;
+}
+
+.services-hero-reference .services-panel-item:hover small {
+    color: rgba(247, 250, 248, 0.82) !important;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1080px) {
+    .services-hero.services-hero-reference {
+        padding: 98px 0 22px !important;
+    }
+
+    .services-hero-reference>.container-wide {
+        width: min(calc(100% - 28px), 1080px) !important;
+        min-height: 620px !important;
+        padding: 54px 38px 30px !important;
+        border-radius: 20px !important;
+
+        background:
+            radial-gradient(circle at 18% 14%,
+                rgba(56, 200, 216, 0.18),
+                transparent 28%),
+
+            linear-gradient(90deg,
+                rgba(3, 7, 10, 0.98) 0%,
+                rgba(3, 7, 10, 0.9) 38%,
+                rgba(3, 7, 10, 0.56) 68%,
+                rgba(3, 7, 10, 0.1) 100%),
+
+            url("../assets/images/services/services-hero-panel.jpg") 80% center / cover no-repeat !important;
+    }
+
+    .services-hero-reference .services-hero-inner {
+        min-height: calc(620px - 84px) !important;
+        gap: 28px !important;
+    }
+
+    .services-hero-reference .services-hero-copy {
+        width: 100% !important;
+        max-width: 780px !important;
+    }
+
+    .services-hero-reference #servicesHeroTitle {
+        max-width: 780px !important;
+        font-size: clamp(3.4rem, 7vw, 5rem) !important;
+    }
+
+    .services-hero-reference .services-hero-copy .lead {
+        max-width: 560px !important;
+    }
+
+    .services-hero-reference .services-panel-list {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+        padding: 10px !important;
+        border-radius: 20px !important;
+    }
+
+    .services-hero-reference .services-panel-item {
+        grid-template-columns: auto minmax(0, 1fr) !important;
+        min-height: 58px !important;
+        padding: 9px !important;
+        border-radius: 15px !important;
+    }
+
+    .services-hero-reference .services-panel-icon {
+        width: 34px !important;
+        height: 34px !important;
+        border-radius: 12px !important;
+    }
+
+    .services-hero-reference .services-panel-icon svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    .services-hero-reference .services-panel-text strong {
+        font-size: 0.74rem !important;
+    }
+
+    .services-hero-reference .services-panel-text small {
+        font-size: 0.54rem !important;
+    }
+
+    .services-hero-reference .services-panel-arrow {
+        display: none !important;
+    }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 720px) {
+    .services-hero.services-hero-reference {
+        padding: 88px 0 18px !important;
+    }
+
+    .services-hero-reference>.container-wide {
+        width: min(calc(100% - 16px), 520px) !important;
+        min-height: 600px !important;
+        padding: 34px 16px 18px !important;
+        border-radius: 18px !important;
+
+        background:
+            linear-gradient(180deg,
+                rgba(3, 7, 10, 0.96) 0%,
+                rgba(3, 7, 10, 0.82) 42%,
+                rgba(3, 7, 10, 0.64) 68%,
+                rgba(3, 7, 10, 0.94) 100%),
+
+            url("../assets/images/services/services-hero-panel.jpg") 76% center / cover no-repeat !important;
+    }
+
+    .services-hero-reference .services-hero-inner {
+        min-height: calc(600px - 52px) !important;
+        gap: 22px !important;
+    }
+
+    .services-hero-reference .services-hero-copy {
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-items: center !important;
+        text-align: center !important;
+        gap: 16px !important;
+    }
+
+    .services-hero-reference #servicesHeroTitle {
+        max-width: 360px !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        font-size: clamp(2.55rem, 12vw, 3.65rem) !important;
+        line-height: 0.98 !important;
+    }
+
+    .services-hero-reference .services-hero-copy .lead {
+        max-width: 320px !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        font-size: 0.86rem !important;
+        line-height: 1.42 !important;
+    }
+
+    .services-hero-reference .home-hero-actions {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        gap: 8px !important;
+    }
+
+    .services-hero-reference .home-hero-actions .btn {
+        width: 100% !important;
+        min-height: 42px !important;
+        padding-inline: 10px !important;
+        font-size: 0.74rem !important;
+    }
+
+    .services-hero-reference .services-panel-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 7px !important;
+        padding: 8px !important;
+        border-radius: 17px !important;
+    }
+
+    .services-hero-reference .services-panel-item {
+        grid-template-columns: auto minmax(0, 1fr) !important;
+        min-height: 58px !important;
+        padding: 8px !important;
+        border-radius: 13px !important;
+        gap: 7px !important;
+    }
+
+    .services-hero-reference .services-panel-icon {
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 10px !important;
+    }
+
+    .services-hero-reference .services-panel-icon svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+    .services-hero-reference .services-panel-text strong {
+        font-size: 0.68rem !important;
+    }
+
+    .services-hero-reference .services-panel-text small {
+        font-size: 0.5rem !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .services-hero-reference>.container-wide {
+        min-height: 570px !important;
+        padding: 30px 12px 14px !important;
+    }
+
+    .services-hero-reference .services-hero-inner {
+        min-height: calc(570px - 44px) !important;
+    }
+
+    .services-hero-reference #servicesHeroTitle {
+        max-width: 320px !important;
+        font-size: clamp(2.2rem, 11.2vw, 3.1rem) !important;
+    }
+
+    .services-hero-reference .services-panel-list {
+        gap: 6px !important;
+        padding: 7px !important;
+    }
+
+    .services-hero-reference .services-panel-item {
+        min-height: 54px !important;
+        padding: 7px !important;
+    }
+
+    .services-hero-reference .services-panel-icon {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    .services-hero-reference .services-panel-text strong {
+        font-size: 0.64rem !important;
+    }
+
+    .services-hero-reference .services-panel-text small {
+        font-size: 0.48rem !important;
+    }
+}
+
+
+/* ==========================================================
+   SERVICES CHECK + MATCHING — PREMIUM HOVER COLOR SHIFTS
+   MUST BE LAST IN services.css
+   ========================================================== */
+
+/* =========================
+   CHECKLIST PANEL HOVERS
+   ========================= */
+
+.services-check-panel {
+    position: relative !important;
+    overflow: hidden !important;
+
+    transition:
+        border-color 280ms ease,
+        background 280ms ease,
+        box-shadow 280ms ease,
+        transform 280ms ease !important;
+}
+
+.services-check-panel::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+
+    background:
+        radial-gradient(circle at 18% 0%,
+            rgba(56, 200, 216, 0.12),
+            transparent 34%),
+        radial-gradient(circle at 86% 18%,
+            rgba(183, 255, 42, 0.08),
+            transparent 30%) !important;
+
+    transition: opacity 280ms ease !important;
+}
+
+.services-check-panel:hover {
+    border-color: rgba(56, 200, 216, 0.18) !important;
+
+    background:
+        radial-gradient(circle at 16% 0%,
+            rgba(56, 200, 216, 0.12),
+            transparent 34%),
+        linear-gradient(180deg,
+            rgba(14, 24, 29, 0.98),
+            rgba(6, 12, 15, 0.99)) !important;
+
+    box-shadow:
+        0 34px 92px rgba(0, 0, 0, 0.52),
+        0 0 0 1px rgba(56, 200, 216, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.09) !important;
+}
+
+.services-check-panel:hover::before {
+    opacity: 1 !important;
+}
+
+.services-check-item {
+    position: relative !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+
+    transition:
+        transform 260ms ease,
+        border-color 260ms ease,
+        background 260ms ease,
+        box-shadow 260ms ease,
+        color 260ms ease !important;
+}
+
+.services-check-item::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 260ms ease !important;
+}
+
+.services-check-item:nth-child(1)::before {
+    background: linear-gradient(90deg, rgba(183, 255, 42, 0.16), transparent 70%) !important;
+}
+
+.services-check-item:nth-child(2)::before {
+    background: linear-gradient(90deg, rgba(56, 200, 216, 0.16), transparent 70%) !important;
+}
+
+.services-check-item:nth-child(3)::before {
+    background: linear-gradient(90deg, rgba(244, 184, 74, 0.16), transparent 70%) !important;
+}
+
+.services-check-item:nth-child(4)::before {
+    background: linear-gradient(90deg, rgba(127, 232, 242, 0.15), transparent 70%) !important;
+}
+
+.services-check-item:nth-child(5)::before {
+    background: linear-gradient(90deg, rgba(183, 255, 42, 0.13), transparent 70%) !important;
+}
+
+.services-check-item i,
+.services-check-item svg,
+.services-check-item span {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.services-check-item i,
+.services-check-item svg {
+    transition:
+        color 260ms ease,
+        transform 260ms ease,
+        filter 260ms ease !important;
+}
+
+.services-check-item:hover {
+    transform: translateY(-2px) !important;
+    border-color: rgba(56, 200, 216, 0.26) !important;
+    background: rgba(255, 255, 255, 0.065) !important;
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.28),
+        0 0 0 1px rgba(56, 200, 216, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.09) !important;
+
+    color: #ffffff !important;
+}
+
+.services-check-item:hover::before {
+    opacity: 1 !important;
+}
+
+.services-check-item:hover i,
+.services-check-item:hover svg {
+    transform: scale(1.12) rotate(-5deg) !important;
+    color: var(--color-accent) !important;
+    filter: drop-shadow(0 0 10px rgba(183, 255, 42, 0.35)) !important;
+}
+
+.services-check-item:nth-child(2):hover i,
+.services-check-item:nth-child(2):hover svg,
+.services-check-item:nth-child(4):hover i,
+.services-check-item:nth-child(4):hover svg {
+    color: var(--color-cool) !important;
+    filter: drop-shadow(0 0 10px rgba(56, 200, 216, 0.38)) !important;
+}
+
+.services-check-item:nth-child(3):hover i,
+.services-check-item:nth-child(3):hover svg {
+    color: var(--color-warm) !important;
+    filter: drop-shadow(0 0 10px rgba(244, 184, 74, 0.38)) !important;
+}
+
+
+/* =========================
+   MATCHING STACK HOVERS
+   ========================= */
+
+.matching-stack-card {
+    position: relative !important;
+    overflow: hidden !important;
+
+    transition:
+        transform 280ms ease,
+        border-color 280ms ease,
+        background 280ms ease,
+        box-shadow 280ms ease !important;
+}
+
+.matching-stack-card::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+
+    transition: opacity 280ms ease !important;
+}
+
+.matching-stack-card:nth-child(1)::before {
+    background:
+        radial-gradient(circle at 8% 18%,
+            rgba(56, 200, 216, 0.14),
+            transparent 34%),
+        linear-gradient(90deg, rgba(56, 200, 216, 0.11), transparent 72%) !important;
+}
+
+.matching-stack-card:nth-child(2)::before {
+    background:
+        radial-gradient(circle at 8% 18%,
+            rgba(183, 255, 42, 0.12),
+            transparent 34%),
+        linear-gradient(90deg, rgba(183, 255, 42, 0.1), transparent 72%) !important;
+}
+
+.matching-stack-card:nth-child(3)::before {
+    background:
+        radial-gradient(circle at 8% 18%,
+            rgba(244, 184, 74, 0.13),
+            transparent 34%),
+        linear-gradient(90deg, rgba(244, 184, 74, 0.1), transparent 72%) !important;
+}
+
+.matching-stack-card>* {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.matching-stack-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(56, 200, 216, 0.24) !important;
+
+    background:
+        linear-gradient(180deg,
+            rgba(14, 24, 29, 0.98),
+            rgba(6, 12, 15, 0.99)) !important;
+
+    box-shadow:
+        0 28px 76px rgba(0, 0, 0, 0.48),
+        0 0 0 1px rgba(56, 200, 216, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.09) !important;
+}
+
+.matching-stack-card:hover::before {
+    opacity: 1 !important;
+}
+
+.matching-stack-card:nth-child(2):hover {
+    border-color: rgba(183, 255, 42, 0.22) !important;
+
+    box-shadow:
+        0 28px 76px rgba(0, 0, 0, 0.48),
+        0 0 0 1px rgba(183, 255, 42, 0.055),
+        inset 0 1px 0 rgba(255, 255, 255, 0.09) !important;
+}
+
+.matching-stack-card:nth-child(3):hover {
+    border-color: rgba(244, 184, 74, 0.24) !important;
+
+    box-shadow:
+        0 28px 76px rgba(0, 0, 0, 0.48),
+        0 0 0 1px rgba(244, 184, 74, 0.055),
+        inset 0 1px 0 rgba(255, 255, 255, 0.09) !important;
+}
+
+/* number circles */
+.matching-stack-number {
+    transition:
+        transform 260ms ease,
+        background 260ms ease,
+        color 260ms ease,
+        box-shadow 260ms ease !important;
+}
+
+.matching-stack-card:hover .matching-stack-number {
+    transform: translateY(-2px) scale(1.06) !important;
+}
+
+.matching-stack-card:nth-child(1):hover .matching-stack-number {
+    background: #38c8d8 !important;
+    color: #031014 !important;
+    box-shadow:
+        0 14px 30px rgba(56, 200, 216, 0.28),
+        0 0 0 1px rgba(56, 200, 216, 0.24) !important;
+}
+
+.matching-stack-card:nth-child(2):hover .matching-stack-number {
+    background: #b7ff2a !important;
+    color: #061004 !important;
+    box-shadow:
+        0 14px 30px rgba(183, 255, 42, 0.25),
+        0 0 0 1px rgba(183, 255, 42, 0.22) !important;
+}
+
+.matching-stack-card:nth-child(3):hover .matching-stack-number {
+    background: #f4b84a !important;
+    color: #2a1700 !important;
+    box-shadow:
+        0 14px 30px rgba(244, 184, 74, 0.26),
+        0 0 0 1px rgba(244, 184, 74, 0.22) !important;
+}
+
+/* text color on hover */
+.matching-stack-card h3,
+.matching-stack-card p {
+    transition: color 260ms ease !important;
+}
+
+.matching-stack-card:hover h3 {
+    color: #ffffff !important;
+}
+
+.matching-stack-card:hover p {
+    color: rgba(247, 250, 248, 0.84) !important;
+}
+
+/* button hover in matching copy */
+.services-matching-copy .btn-primary {
+    transition:
+        background 260ms ease,
+        color 260ms ease,
+        box-shadow 260ms ease,
+        transform 260ms ease !important;
+}
+
+.services-matching-copy .btn-primary:hover {
+    background: var(--color-cool) !important;
+    color: #031014 !important;
+    transform: translateY(-2px) !important;
+
+    box-shadow:
+        0 22px 54px rgba(56, 200, 216, 0.24),
+        0 0 0 1px rgba(56, 200, 216, 0.18) !important;
+}
+
+/* touch devices */
+@media (hover: none) {
+
+    .services-check-item:hover,
+    .matching-stack-card:hover,
+    .services-matching-copy .btn-primary:hover {
+        transform: none !important;
+    }
+}
+
+/* ==========================================================
+   SERVICES FAQ — TWO COLUMNS ON DESKTOP
+   MUST BE LAST IN services.css
+   ========================================================== */
+
+.services-faq-section .container-narrow {
+    width: min(calc(100% - 40px), 1120px) !important;
+}
+
+.services-faq-section .section-heading {
+    margin-bottom: 34px !important;
+}
+
+.services-faq-section .faq-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    align-items: start !important;
+}
+
+.services-faq-section .faq-item {
+    height: fit-content !important;
+    border-radius: 22px !important;
+    transition:
+        border-color 260ms ease,
+        background 260ms ease,
+        box-shadow 260ms ease,
+        transform 260ms ease !important;
+}
+
+.services-faq-section .faq-item:hover {
+    transform: translateY(-2px) !important;
+    border-color: rgba(56, 200, 216, 0.22) !important;
+    background: rgba(56, 200, 216, 0.055) !important;
+    box-shadow:
+        0 18px 46px rgba(0, 0, 0, 0.28),
+        0 0 0 1px rgba(56, 200, 216, 0.04) !important;
+}
+
+.services-faq-section .faq-question {
+    min-height: 70px !important;
+    padding: 20px 22px !important;
+}
+
+.services-faq-section .faq-question span {
+    color: var(--color-heading) !important;
+    font-size: 0.98rem !important;
+    line-height: 1.3 !important;
+}
+
+.services-faq-section .faq-answer p {
+    padding: 0 22px 22px !important;
+    font-size: 0.92rem !important;
+    line-height: 1.56 !important;
+}
+
+/* чтобы открытый аккордеон выглядел активным */
+.services-faq-section .faq-item.is-open {
+    border-color: rgba(183, 255, 42, 0.2) !important;
+    background: rgba(183, 255, 42, 0.045) !important;
+}
+
+.services-faq-section .faq-item.is-open .faq-question svg {
+    color: var(--color-accent) !important;
+}
+
+/* TABLET / MOBILE — обратно одна колонка */
+@media (max-width: 860px) {
+    .services-faq-section .container-narrow {
+        width: min(calc(100% - 28px), 760px) !important;
+    }
+
+    .services-faq-section .faq-list {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    .services-faq-section .faq-question {
+        min-height: 62px !important;
+        padding: 18px !important;
+    }
+
+    .services-faq-section .faq-answer p {
+        padding: 0 18px 18px !important;
+    }
+}
+
+
+
+/* ==========================================================
+   SERVICES CTA — SAME AS HOME FINAL RIBBON
+   MUST BE LAST IN services.css
+   ========================================================== */
+
+.services-final-ribbon {
+    padding-top: 26px !important;
+    padding-bottom: 52px !important;
+    background: transparent !important;
+}
+
+.services-final-ribbon .container-wide {
+    position: relative !important;
+}
+
+.services-final-ribbon-card {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    min-height: 220px !important;
+    padding: 28px 34px !important;
+
+    display: grid !important;
+    align-items: center !important;
+
+    border: 1px solid rgba(56, 200, 216, 0.18) !important;
+    border-radius: 24px !important;
+
+    background:
+        radial-gradient(circle at 12% 16%,
+            rgba(56, 200, 216, 0.14),
+            transparent 30%),
+
+        linear-gradient(90deg,
+            rgba(3, 7, 10, 0.98) 0%,
+            rgba(3, 7, 10, 0.92) 34%,
+            rgba(3, 7, 10, 0.72) 54%,
+            rgba(3, 7, 10, 0.34) 76%,
+            rgba(3, 7, 10, 0.08) 100%),
+
+        url("../assets/images/home/final-cta-hvac.jpg") 78% center / cover no-repeat !important;
+
+    box-shadow:
+        0 28px 86px rgba(0, 0, 0, 0.48),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+
+    transition:
+        border-color 280ms ease,
+        box-shadow 280ms ease,
+        background 280ms ease,
+        transform 280ms ease !important;
+}
+
+.services-final-ribbon-card::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+
+    background:
+        linear-gradient(180deg,
+            rgba(3, 7, 10, 0.04) 0%,
+            rgba(3, 7, 10, 0.18) 48%,
+            rgba(3, 7, 10, 0.74) 100%),
+        radial-gradient(circle at 86% 10%,
+            rgba(183, 255, 42, 0.08),
+            transparent 26%) !important;
+}
+
+.services-final-ribbon-card::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 1px !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+    border-radius: 23px !important;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(56, 200, 216, 0.18),
+            transparent) !important;
+
+    opacity: 0.36 !important;
+    mask-image: linear-gradient(180deg, black, transparent 72%) !important;
+}
+
+/* content */
+.services-final-ribbon-content {
+    position: relative !important;
+    z-index: 2 !important;
+
+    display: grid !important;
+    gap: 12px !important;
+
+    max-width: 760px !important;
+}
+
+.services-final-ribbon-content .section-kicker {
+    margin-bottom: 0 !important;
+}
+
+.services-final-ribbon-content h2 {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+
+    color: #f7faf8 !important;
+    font-size: clamp(2rem, 3.2vw, 3.35rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -0.045em !important;
+
+    white-space: nowrap !important;
+}
+
+.services-final-ribbon-content p {
+    max-width: 620px !important;
+    margin: 0 !important;
+
+    color: rgba(247, 250, 248, 0.76) !important;
+    font-size: 0.94rem !important;
+    line-height: 1.48 !important;
+}
+
+/* actions */
+.services-final-ribbon-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-top: 2px !important;
+}
+
+.services-final-ribbon-btn {
+    min-height: 44px !important;
+    padding-inline: 18px !important;
+}
+
+.services-final-ribbon-phone {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 9px !important;
+
+    min-height: 44px !important;
+    padding: 0 16px !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.13) !important;
+    border-radius: var(--radius-full) !important;
+
+    background: rgba(255, 255, 255, 0.055) !important;
+    color: #f7faf8 !important;
+
+    font-size: 0.88rem !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+
+    backdrop-filter: blur(14px) !important;
+
+    transition:
+        transform 260ms ease,
+        border-color 260ms ease,
+        background 260ms ease,
+        color 260ms ease,
+        box-shadow 260ms ease !important;
+}
+
+.services-final-ribbon-phone svg {
+    width: 17px !important;
+    height: 17px !important;
+    color: var(--color-cool) !important;
+    transition:
+        color 260ms ease,
+        transform 260ms ease !important;
+}
+
+.services-final-ribbon-disclaimer {
+    display: block !important;
+    max-width: 760px !important;
+    margin-top: 0 !important;
+
+    color: rgba(247, 250, 248, 0.48) !important;
+    font-size: 0.66rem !important;
+    line-height: 1.42 !important;
+}
+
+/* hover */
+.services-final-ribbon-card:hover {
+    border-color: rgba(56, 200, 216, 0.26) !important;
+
+    background:
+        radial-gradient(circle at 12% 16%,
+            rgba(56, 200, 216, 0.2),
+            transparent 30%),
+
+        linear-gradient(90deg,
+            rgba(3, 7, 10, 0.96) 0%,
+            rgba(3, 7, 10, 0.88) 34%,
+            rgba(3, 7, 10, 0.62) 54%,
+            rgba(3, 7, 10, 0.24) 76%,
+            rgba(3, 7, 10, 0.04) 100%),
+
+        url("../assets/images/home/final-cta-hvac.jpg") 82% center / cover no-repeat !important;
+
+    box-shadow:
+        0 34px 100px rgba(0, 0, 0, 0.58),
+        0 0 0 1px rgba(56, 200, 216, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+.services-final-ribbon-btn:hover {
+    background: var(--color-cool) !important;
+    color: #031014 !important;
+
+    box-shadow:
+        0 22px 54px rgba(56, 200, 216, 0.24),
+        0 0 0 1px rgba(56, 200, 216, 0.18) !important;
+}
+
+.services-final-ribbon-phone:hover {
+    transform: translateY(-2px) !important;
+    border-color: rgba(183, 255, 42, 0.34) !important;
+    background: rgba(183, 255, 42, 0.1) !important;
+    color: var(--color-accent) !important;
+
+    box-shadow:
+        0 18px 42px rgba(183, 255, 42, 0.12),
+        0 0 0 1px rgba(183, 255, 42, 0.06) !important;
+}
+
+.services-final-ribbon-phone:hover svg {
+    color: var(--color-accent) !important;
+    transform: rotate(-8deg) scale(1.06) !important;
+}
+
+/* TABLET */
+@media (max-width: 980px) {
+    .services-final-ribbon {
+        padding-top: 22px !important;
+        padding-bottom: 42px !important;
+    }
+
+    .services-final-ribbon-card {
+        min-height: 210px !important;
+        padding: 26px 28px !important;
+        border-radius: 22px !important;
+
+        background:
+            radial-gradient(circle at 12% 16%,
+                rgba(56, 200, 216, 0.16),
+                transparent 30%),
+
+            linear-gradient(90deg,
+                rgba(3, 7, 10, 0.96) 0%,
+                rgba(3, 7, 10, 0.86) 42%,
+                rgba(3, 7, 10, 0.52) 70%,
+                rgba(3, 7, 10, 0.1) 100%),
+
+            url("../assets/images/home/final-cta-hvac.jpg") 78% center / cover no-repeat !important;
+    }
+
+    .services-final-ribbon-content h2 {
+        font-size: clamp(1.8rem, 4vw, 2.85rem) !important;
+        white-space: nowrap !important;
+    }
+
+    .services-final-ribbon-content p {
+        max-width: 560px !important;
+        font-size: 0.88rem !important;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+    .services-final-ribbon {
+        padding-top: 8px !important;
+        padding-bottom: 32px !important;
+    }
+
+    .services-final-ribbon-card {
+        min-height: auto !important;
+        padding: 20px !important;
+        border-radius: 20px !important;
+
+        background:
+            linear-gradient(180deg,
+                rgba(3, 7, 10, 0.94) 0%,
+                rgba(3, 7, 10, 0.74) 52%,
+                rgba(3, 7, 10, 0.94) 100%),
+
+            url("../assets/images/home/final-cta-hvac.jpg") 76% center / cover no-repeat !important;
+    }
+
+    .services-final-ribbon-card::after {
+        border-radius: 19px !important;
+    }
+
+    .services-final-ribbon-content {
+        gap: 11px !important;
+        text-align: left !important;
+    }
+
+    .services-final-ribbon-content h2 {
+        font-size: clamp(1.65rem, 8vw, 2.45rem) !important;
+        line-height: 1.02 !important;
+        white-space: normal !important;
+    }
+
+    .services-final-ribbon-content p {
+        max-width: 100% !important;
+        font-size: 0.82rem !important;
+        line-height: 1.42 !important;
+    }
+
+    .services-final-ribbon-actions {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+    .services-final-ribbon-btn,
+    .services-final-ribbon-phone {
+        width: 100% !important;
+        min-height: 42px !important;
+    }
+
+    .services-final-ribbon-disclaimer {
+        font-size: 0.62rem !important;
+    }
+}
+
+
+/* ==========================================================
+   SERVICES DIRECTORY — BRIGHTER PHOTO CARDS
+   MUST BE LAST IN services.css
+   ========================================================== */
+
+.services-directory-grid .service-card-photo .service-card-bg,
+.services-directory-grid .service-card-bg {
+    opacity: 0.86 !important;
+    filter: brightness(1.08) contrast(1.08) saturate(1.16) !important;
+}
+
+/* уменьшаем тёмный градиент поверх фото */
+.services-directory-grid .service-card-photo .service-card-overlay,
+.services-directory-grid .service-card-overlay {
+    background:
+        linear-gradient(180deg,
+            rgba(3, 7, 10, 0.08) 0%,
+            rgba(3, 7, 10, 0.34) 42%,
+            rgba(3, 7, 10, 0.78) 100%),
+        linear-gradient(135deg,
+            rgba(3, 7, 10, 0.48) 0%,
+            rgba(3, 7, 10, 0.12) 52%,
+            rgba(3, 7, 10, 0.48) 100%) !important;
+}
+
+/* цветные свечения тоже делаем мягче, чтобы не гасили фото */
+.services-directory-grid .service-card-photo::before {
+    opacity: 0.46 !important;
+}
+
+/* текст оставляем читаемым */
+.services-directory-grid .service-card-photo h3 {
+    color: #ffffff !important;
+    text-shadow: 0 12px 34px rgba(0, 0, 0, 0.58) !important;
+}
+
+.services-directory-grid .service-card-photo p {
+    color: rgba(247, 250, 248, 0.84) !important;
+}
+
+.services-directory-grid .service-card-photo .service-card-label {
+    color: rgba(247, 250, 248, 0.76) !important;
+}
+
+/* hover — фото становится ещё ярче */
+.services-directory-grid .service-card-photo:hover .service-card-bg,
+.services-directory-grid .service-card:hover .service-card-bg {
+    opacity: 0.96 !important;
+    filter: brightness(1.18) contrast(1.1) saturate(1.22) !important;
+    transform: scale(1.035) !important;
+}
+
+.services-directory-grid .service-card-photo:hover .service-card-overlay,
+.services-directory-grid .service-card:hover .service-card-overlay {
+    background:
+        linear-gradient(180deg,
+            rgba(3, 7, 10, 0.04) 0%,
+            rgba(3, 7, 10, 0.24) 42%,
+            rgba(3, 7, 10, 0.7) 100%),
+        linear-gradient(135deg,
+            rgba(3, 7, 10, 0.38) 0%,
+            rgba(3, 7, 10, 0.08) 52%,
+            rgba(3, 7, 10, 0.4) 100%) !important;
+}
+
+/* mobile/tablet — тоже ярче, но без потери читаемости */
+@media (max-width: 1180px) {
+
+    .services-directory-grid .service-card-photo .service-card-bg,
+    .services-directory-grid .service-card-bg {
+        opacity: 0.88 !important;
+        filter: brightness(1.1) contrast(1.08) saturate(1.16) !important;
+    }
+
+    .services-directory-grid .service-card-photo .service-card-overlay,
+    .services-directory-grid .service-card-overlay {
+        background:
+            linear-gradient(180deg,
+                rgba(3, 7, 10, 0.1) 0%,
+                rgba(3, 7, 10, 0.34) 42%,
+                rgba(3, 7, 10, 0.76) 100%) !important;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .services-directory-grid .service-card-photo .service-card-bg,
+    .services-directory-grid .service-card-bg {
+        opacity: 0.9 !important;
+        filter: brightness(1.12) contrast(1.06) saturate(1.18) !important;
+    }
+
+    .services-directory-grid .service-card-photo .service-card-overlay,
+    .services-directory-grid .service-card-overlay {
+        background:
+            linear-gradient(180deg,
+                rgba(3, 7, 10, 0.12) 0%,
+                rgba(3, 7, 10, 0.36) 46%,
+                rgba(3, 7, 10, 0.78) 100%) !important;
+    }
+}
+
+/* ==========================================================
+   SERVICES DIRECTORY — BOTTOM TEXT READABILITY FIX
+   MUST BE LAST IN services.css
+   ========================================================== */
+
+/* фото оставляем ярким */
+.services-directory-grid .service-card-photo .service-card-bg,
+.services-directory-grid .service-card .service-card-bg {
+    opacity: 0.88 !important;
+    filter: brightness(1.05) contrast(1.08) saturate(1.14) !important;
+}
+
+/* главный фикс: сильное затемнение именно снизу */
+.services-directory-grid .service-card-photo .service-card-overlay,
+.services-directory-grid .service-card .service-card-overlay {
+    background:
+        linear-gradient(180deg,
+            rgba(3, 7, 10, 0.08) 0%,
+            rgba(3, 7, 10, 0.14) 28%,
+            rgba(3, 7, 10, 0.42) 55%,
+            rgba(3, 7, 10, 0.78) 78%,
+            rgba(3, 7, 10, 0.96) 100%),
+        linear-gradient(135deg,
+            rgba(3, 7, 10, 0.28) 0%,
+            rgba(3, 7, 10, 0.08) 44%,
+            rgba(3, 7, 10, 0.5) 100%) !important;
+}
+
+/* дополнительная тёмная подложка прямо под нижним текстом */
+.services-directory-grid .service-card-photo a::after,
+.services-directory-grid .service-card a::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 2 !important;
+    height: 58% !important;
+    pointer-events: none !important;
+
+    background:
+        linear-gradient(180deg,
+            transparent 0%,
+            rgba(3, 7, 10, 0.48) 36%,
+            rgba(3, 7, 10, 0.9) 100%) !important;
+}
+
+/* сам нижний текст кладём на аккуратную glass-плашку */
+.services-directory-grid .service-card-photo .service-card-content,
+.services-directory-grid .service-card .service-card-content {
+    position: relative !important;
+    z-index: 4 !important;
+
+    padding: 16px !important;
+    margin: 0 -6px -4px !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.13) !important;
+    border-radius: 22px !important;
+
+    background:
+        linear-gradient(180deg,
+            rgba(3, 7, 10, 0.72),
+            rgba(3, 7, 10, 0.88)) !important;
+
+    backdrop-filter: blur(16px) !important;
+
+    box-shadow:
+        0 18px 44px rgba(0, 0, 0, 0.34),
+        inset 0 1px 0 rgba(255, 255, 255, 0.09) !important;
+}
+
+/* label внутри нижней плашки — без лишнего белого шума */
+.services-directory-grid .service-card-photo .service-card-label,
+.services-directory-grid .service-card .service-card-label {
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: rgba(247, 250, 248, 0.7) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+}
+
+/* заголовок и описание — максимально читаемые */
+.services-directory-grid .service-card-photo h3,
+.services-directory-grid .service-card h3 {
+    color: #ffffff !important;
+    text-shadow: 0 10px 28px rgba(0, 0, 0, 0.7) !important;
+}
+
+.services-directory-grid .service-card-photo p,
+.services-directory-grid .service-card p {
+    color: rgba(247, 250, 248, 0.9) !important;
+    text-shadow: 0 8px 22px rgba(0, 0, 0, 0.65) !important;
+}
+
+/* footer тоже должен быть выше затемнения */
+.services-directory-grid .service-card-photo .service-card-footer,
+.services-directory-grid .service-card .service-card-footer {
+    position: relative !important;
+    z-index: 4 !important;
+
+    margin-top: 16px !important;
+    padding-top: 14px !important;
+
+    border-top-color: rgba(255, 255, 255, 0.16) !important;
+    color: #ffffff !important;
+}
+
+/* hover: фото чуть ярче, но нижний текст не теряется */
+.services-directory-grid .service-card-photo:hover .service-card-bg,
+.services-directory-grid .service-card:hover .service-card-bg {
+    opacity: 0.96 !important;
+    filter: brightness(1.12) contrast(1.1) saturate(1.18) !important;
+}
+
+.services-directory-grid .service-card-photo:hover .service-card-content,
+.services-directory-grid .service-card:hover .service-card-content {
+    border-color: rgba(56, 200, 216, 0.24) !important;
+    background:
+        linear-gradient(180deg,
+            rgba(3, 7, 10, 0.76),
+            rgba(3, 7, 10, 0.92)) !important;
+
+    box-shadow:
+        0 22px 54px rgba(0, 0, 0, 0.42),
+        0 0 0 1px rgba(56, 200, 216, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.11) !important;
+}
+
+/* mobile/tablet — плашку чуть компактнее */
+@media (max-width: 720px) {
+
+    .services-directory-grid .service-card-photo .service-card-content,
+    .services-directory-grid .service-card .service-card-content {
+        padding: 14px !important;
+        border-radius: 18px !important;
+    }
+
+    .services-directory-grid .service-card-photo a::after,
+    .services-directory-grid .service-card a::after {
+        height: 64% !important;
+    }
+}
+
+
+/* ==========================================================
+   SERVICES DIRECTORY — TITLES ONLY PHOTO CARDS
+   MUST BE LAST IN services.css
+   ========================================================== */
+
+/* убираем описательный текст внутри карточек */
+.services-directory-grid .service-card p,
+.services-directory-grid .service-card-photo p {
+    display: none !important;
+}
+
+/* нижняя текстовая зона становится компактнее */
+.services-directory-grid .service-card-content,
+.services-directory-grid .service-card-photo .service-card-content {
+    gap: 8px !important;
+    padding: 14px 16px !important;
+    margin: 0 -6px -4px !important;
+}
+
+/* заголовок делаем главным элементом */
+.services-directory-grid .service-card h3,
+.services-directory-grid .service-card-photo h3 {
+    margin: 0 !important;
+    color: #ffffff !important;
+    font-size: clamp(1.5rem, 2vw, 2rem) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.045em !important;
+    text-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.7),
+        0 18px 46px rgba(0, 0, 0, 0.55) !important;
+}
+
+/* label оставляем маленьким и аккуратным */
+.services-directory-grid .service-card-label {
+    color: rgba(247, 250, 248, 0.72) !important;
+    font-size: 0.7rem !important;
+    letter-spacing: 0.11em !important;
+}
+
+/* карточки можно сделать немного ниже, раз текста меньше */
+.services-directory-grid .service-card,
+.services-directory-grid .service-card-photo {
+    min-height: 300px !important;
+}
+
+.services-directory-grid .service-card a,
+.services-directory-grid .service-card-photo a {
+    min-height: 300px !important;
+}
+
+/* footer ближе к заголовку */
+.services-directory-grid .service-card-footer {
+    margin-top: 14px !important;
+    padding-top: 13px !important;
+}
+
+/* hover — плашка остаётся компактной */
+.services-directory-grid .service-card:hover .service-card-content,
+.services-directory-grid .service-card-photo:hover .service-card-content {
+    border-color: rgba(56, 200, 216, 0.24) !important;
+}
+
+/* TABLET */
+@media (max-width: 1180px) {
+
+    .services-directory-grid .service-card,
+    .services-directory-grid .service-card-photo,
+    .services-directory-grid .service-card a,
+    .services-directory-grid .service-card-photo a {
+        min-height: 280px !important;
+    }
+
+    .services-directory-grid .service-card h3,
+    .services-directory-grid .service-card-photo h3 {
+        font-size: clamp(1.35rem, 2.8vw, 1.75rem) !important;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 720px) {
+
+    .services-directory-grid .service-card,
+    .services-directory-grid .service-card-photo,
+    .services-directory-grid .service-card a,
+    .services-directory-grid .service-card-photo a {
+        min-height: 250px !important;
+    }
+
+    .services-directory-grid .service-card-content,
+    .services-directory-grid .service-card-photo .service-card-content {
+        padding: 13px 14px !important;
+        border-radius: 18px !important;
+    }
+
+    .services-directory-grid .service-card h3,
+    .services-directory-grid .service-card-photo h3 {
+        font-size: 1.42rem !important;
     }
 }
