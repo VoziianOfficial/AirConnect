@@ -1,8 +1,3 @@
-/* ==========================================================
-   AIRCONNECT — CONTACT PAGE
-   File: /css/contact.css
-   Dark HVAC contact page
-   ========================================================== */
 
 .contact-hero {
     position: relative;
@@ -454,5 +449,622 @@
 
     .contact-method-text strong {
         white-space: normal;
+    }
+}
+
+/* ==========================================================
+   CONTACT HERO — SAME AS ABOUT HERO REFERENCE
+   MUST BE LAST IN contact.css
+   ========================================================== */
+
+.contact-hero.contact-hero-reference {
+    position: relative !important;
+    padding: 112px 0 28px !important;
+    overflow: visible !important;
+    background: transparent !important;
+}
+
+.contact-hero.contact-hero-reference::before,
+.contact-hero.contact-hero-reference::after {
+    display: none !important;
+}
+
+.contact-hero-reference>.container-wide {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    width: min(calc(100% - 32px), 1460px) !important;
+    min-height: 690px !important;
+    padding: 72px 78px 38px !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.075) !important;
+    border-radius: 16px !important;
+
+    background:
+        radial-gradient(circle at 18% 14%,
+            rgba(56, 200, 216, 0.16),
+            transparent 28%),
+
+        radial-gradient(circle at 82% 18%,
+            rgba(183, 255, 42, 0.08),
+            transparent 26%),
+
+        linear-gradient(90deg,
+            rgba(3, 7, 10, 0.99) 0%,
+            rgba(3, 7, 10, 0.96) 30%,
+            rgba(3, 7, 10, 0.78) 50%,
+            rgba(3, 7, 10, 0.34) 72%,
+            rgba(3, 7, 10, 0.08) 100%),
+
+        url("../assets/images/contact/contact-hero-hvac.jpg") 82% center / cover no-repeat !important;
+
+    box-shadow:
+        0 38px 120px rgba(0, 0, 0, 0.66),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+
+    transition:
+        border-color 300ms ease,
+        box-shadow 300ms ease,
+        background 300ms ease !important;
+}
+
+.contact-hero-reference>.container-wide::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+
+    background:
+        linear-gradient(180deg,
+            rgba(3, 7, 10, 0.04) 0%,
+            rgba(3, 7, 10, 0.12) 42%,
+            rgba(3, 7, 10, 0.68) 100%),
+        radial-gradient(circle at 74% 12%,
+            rgba(56, 200, 216, 0.14),
+            transparent 26%) !important;
+}
+
+.contact-hero-reference>.container-wide::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    border-radius: inherit !important;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.045),
+        inset 0 -120px 180px rgba(0, 0, 0, 0.7),
+        inset 0 80px 130px rgba(0, 0, 0, 0.18) !important;
+}
+
+.contact-hero-reference>.container-wide:hover {
+    border-color: rgba(56, 200, 216, 0.18) !important;
+
+    background:
+        radial-gradient(circle at 18% 14%,
+            rgba(56, 200, 216, 0.2),
+            transparent 28%),
+
+        radial-gradient(circle at 82% 18%,
+            rgba(183, 255, 42, 0.1),
+            transparent 26%),
+
+        linear-gradient(90deg,
+            rgba(3, 7, 10, 0.98) 0%,
+            rgba(3, 7, 10, 0.94) 30%,
+            rgba(3, 7, 10, 0.68) 50%,
+            rgba(3, 7, 10, 0.24) 72%,
+            rgba(3, 7, 10, 0.04) 100%),
+
+        url("../assets/images/contact/contact-hero-hvac.jpg") 86% center / cover no-repeat !important;
+
+    box-shadow:
+        0 44px 132px rgba(0, 0, 0, 0.72),
+        0 0 0 1px rgba(56, 200, 216, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* layout */
+
+.contact-hero-reference .contact-hero-inner {
+    position: relative !important;
+    z-index: 3 !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr auto !important;
+    gap: 34px !important;
+
+    min-height: calc(690px - 110px) !important;
+    align-items: stretch !important;
+}
+
+.contact-hero-reference .contact-hero-copy {
+    display: grid !important;
+    align-content: start !important;
+    gap: 22px !important;
+
+    width: min(920px, 66vw) !important;
+    max-width: 920px !important;
+}
+
+.contact-hero-reference #contactHeroTitle {
+    display: grid !important;
+    gap: 0 !important;
+
+    max-width: 920px !important;
+    margin: 0 !important;
+
+    color: #f7faf8 !important;
+    font-family: var(--font-heading) !important;
+    font-size: clamp(3.8rem, 4.8vw, 5.85rem) !important;
+    font-weight: 700 !important;
+    line-height: 0.96 !important;
+    letter-spacing: -0.065em !important;
+    text-transform: none !important;
+}
+
+.contact-hero-reference #contactHeroTitle span {
+    display: block !important;
+    color: inherit !important;
+    text-shadow: none !important;
+}
+
+.contact-hero-reference #contactHeroTitle span:nth-child(3) {
+    color: var(--color-cool) !important;
+    text-shadow: 0 0 34px rgba(56, 200, 216, 0.16) !important;
+}
+
+.contact-hero-reference .contact-hero-copy .lead {
+    max-width: 600px !important;
+    color: rgba(247, 250, 248, 0.76) !important;
+    font-size: 1.08rem !important;
+    line-height: 1.55 !important;
+}
+
+.contact-hero-reference .home-hero-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+}
+
+/* bottom panel */
+
+.contact-hero-reference .contact-hero-panel,
+.contact-hero-reference .contact-hero-panel:hover {
+    position: relative !important;
+    z-index: 3 !important;
+
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: auto !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+}
+
+.contact-hero-reference .contact-hero-panel::before,
+.contact-hero-reference .contact-hero-panel::after {
+    display: none !important;
+}
+
+.contact-hero-reference .contact-panel-list {
+    position: relative !important;
+    z-index: 3 !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 12px !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.09) !important;
+    border-radius: 24px !important;
+
+    background: rgba(3, 7, 10, 0.56) !important;
+    backdrop-filter: blur(20px) !important;
+
+    box-shadow:
+        0 18px 54px rgba(0, 0, 0, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+/* panel items */
+
+.contact-hero-reference .contact-panel-item {
+    position: relative !important;
+    overflow: hidden !important;
+
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 10px !important;
+
+    min-height: 62px !important;
+    padding: 10px 11px !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.095) !important;
+    border-radius: 17px !important;
+
+    background: rgba(255, 255, 255, 0.055) !important;
+    color: #f7faf8 !important;
+
+    box-shadow:
+        0 10px 26px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07) !important;
+
+    transition:
+        transform 260ms ease,
+        border-color 260ms ease,
+        background 260ms ease,
+        box-shadow 260ms ease !important;
+}
+
+.contact-hero-reference .contact-panel-item::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    transition: opacity 260ms ease !important;
+}
+
+.contact-hero-reference .contact-panel-item.tone-cool::before {
+    background: linear-gradient(90deg, rgba(56, 200, 216, 0.2), transparent 70%) !important;
+}
+
+.contact-hero-reference .contact-panel-item.tone-lime::before {
+    background: linear-gradient(90deg, rgba(183, 255, 42, 0.18), transparent 70%) !important;
+}
+
+.contact-hero-reference .contact-panel-item.tone-warm::before {
+    background: linear-gradient(90deg, rgba(244, 184, 74, 0.2), transparent 70%) !important;
+}
+
+.contact-hero-reference .contact-panel-item.tone-air::before {
+    background: linear-gradient(90deg, rgba(127, 232, 242, 0.18), transparent 70%) !important;
+}
+
+.contact-hero-reference .contact-panel-icon {
+    position: relative !important;
+    z-index: 1 !important;
+
+    display: grid !important;
+    width: 38px !important;
+    height: 38px !important;
+    place-items: center !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 13px !important;
+
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: var(--color-cool) !important;
+
+    transition:
+        transform 260ms ease,
+        background 260ms ease,
+        color 260ms ease,
+        border-color 260ms ease,
+        box-shadow 260ms ease !important;
+}
+
+.contact-hero-reference .contact-panel-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    transition: transform 260ms ease !important;
+}
+
+.contact-hero-reference .contact-panel-text {
+    position: relative !important;
+    z-index: 1 !important;
+
+    display: grid !important;
+    gap: 3px !important;
+    min-width: 0 !important;
+}
+
+.contact-hero-reference .contact-panel-text strong {
+    color: #f7faf8 !important;
+    font-size: 0.86rem !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.contact-hero-reference .contact-panel-text small {
+    color: rgba(247, 250, 248, 0.58) !important;
+    font-size: 0.62rem !important;
+    font-weight: 700 !important;
+    line-height: 1.18 !important;
+}
+
+/* hover */
+
+.contact-hero-reference .contact-panel-item:hover {
+    transform: translateY(-3px) !important;
+    border-color: rgba(56, 200, 216, 0.28) !important;
+    background: rgba(3, 7, 10, 0.72) !important;
+
+    box-shadow:
+        0 18px 46px rgba(0, 0, 0, 0.34),
+        0 0 0 1px rgba(56, 200, 216, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.11) !important;
+}
+
+.contact-hero-reference .contact-panel-item:hover::before {
+    opacity: 1 !important;
+}
+
+.contact-hero-reference .contact-panel-item.tone-cool:hover .contact-panel-icon {
+    background: #38c8d8 !important;
+    color: #031014 !important;
+    border-color: rgba(56, 200, 216, 0.55) !important;
+    box-shadow: 0 12px 26px rgba(56, 200, 216, 0.24) !important;
+}
+
+.contact-hero-reference .contact-panel-item.tone-lime:hover .contact-panel-icon {
+    background: #b7ff2a !important;
+    color: #061004 !important;
+    border-color: rgba(183, 255, 42, 0.55) !important;
+    box-shadow: 0 12px 26px rgba(183, 255, 42, 0.22) !important;
+}
+
+.contact-hero-reference .contact-panel-item.tone-warm:hover .contact-panel-icon {
+    background: #f4b84a !important;
+    color: #2a1700 !important;
+    border-color: rgba(244, 184, 74, 0.55) !important;
+    box-shadow: 0 12px 26px rgba(244, 184, 74, 0.22) !important;
+}
+
+.contact-hero-reference .contact-panel-item.tone-air:hover .contact-panel-icon {
+    background: #7fe8f2 !important;
+    color: #031014 !important;
+    border-color: rgba(127, 232, 242, 0.55) !important;
+    box-shadow: 0 12px 26px rgba(127, 232, 242, 0.2) !important;
+}
+
+.contact-hero-reference .contact-panel-item:hover .contact-panel-icon svg {
+    transform: scale(1.08) rotate(-5deg) !important;
+}
+
+.contact-hero-reference .contact-panel-item:hover small {
+    color: rgba(247, 250, 248, 0.82) !important;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1080px) {
+    .contact-hero.contact-hero-reference {
+        padding: 98px 0 22px !important;
+    }
+
+    .contact-hero-reference>.container-wide {
+        width: min(calc(100% - 28px), 1080px) !important;
+        min-height: 620px !important;
+        padding: 54px 38px 30px !important;
+        border-radius: 20px !important;
+
+        background:
+            radial-gradient(circle at 18% 14%,
+                rgba(56, 200, 216, 0.18),
+                transparent 28%),
+
+            linear-gradient(90deg,
+                rgba(3, 7, 10, 0.98) 0%,
+                rgba(3, 7, 10, 0.9) 38%,
+                rgba(3, 7, 10, 0.56) 68%,
+                rgba(3, 7, 10, 0.1) 100%),
+
+            url("../assets/images/contact/contact-hero-hvac.jpg") 82% center / cover no-repeat !important;
+    }
+
+    .contact-hero-reference .contact-hero-inner {
+        min-height: calc(620px - 84px) !important;
+        gap: 28px !important;
+    }
+
+    .contact-hero-reference .contact-hero-copy {
+        width: 100% !important;
+        max-width: 780px !important;
+    }
+
+    .contact-hero-reference #contactHeroTitle {
+        max-width: 780px !important;
+        font-size: clamp(3.4rem, 7vw, 5rem) !important;
+    }
+
+    .contact-hero-reference .contact-hero-copy .lead {
+        max-width: 560px !important;
+    }
+
+    .contact-hero-reference .contact-panel-list {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+        padding: 10px !important;
+        border-radius: 20px !important;
+    }
+
+    .contact-hero-reference .contact-panel-item {
+        min-height: 58px !important;
+        padding: 9px !important;
+        border-radius: 15px !important;
+    }
+
+    .contact-hero-reference .contact-panel-icon {
+        width: 34px !important;
+        height: 34px !important;
+        border-radius: 12px !important;
+    }
+
+    .contact-hero-reference .contact-panel-icon svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    .contact-hero-reference .contact-panel-text strong {
+        font-size: 0.74rem !important;
+    }
+
+    .contact-hero-reference .contact-panel-text small {
+        font-size: 0.54rem !important;
+    }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 720px) {
+    .contact-hero.contact-hero-reference {
+        padding: 88px 0 18px !important;
+    }
+
+    .contact-hero-reference>.container-wide {
+        width: min(calc(100% - 16px), 520px) !important;
+        min-height: 600px !important;
+        padding: 34px 16px 18px !important;
+        border-radius: 18px !important;
+
+        background:
+            linear-gradient(180deg,
+                rgba(3, 7, 10, 0.96) 0%,
+                rgba(3, 7, 10, 0.82) 42%,
+                rgba(3, 7, 10, 0.64) 68%,
+                rgba(3, 7, 10, 0.94) 100%),
+
+            url("../assets/images/contact/contact-hero-hvac.jpg") 76% center / cover no-repeat !important;
+    }
+
+    .contact-hero-reference .contact-hero-inner {
+        min-height: calc(600px - 52px) !important;
+        gap: 22px !important;
+    }
+
+    .contact-hero-reference .contact-hero-copy {
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-items: center !important;
+        text-align: center !important;
+        gap: 16px !important;
+    }
+
+    .contact-hero-reference #contactHeroTitle {
+        max-width: 360px !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        font-size: clamp(2.55rem, 12vw, 3.65rem) !important;
+        line-height: 0.98 !important;
+    }
+
+    .contact-hero-reference .contact-hero-copy .lead {
+        max-width: 320px !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        font-size: 0.86rem !important;
+        line-height: 1.42 !important;
+    }
+
+    .contact-hero-reference .home-hero-actions {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        gap: 8px !important;
+    }
+
+    .contact-hero-reference .home-hero-actions .btn {
+        width: 100% !important;
+        min-height: 42px !important;
+        padding-inline: 10px !important;
+        font-size: 0.74rem !important;
+    }
+
+    .contact-hero-reference .contact-panel-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 7px !important;
+        padding: 8px !important;
+        border-radius: 17px !important;
+    }
+
+    .contact-hero-reference .contact-panel-item {
+        min-height: 58px !important;
+        padding: 8px !important;
+        border-radius: 13px !important;
+        gap: 7px !important;
+    }
+
+    .contact-hero-reference .contact-panel-icon {
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 10px !important;
+    }
+
+    .contact-hero-reference .contact-panel-icon svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+    .contact-hero-reference .contact-panel-text strong {
+        font-size: 0.68rem !important;
+    }
+
+    .contact-hero-reference .contact-panel-text small {
+        font-size: 0.5rem !important;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 420px) {
+    .contact-hero-reference>.container-wide {
+        min-height: 570px !important;
+        padding: 30px 12px 14px !important;
+    }
+
+    .contact-hero-reference .contact-hero-inner {
+        min-height: calc(570px - 44px) !important;
+    }
+
+    .contact-hero-reference #contactHeroTitle {
+        max-width: 320px !important;
+        font-size: clamp(2.2rem, 11.2vw, 3.1rem) !important;
+    }
+
+    .contact-hero-reference .contact-panel-list {
+        gap: 6px !important;
+        padding: 7px !important;
+    }
+
+    .contact-hero-reference .contact-panel-item {
+        min-height: 54px !important;
+        padding: 7px !important;
+    }
+
+    .contact-hero-reference .contact-panel-icon {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    .contact-hero-reference .contact-panel-text strong {
+        font-size: 0.64rem !important;
+    }
+
+    .contact-hero-reference .contact-panel-text small {
+        font-size: 0.48rem !important;
     }
 }

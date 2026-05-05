@@ -130,7 +130,7 @@ window.SITE_CONFIG = {
             summary:
                 "Explore local provider options for cooling installation, replacement planning, and system quote comparison.",
             cardText:
-                "Compare cooling installation options, project scope, timing, and quote details from independent providers.",
+                "Compare cooling installation options, project scope, timing, and quote details from providers.",
             heroTitle:
                 "Find cooling installation provider options for your home.",
             heroText:
