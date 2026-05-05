@@ -3917,3 +3917,200 @@
         radial-gradient(circle at 50% 120%, rgba(0, 0, 0, 0.28), transparent 42%);
     pointer-events: none;
 }
+
+/* ==========================================================
+   HERO REFERENCE — PREMIUM HOVERS / COLOR SHIFT
+   Buttons, badges, trust avatars
+   MUST BE LAST IN home.css
+   ========================================================== */
+
+/* основная кнопка */
+.hero-reference-btn {
+    position: relative !important;
+    overflow: hidden !important;
+    transition:
+        background 260ms ease,
+        color 260ms ease,
+        box-shadow 260ms ease,
+        transform 260ms ease !important;
+}
+
+.hero-reference-btn::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background:
+        linear-gradient(120deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.34) 46%,
+            transparent 78%);
+    transform: translateX(-130%);
+    transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+}
+
+.hero-reference-btn:hover {
+    background: #38C8D8 !important;
+    color: #031014 !important;
+    transform: translateY(-2px) !important;
+    box-shadow:
+        0 22px 54px rgba(56, 200, 216, 0.24),
+        0 0 0 1px rgba(56, 200, 216, 0.18) !important;
+}
+
+.hero-reference-btn:hover::before {
+    transform: translateX(130%);
+}
+
+.hero-reference-btn:hover svg {
+    transform: translateX(3px);
+}
+
+.hero-reference-btn svg {
+    transition: transform 260ms ease;
+}
+
+/* общая анимация плашек */
+.hero-reference-badge {
+    cursor: default;
+    transition:
+        background 280ms ease,
+        color 280ms ease,
+        box-shadow 280ms ease,
+        transform 280ms ease,
+        filter 280ms ease !important;
+}
+
+.hero-reference-badge svg {
+    transition:
+        color 280ms ease,
+        transform 280ms ease,
+        filter 280ms ease;
+}
+
+.hero-reference-badge:hover {
+    transform: translateY(-3px) !important;
+    filter: saturate(1.08) brightness(1.06);
+}
+
+/* cooling badge hover */
+.hero-reference-badge-cool:hover {
+    background: linear-gradient(135deg, #7FE8F2, #38C8D8) !important;
+    color: #031014 !important;
+    box-shadow:
+        0 18px 44px rgba(56, 200, 216, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+}
+
+.hero-reference-badge-cool:hover svg {
+    transform: rotate(-8deg) scale(1.08);
+    filter: drop-shadow(0 0 10px rgba(56, 200, 216, 0.45));
+}
+
+/* heating badge hover */
+.hero-reference-badge-warm:hover {
+    background: linear-gradient(135deg, #FFD37A, #F4B84A) !important;
+    color: #2A1700 !important;
+    box-shadow:
+        0 18px 44px rgba(244, 184, 74, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+}
+
+.hero-reference-badge-warm:hover svg {
+    transform: rotate(8deg) scale(1.08);
+    filter: drop-shadow(0 0 10px rgba(244, 184, 74, 0.45));
+}
+
+/* lime badge hover */
+.hero-reference-badge-lime:hover {
+    background: linear-gradient(135deg, #D5FF68, #B7FF2A) !important;
+    color: #061004 !important;
+    box-shadow:
+        0 18px 44px rgba(183, 255, 42, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+}
+
+.hero-reference-badge-lime:hover svg {
+    transform: translateY(-1px) scale(1.08);
+    filter: drop-shadow(0 0 10px rgba(183, 255, 42, 0.42));
+}
+
+/* trust row hover */
+.hero-reference-trust {
+    transition:
+        opacity 260ms ease,
+        filter 260ms ease;
+}
+
+.hero-reference-trust:hover {
+    filter: brightness(1.08);
+}
+
+.hero-reference-trust:hover p {
+    color: rgba(247, 250, 248, 0.9) !important;
+}
+
+.hero-reference-trust p {
+    transition: color 260ms ease;
+}
+
+/* avatars hover */
+.hero-reference-avatars span {
+    transition:
+        transform 260ms ease,
+        box-shadow 260ms ease,
+        border-color 260ms ease,
+        filter 260ms ease !important;
+}
+
+.hero-reference-avatars:hover span {
+    border-color: rgba(56, 200, 216, 0.36) !important;
+    box-shadow:
+        0 12px 26px rgba(0, 0, 0, 0.34),
+        0 0 20px rgba(56, 200, 216, 0.14) !important;
+}
+
+.hero-reference-avatars span:hover {
+    transform: translateY(-3px) scale(1.04);
+    z-index: 2;
+    filter: saturate(1.12) brightness(1.08);
+}
+
+/* airflow lines чуть активнее при наведении на hero */
+.hero-reference-card:hover .hero-reference-air span {
+    opacity: 0.78 !important;
+    box-shadow: 0 0 24px rgba(56, 200, 216, 0.38) !important;
+}
+
+/* мягкая подсветка всей карточки hero */
+.hero-reference-card {
+    transition:
+        box-shadow 320ms ease,
+        border-color 320ms ease,
+        filter 320ms ease;
+}
+
+.hero-reference-card:hover {
+    box-shadow:
+        0 42px 130px rgba(0, 0, 0, 0.72),
+        0 0 0 1px rgba(56, 200, 216, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* на mobile hover не нужен, чтобы не было странных tap-эффектов */
+@media (hover: none) {
+
+    .hero-reference-btn:hover,
+    .hero-reference-badge:hover,
+    .hero-reference-avatars span:hover,
+    .hero-reference-card:hover {
+        transform: none !important;
+        filter: none !important;
+    }
+
+    .hero-reference-btn:hover {
+        background: #B7FF2A !important;
+        color: #061004 !important;
+    }
+}
