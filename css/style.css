@@ -275,14 +275,14 @@ h6 {
 
 .section {
     position: relative;
-    padding: 108px 0;
+    padding: 60px 0;
     overflow: hidden;
     background: transparent;
 }
 
 .section-sm {
     position: relative;
-    padding: 72px 0;
+    padding: 42px 0;
     overflow: hidden;
     background: transparent;
 }
@@ -1638,11 +1638,11 @@ select.form-control option {
     }
 
     .section {
-        padding: 82px 0;
+        padding: 42px 0;
     }
 
     .section-sm {
-        padding: 58px 0;
+        padding: 48px 0;
     }
 
     .section-xl {

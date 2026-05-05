@@ -477,9 +477,19 @@ function renderServiceCards() {
 
         mount.innerHTML = services
             .map((service) => {
+                const image = service.image || service.heroImage || "./assets/images/home/hero-hvac.jpg";
+
                 return `
-                    <article class="service-card reveal-up" data-accent="${escapeHtml(service.accent || "cool")}">
+                    <article class="service-card service-card-photo reveal-up" data-accent="${escapeHtml(service.accent || "cool")}">
                         <a href="${escapeHtml(service.href)}" aria-label="View ${escapeHtml(service.title)}">
+                            <img class="service-card-bg"
+                                src="${escapeHtml(image)}"
+                                alt=""
+                                loading="lazy"
+                                aria-hidden="true">
+
+                            <div class="service-card-overlay" aria-hidden="true"></div>
+
                             <div class="service-card-icon">
                                 ${createIcon(service.icon || "wrench")}
                             </div>
@@ -500,6 +510,8 @@ function renderServiceCards() {
             })
             .join("");
     });
+
+    refreshIcons();
 }
 
 /* =========================
