@@ -94,7 +94,7 @@ window.SITE_CONFIG = {
             accent: "cool",
             label: "Cooling support",
             image: "./assets/images/services/ac-repair.jpg",
-            heroImage: "./assets/images/service-pages/ac-repair-hero.jpg",
+            heroImage: "../assets/images/service-pages/ac-repair-hero.jpg",
             summary:
                 "Compare independent local provider options for AC repair, cooling concerns, airflow issues, and related system checks.",
             cardText:

@@ -549,7 +549,27 @@ function renderFaqLists() {
 function getFaqForMount(mount, config) {
     if (mount.dataset.faqSource === "service") {
         const service = window.AIRCONNECT?.getCurrentService?.();
-        return service?.faq || config.faq || [];
+
+        if (!service) {
+            return config.faq || [];
+        }
+
+        const serviceTitle = service.shortTitle || service.title || "this HVAC service";
+
+        const baseFaq = Array.isArray(service.faq) ? service.faq.slice(0, 2) : [];
+
+        const extraFaq = [
+            {
+                question: `Does ${config.companyName || "AirConnect"} perform ${serviceTitle} work directly?`,
+                answer: `${config.companyName || "AirConnect"} is an independent HVAC provider matching platform. It does not perform repair, installation, heating, cooling, ventilation, or maintenance work directly.`
+            },
+            {
+                question: `What should I check before hiring a ${serviceTitle} provider?`,
+                answer: `Before hiring any provider, review licensing, insurance, quote scope, diagnostic fees, timelines, warranty terms, reviews, and service details. Providers are independent, so details may vary.`
+            }
+        ];
+
+        return [...baseFaq, ...extraFaq];
     }
 
     return config.faq || [];
