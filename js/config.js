@@ -33,9 +33,10 @@ window.SITE_CONFIG = {
     mapCard: {
         eyebrow: "Platform address",
         title: "AirConnect contact location",
-        text: "This address is provided for platform contact context. Local HVAC provider availability may vary by ZIP code and service category.",
+        text: "This address is shown for platform contact context. HVAC provider availability may vary by ZIP code.",
+        address: "600 Congress Avenue, Austin, TX 78701, USA",
         regionLabel: "Austin, TX",
-        address: "600 Congress Avenue, Austin, TX 78701, USA"
+        openUrl: ""
     },
 
     serviceArea: "Independent HVAC provider matching across the United States",

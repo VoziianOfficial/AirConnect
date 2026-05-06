@@ -1,9 +1,5 @@
 "use strict";
 
-/* ==========================================================
-   AIRCONNECT — MAIN GLOBAL SCRIPT
-   File: /js/main.js
-   ========================================================== */
 
 let requestFormCounter = 0;
 
@@ -602,9 +598,6 @@ function renderFaqSchema() {
     });
 }
 
-/* =========================
-   REQUEST FORMS
-   ========================= */
 
 function renderRequestForms() {
     const config = getConfig();
@@ -622,12 +615,6 @@ function renderRequestForms() {
     initContactRequestForm();
 }
 
-/* ==========================================================
-   CONTACT REQUEST FORM — LIGHT FORM VALIDATION
-   Works with:
-   1) <form id="requestForm" class="contact-request-form">
-   2) <section id="requestForm"> ... <form class="contact-request-form">
-   ========================================================== */
 
 function initContactRequestForm() {
     const directForm = document.querySelector("form#requestForm");
@@ -768,171 +755,6 @@ function initContactRequestForm() {
     });
 }
 
-function getRequestFormHtml(config, formId) {
-    const serviceOptions = (config.forms?.serviceTypes || [])
-        .map((type) => `<option value="${escapeHtml(type)}">${escapeHtml(type)}</option>`)
-        .join("");
-
-    const nameId = `request-name-${formId}`;
-    const phoneId = `request-phone-${formId}`;
-    const emailId = `request-email-${formId}`;
-    const zipId = `request-zip-${formId}`;
-    const serviceId = `request-service-${formId}`;
-    const notesId = `request-notes-${formId}`;
-
-    return `
-        <div class="form-card">
-            <div class="form-card-inner">
-                <div>
-                    <p class="section-kicker">Request flow</p>
-                    <h3>${escapeHtml(config.forms?.requestTitle || "Start request")}</h3>
-                    <p class="text-muted">${escapeHtml(config.forms?.requestText || "")}</p>
-                </div>
-
-                <form class="request-form" novalidate>
-                    <div class="form-grid">
-                        <div class="form-field">
-                            <label for="${nameId}">Name</label>
-                            <div class="input-wrap">
-                                <input class="form-control" id="${nameId}" name="name" type="text" autocomplete="name" placeholder="Your name" required>
-                                <span class="input-status">${createIcon("check")}</span>
-                            </div>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="${phoneId}">Phone</label>
-                            <div class="input-wrap">
-                                <input class="form-control" id="${phoneId}" name="phone" type="tel" autocomplete="tel" placeholder="Phone number" required>
-                                <span class="input-status">${createIcon("check")}</span>
-                            </div>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="${emailId}">Email</label>
-                            <div class="input-wrap">
-                                <input class="form-control" id="${emailId}" name="email" type="email" autocomplete="email" placeholder="Email address" required>
-                                <span class="input-status">${createIcon("check")}</span>
-                            </div>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="${zipId}">ZIP code</label>
-                            <div class="input-wrap">
-                                <input class="form-control" id="${zipId}" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="ZIP code" required minlength="5">
-                                <span class="input-status">${createIcon("check")}</span>
-                            </div>
-                        </div>
-
-                        <div class="form-field full">
-                            <label for="${serviceId}">Service type</label>
-                            <div class="select-wrap">
-                                <select class="form-control" id="${serviceId}" name="service" required>
-                                    <option value="">Choose service type</option>
-                                    ${serviceOptions}
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-field full">
-                            <label for="${notesId}">Project notes</label>
-                            <div class="textarea-wrap">
-                                <textarea class="form-control" id="${notesId}" name="notes" placeholder="Describe the HVAC issue, timing, system notes, or provider preferences." required></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-message" data-form-message role="status" aria-live="polite"></div>
-
-                    <button class="btn btn-primary" type="submit">
-                        <span>${escapeHtml(config.forms?.submitLabel || "Submit request")}</span>
-                        ${createIcon("arrow-right")}
-                    </button>
-
-                    <p class="form-disclaimer">${escapeHtml(config.disclaimer || "")}</p>
-                </form>
-            </div>
-        </div>
-    `;
-}
-
-function initSingleForm(form) {
-    const config = getConfig();
-
-    if (!form || form.dataset.formReady === "true") return;
-
-    form.dataset.formReady = "true";
-
-    const fields = Array.from(form.querySelectorAll(".form-control"));
-    const message = form.querySelector("[data-form-message]");
-
-    fields.forEach((field) => {
-        field.addEventListener("input", () => {
-            updateFieldState(field);
-        });
-
-        field.addEventListener("blur", () => {
-            updateFieldState(field);
-        });
-
-        field.addEventListener("change", () => {
-            updateFieldState(field);
-        });
-    });
-
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-
-        let isValid = true;
-
-        fields.forEach((field) => {
-            const fieldValid = updateFieldState(field);
-
-            if (!fieldValid) {
-                isValid = false;
-            }
-        });
-
-        if (!message) return;
-
-        message.classList.add("is-visible");
-
-        if (!isValid) {
-            message.classList.add("error");
-            message.textContent = config.forms?.errorMessage || "Please complete the required fields.";
-            return;
-        }
-
-        message.classList.remove("error");
-        message.textContent =
-            config.forms?.successMessage ||
-            "Success! Your HVAC matching request details were sent successfully.";
-
-        form.reset();
-
-        fields.forEach((field) => {
-            field.classList.remove("is-valid", "is-invalid");
-        });
-    });
-}
-
-function updateFieldState(field) {
-    const value = field.value.trim();
-    let isValid = field.checkValidity();
-
-    if (field.name === "zip") {
-        isValid = /^\d{5}(-\d{4})?$/.test(value);
-    }
-
-    if (!value) {
-        field.classList.remove("is-valid", "is-invalid");
-        return false;
-    }
-
-    field.classList.toggle("is-valid", isValid);
-    field.classList.toggle("is-invalid", !isValid);
-
-    return isValid;
-}
 
 function getRequestFormHtml(config, formId) {
     const serviceOptions = (config.forms?.serviceTypes || [])
@@ -1100,9 +922,7 @@ function updateFieldState(field) {
     return isValid;
 }
 
-/* =========================
-   REAL MAP CARD
-   ========================= */
+
 
 function renderMapCards() {
     const config = getConfig();
@@ -1122,16 +942,12 @@ function renderMapCards() {
 
         const encodedAddress = encodeURIComponent(mapAddress);
 
-        const mapEmbedUrl =
-            config.mapCard?.embedUrl ||
-            `https://www.google.com/maps?q=${encodedAddress}&output=embed`;
-
         const mapOpenUrl =
             config.mapCard?.openUrl ||
             `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
 
         mount.innerHTML = `
-            <article class="map-card real-map-card">
+            <article class="map-card real-map-card real-map-card-static">
                 <div class="map-card-top">
                     <p class="section-kicker">
                         ${escapeHtml(config.mapCard?.eyebrow || "Platform address")}
@@ -1146,20 +962,23 @@ function renderMapCards() {
                     </p>
                 </div>
 
-                <a class="real-map-frame-link"
+                <a class="real-map-static-preview"
                     href="${escapeHtml(mapOpenUrl)}"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Open ${escapeHtml(mapAddress)} in Google Maps">
 
-                    <iframe
-                        class="real-map-frame"
-                        title="Map for ${escapeHtml(mapAddress)}"
-                        src="${escapeHtml(mapEmbedUrl)}"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        aria-hidden="true">
-                    </iframe>
+                    <div class="real-map-grid" aria-hidden="true"></div>
+                    <div class="real-map-route route-one" aria-hidden="true"></div>
+                    <div class="real-map-route route-two" aria-hidden="true"></div>
+
+                    <span class="real-map-pin">
+                        ${createIcon("map-pin")}
+                    </span>
+
+                    <span class="real-map-city-label">
+                        ${escapeHtml(config.mapCard?.regionLabel || "USA address")}
+                    </span>
 
                     <span class="real-map-open-badge">
                         ${createIcon("external-link")}
@@ -1190,9 +1009,6 @@ function renderMapCards() {
     refreshIcons();
 }
 
-/* =========================
-   POLICY BANNER
-   ========================= */
 
 function renderPolicyBanner() {
     const config = getConfig();
@@ -1251,9 +1067,7 @@ function renderPolicyBanner() {
     });
 }
 
-/* =========================
-   REVEAL ANIMATIONS
-   ========================= */
+
 
 function initRevealAnimations() {
     const elements = document.querySelectorAll(".reveal-up:not(.is-visible)");
