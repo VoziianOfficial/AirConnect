@@ -1002,34 +1002,6 @@
         inset 0 80px 130px rgba(0, 0, 0, 0.18) !important;
 }
 
-/* hover всей секции */
-.services-hero-reference>.container-wide:hover {
-    border-color: rgba(56, 200, 216, 0.18) !important;
-
-    background:
-        radial-gradient(circle at 18% 14%,
-            rgba(56, 200, 216, 0.2),
-            transparent 28%),
-
-        radial-gradient(circle at 82% 18%,
-            rgba(183, 255, 42, 0.1),
-            transparent 26%),
-
-        linear-gradient(90deg,
-            rgba(3, 7, 10, 0.98) 0%,
-            rgba(3, 7, 10, 0.94) 30%,
-            rgba(3, 7, 10, 0.68) 50%,
-            rgba(3, 7, 10, 0.24) 72%,
-            rgba(3, 7, 10, 0.04) 100%),
-
-        url("../assets/images/services/services-hero-panel.jpg") 84% center / cover no-repeat !important;
-
-    box-shadow:
-        0 44px 132px rgba(0, 0, 0, 0.72),
-        0 0 0 1px rgba(56, 200, 216, 0.06),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
-}
-
 /* layout внутри */
 .services-hero-reference .services-hero-inner {
     position: relative !important;

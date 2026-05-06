@@ -663,32 +663,6 @@
         inset 0 80px 120px rgba(0, 0, 0, 0.16) !important;
 }
 
-.service-hero-card:hover {
-    border-color: rgba(56, 200, 216, 0.2) !important;
-
-    background:
-        radial-gradient(circle at 16% 16%,
-            rgba(56, 200, 216, 0.22),
-            transparent 28%),
-
-        radial-gradient(circle at 82% 16%,
-            rgba(183, 255, 42, 0.1),
-            transparent 25%),
-
-        linear-gradient(90deg,
-            rgba(3, 7, 10, 0.98) 0%,
-            rgba(3, 7, 10, 0.9) 34%,
-            rgba(3, 7, 10, 0.58) 56%,
-            rgba(3, 7, 10, 0.2) 78%,
-            rgba(3, 7, 10, 0.04) 100%),
-
-        var(--service-hero-img) 82% center / cover no-repeat !important;
-
-    box-shadow:
-        0 42px 124px rgba(0, 0, 0, 0.7),
-        0 0 0 1px rgba(56, 200, 216, 0.055),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
-}
 
 /* =========================
    INNER LAYOUT
@@ -800,6 +774,7 @@
     width: 44px !important;
     height: 44px !important;
     place-items: center !important;
+    line-height: 0 !important;
 
     border: 1px solid rgba(56, 200, 216, 0.28) !important;
     border-radius: 15px !important;
@@ -809,12 +784,12 @@
 }
 
 .service-hero-side-icon svg {
+    display: block !important;
     width: 20px !important;
     height: 20px !important;
 }
 
 .service-hero-side span {
-    display: block !important;
     color: rgba(247, 250, 248, 0.52) !important;
     font-size: 0.68rem !important;
     font-weight: 850 !important;
@@ -1002,11 +977,22 @@
     .service-hero-compact .service-hero-inner {
         grid-template-columns: 1fr !important;
         gap: 22px !important;
-        align-items: start !important;
+        align-items: center !important;
     }
 
     .service-hero-compact .service-hero-copy {
         max-width: 760px !important;
+        justify-items: center !important;
+        text-align: center !important;
+    }
+
+    .service-hero-compact #serviceHeroTitle {
+        margin-inline: auto !important;
+    }
+
+    .service-hero-compact .service-hero-copy .lead {
+        margin-inline: auto !important;
+        text-wrap: balance !important;
     }
 
     .service-hero-compact .service-hero-copy h1 {
@@ -1017,6 +1003,9 @@
     .service-hero-side {
         width: min(100%, 520px) !important;
         padding: 14px !important;
+        justify-self: center !important;
+        align-self: center !important;
+        margin-inline: auto !important;
     }
 
     .service-hero-bottom {
@@ -3642,4 +3631,40 @@
     .service-faq-grid .faq-answer p {
         padding: 0 18px 18px !important;
     }
+}
+/* ==========================================================
+   SERVICE HERO — DISABLE PHOTO / GRADIENT HOVER CHANGE
+   MUST BE LAST IN service-page.css
+   ========================================================== */
+
+.service-hero-card {
+    transition:
+        border-color 300ms ease,
+        box-shadow 300ms ease !important;
+}
+
+.service-hero-card:hover {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+
+    background:
+        radial-gradient(circle at 16% 16%,
+            rgba(56, 200, 216, 0.18),
+            transparent 28%),
+
+        radial-gradient(circle at 82% 16%,
+            rgba(183, 255, 42, 0.08),
+            transparent 25%),
+
+        linear-gradient(90deg,
+            rgba(3, 7, 10, 0.99) 0%,
+            rgba(3, 7, 10, 0.94) 34%,
+            rgba(3, 7, 10, 0.68) 56%,
+            rgba(3, 7, 10, 0.28) 78%,
+            rgba(3, 7, 10, 0.08) 100%),
+
+        var(--service-hero-img) 78% center / cover no-repeat !important;
+
+    box-shadow:
+        0 34px 110px rgba(0, 0, 0, 0.62),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
 }
