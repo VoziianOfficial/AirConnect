@@ -128,7 +128,7 @@ function renderServicePage() {
                             <i data-lucide="clipboard-check" aria-hidden="true"></i>
                         </div>
                         <span>Request context</span>
-                        <strong>Describe the project clearly</strong>
+                        <strong>Clear details</strong>
                     </article>
 
                     <article class="service-intro-item">
@@ -136,7 +136,7 @@ function renderServicePage() {
                             <i data-lucide="map-pin" aria-hidden="true"></i>
                         </div>
                         <span>Local matching</span>
-                        <strong>Compare by ZIP code</strong>
+                        <strong>ZIP match</strong>
                     </article>
 
                     <article class="service-intro-item">
@@ -144,7 +144,7 @@ function renderServicePage() {
                             <i data-lucide="file-text" aria-hidden="true"></i>
                         </div>
                         <span>Quote details</span>
-                        <strong>Review scope and fees</strong>
+                        <strong>Scope & fees</strong>
                     </article>
 
                     <article class="service-intro-item">
@@ -152,7 +152,7 @@ function renderServicePage() {
                             <i data-lucide="shield-check" aria-hidden="true"></i>
                         </div>
                         <span>Before hiring</span>
-                        <strong>Verify provider details</strong>
+                        <strong>Verify providers</strong>
                     </article>
                 </div>
             </div>
