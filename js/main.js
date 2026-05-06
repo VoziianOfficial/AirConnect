@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderPolicyBanner();
     initMobileMenu();
     initFaqAccordions();
+    scheduleFaqQuestionEqualization();
     initRevealAnimations();
     refreshIcons();
 });
@@ -587,6 +588,7 @@ function renderFaqLists() {
 
         if (!useColumns) {
             mount.innerHTML = itemsHtml.join("");
+            scheduleFaqQuestionEqualization();
             return;
         }
 
@@ -609,6 +611,7 @@ function renderFaqLists() {
                 ${rightColumn.join("")}
             </div>
         `;
+        scheduleFaqQuestionEqualization();
     });
 }
 
@@ -652,6 +655,62 @@ function initFaqAccordions() {
         button.addEventListener("click", () => {
             const isOpen = item.classList.toggle("is-open");
             button.setAttribute("aria-expanded", String(isOpen));
+            scheduleFaqQuestionEqualization();
+        });
+    });
+}
+
+let faqEqualizeRaf = 0;
+let faqEqualizeResizeReady = false;
+
+function scheduleFaqQuestionEqualization() {
+    if (faqEqualizeRaf) cancelAnimationFrame(faqEqualizeRaf);
+
+    faqEqualizeRaf = requestAnimationFrame(() => {
+        faqEqualizeRaf = 0;
+        equalizeFaqQuestionHeights();
+    });
+
+    if (!faqEqualizeResizeReady) {
+        faqEqualizeResizeReady = true;
+
+        let resizeTimer = 0;
+        window.addEventListener("resize", () => {
+            window.clearTimeout(resizeTimer);
+            resizeTimer = window.setTimeout(() => {
+                scheduleFaqQuestionEqualization();
+            }, 120);
+        });
+
+        if (document.fonts && typeof document.fonts.ready?.then === "function") {
+            document.fonts.ready.then(() => {
+                scheduleFaqQuestionEqualization();
+            });
+        }
+    }
+}
+
+function equalizeFaqQuestionHeights() {
+    document.querySelectorAll(".faq-list").forEach((list) => {
+        const questions = Array.from(list.querySelectorAll(".faq-question"));
+
+        if (!questions.length) return;
+
+        questions.forEach((q) => {
+            q.style.height = "";
+        });
+
+        let max = 0;
+
+        questions.forEach((q) => {
+            const h = Math.ceil(q.getBoundingClientRect().height);
+            if (h > max) max = h;
+        });
+
+        if (!max) return;
+
+        questions.forEach((q) => {
+            q.style.height = `${max}px`;
         });
     });
 }

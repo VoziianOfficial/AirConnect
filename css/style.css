@@ -1945,3 +1945,11 @@ select.form-control option {
         padding: 16px 18px;
     }
 }
+
+.faq-question {
+    box-sizing: border-box;
+}
+
+.faq-question span {
+    min-width: 0;
+}
