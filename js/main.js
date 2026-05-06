@@ -156,10 +156,48 @@ function renderHeader() {
     if (!mount) return;
 
     const currentPage = getCurrentPageName();
+    const services = config.services || [];
 
     const navHtml = (config.navigation || [])
         .map((item) => {
             const activeClass = isPrimaryNavActive(item, currentPage) ? "is-active" : "";
+
+            if (item.href === "services.html" && services.length > 0) {
+                const dropdownItemsHtml = [
+                    {
+                        href: "services.html",
+                        title: "All services",
+                        icon: "arrow-up-right"
+                    },
+                    ...services.map((service) => ({
+                        href: service.href,
+                        title: service.shortTitle || service.title,
+                        icon: service.icon || "arrow-up-right"
+                    }))
+                ]
+                    .map((entry) => {
+                        const isActive = entry.href === currentPage ? "is-active" : "";
+
+                        return `
+                            <a class="nav-dropdown-link ${isActive}" href="${escapeHtml(entry.href)}">
+                                <span class="nav-dropdown-icon">${createIcon(entry.icon)}</span>
+                                <span class="nav-dropdown-text">${escapeHtml(entry.title)}</span>
+                            </a>
+                        `;
+                    })
+                    .join("");
+
+                return `
+                    <div class="nav-dropdown">
+                        <a href="${escapeHtml(item.href)}" class="nav-dropdown-trigger ${activeClass}" aria-haspopup="true">
+                            ${escapeHtml(item.label)}
+                        </a>
+                        <div class="nav-dropdown-menu" role="menu" aria-label="Services">
+                            ${dropdownItemsHtml}
+                        </div>
+                    </div>
+                `;
+            }
 
             return `
                 <a href="${escapeHtml(item.href)}" class="${activeClass}">
@@ -522,27 +560,55 @@ function renderFaqLists() {
 
     mounts.forEach((mount, mountIndex) => {
         const faqItems = getFaqForMount(mount, config);
+        const prefersColumns =
+            typeof window.matchMedia === "function" ? window.matchMedia("(min-width: 861px)").matches : true;
+        const useColumns = prefersColumns && faqItems.length > 1;
 
-        mount.innerHTML = faqItems
-            .map((item, index) => {
-                const id = `faq-${mountIndex + 1}-${index + 1}`;
+        const itemsHtml = faqItems.map((item, index) => {
+            const id = `faq-${mountIndex + 1}-${index + 1}`;
 
-                return `
-                    <article class="faq-item">
-                        <button class="faq-question" type="button" aria-expanded="false" aria-controls="${id}">
-                            <span>${escapeHtml(item.question)}</span>
-                            ${createIcon("plus")}
-                        </button>
+            return `
+                <article class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="${id}">
+                        <span>${escapeHtml(item.question)}</span>
+                        ${createIcon("plus")}
+                    </button>
 
-                        <div class="faq-answer" id="${id}">
-                            <div class="faq-answer-inner">
-                                <p>${escapeHtml(item.answer)}</p>
-                            </div>
+                    <div class="faq-answer" id="${id}">
+                        <div class="faq-answer-inner">
+                            <p>${escapeHtml(item.answer)}</p>
                         </div>
-                    </article>
-                `;
-            })
-            .join("");
+                    </div>
+                </article>
+            `;
+        });
+
+        mount.classList.toggle("faq-columns", useColumns);
+
+        if (!useColumns) {
+            mount.innerHTML = itemsHtml.join("");
+            return;
+        }
+
+        const leftColumn = [];
+        const rightColumn = [];
+
+        itemsHtml.forEach((html, index) => {
+            if (index % 2 === 0) {
+                leftColumn.push(html);
+            } else {
+                rightColumn.push(html);
+            }
+        });
+
+        mount.innerHTML = `
+            <div class="faq-column">
+                ${leftColumn.join("")}
+            </div>
+            <div class="faq-column">
+                ${rightColumn.join("")}
+            </div>
+        `;
     });
 }
 

@@ -176,7 +176,7 @@ window.SITE_CONFIG = {
             accent: "warm",
             label: "Heating support",
             image: "./assets/images/services/heating-repair.jpg",
-            heroImage: "./assets/images/service-pages/heating-repair-hero.jpg",
+            heroImage: "../assets/images/service-pages/heating-repair-hero.jpg",
             summary:
                 "Compare provider options for heating repair, furnace service, inconsistent heat, and cold-weather system concerns.",
             cardText:
@@ -217,7 +217,7 @@ window.SITE_CONFIG = {
             accent: "cool",
             label: "Airflow planning",
             image: "./assets/images/services/ventilation.jpg",
-            heroImage: "./assets/images/service-pages/ventilation-hero.jpg",
+            heroImage: "../assets/images/service-pages/ventilation-hero.jpg",
             summary:
                 "Explore provider options for ventilation concerns, airflow balance, duct-related requests, and comfort improvements.",
             cardText:

@@ -972,9 +972,16 @@
 
     .about-boundary .boundary-item {
         grid-template-columns: 1fr !important;
-        align-content: start !important;
+        justify-items: center !important;
+        text-align: center !important;
+        align-content: center !important;
         gap: 12px !important;
         min-height: 170px !important;
+    }
+
+    .about-boundary .boundary-item p {
+        margin: 0 !important;
+        max-width: 26ch !important;
     }
 }
 
@@ -1563,25 +1570,19 @@
 }
 
 .about-faq-section .faq-list {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 14px !important;
-    align-items: start !important;
 }
 
 .about-faq-section .faq-item {
-    height: fit-content !important;
     border-radius: 22px !important;
 
     transition:
-        transform 260ms ease,
         border-color 260ms ease,
         background 260ms ease,
         box-shadow 260ms ease !important;
 }
 
 .about-faq-section .faq-item:hover {
-    transform: translateY(-2px) !important;
     border-color: rgba(56, 200, 216, 0.22) !important;
     background: rgba(56, 200, 216, 0.055) !important;
 
@@ -1640,7 +1641,6 @@
     }
 
     .about-faq-section .faq-list {
-        grid-template-columns: 1fr !important;
         gap: 10px !important;
     }
 

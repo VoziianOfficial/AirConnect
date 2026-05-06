@@ -602,7 +602,6 @@
     grid-template-rows: 1fr auto !important;
     gap: 24px !important;
 
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
     border-radius: 20px !important;
 
     background:
@@ -3070,6 +3069,7 @@
     max-width: 100% !important;
     align-items: center !important;
     gap: 9px !important;
+    white-space: nowrap !important;
 
     min-height: 38px !important;
     padding: 0 13px !important;
@@ -3405,13 +3405,15 @@
     }
 
     .service-mini-points {
-        grid-template-columns: repeat(3, auto) !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
         justify-content: center !important;
         gap: 8px !important;
     }
 
     .service-mini-points span {
-        width: auto !important;
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
     }
 }
 
@@ -3547,27 +3549,21 @@
 }
 
 .service-faq-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 14px !important;
-    align-items: start !important;
 }
 
 .service-faq-grid .faq-item {
-    height: fit-content !important;
     overflow: hidden !important;
 
     border-radius: 22px !important;
 
     transition:
-        transform 260ms ease,
         border-color 260ms ease,
         background 260ms ease,
         box-shadow 260ms ease !important;
 }
 
 .service-faq-grid .faq-item:hover {
-    transform: translateY(-2px) !important;
     border-color: rgba(56, 200, 216, 0.22) !important;
     background: rgba(56, 200, 216, 0.055) !important;
 
@@ -3619,7 +3615,6 @@
     }
 
     .service-faq-grid {
-        grid-template-columns: 1fr !important;
         gap: 10px !important;
     }
 

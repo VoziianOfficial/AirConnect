@@ -302,17 +302,17 @@ function renderServicePage() {
                 <div class="service-mini-points" aria-label="Request reminders">
                     <span>
                         <i data-lucide="ban" aria-hidden="true"></i>
-                        No direct HVAC work by ${escapeServiceHtml(config.companyName)}
+                        No direct HVAC work
                     </span>
 
                     <span>
                         <i data-lucide="users" aria-hidden="true"></i>
-                        Independent provider options
+                        Independent providers
                     </span>
 
                     <span>
                         <i data-lucide="shield-check" aria-hidden="true"></i>
-                        Verify details before hiring
+                        Verify before hiring
                     </span>
                 </div>
             </div>
