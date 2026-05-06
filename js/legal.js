@@ -284,32 +284,40 @@ function renderLegalPage() {
             </div>
         </section>
 
-        <section class="legal-cta section-sm" aria-labelledby="legalCtaTitle">
-            <div class="container-wide">
-                <div class="legal-cta-card reveal-up">
-                    <div class="legal-cta-content">
-                        <p class="section-kicker">Back to AirConnect</p>
-                        <h2 id="legalCtaTitle">
-                            Start a structured HVAC provider matching request.
-                        </h2>
-                        <p class="lead">
-                            Compare independent local provider options for AC repair, cooling installation, heating repair, and ventilation projects.
-                        </p>
-                    </div>
+  <section class="legal-cta legal-final-ribbon final-ribbon section-sm" aria-labelledby="legalCtaTitle">
+    <div class="container-wide">
+        <div class="legal-final-ribbon-card reveal-up">
+            <div class="legal-final-ribbon-content">
+                <p class="section-kicker">Back to AirConnect</p>
 
-                    <div class="legal-cta-actions">
-                        <a class="btn btn-primary" href="contact.html">
-                            <span>Start request</span>
-                            <i data-lucide="arrow-right" aria-hidden="true"></i>
-                        </a>
+                <h2 id="legalCtaTitle">
+                    Start a structured HVAC provider matching request.
+                </h2>
 
-                        <p class="legal-cta-disclaimer" data-disclaimer>
-                            ${escapeLegalHtml(config.disclaimer || "")}
-                        </p>
-                    </div>
+                <p class="lead">
+                    Compare independent local provider options for AC repair, cooling installation, heating repair,
+                    and ventilation projects.
+                </p>
+
+                <div class="legal-final-ribbon-actions">
+                    <a class="btn btn-primary legal-final-ribbon-btn" href="contact.html">
+                        <span>Start request</span>
+                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="legal-final-ribbon-phone" href="tel:${escapeLegalHtml(config.phoneHref || config.phone || "")}" data-phone-link>
+                        <i data-lucide="phone" aria-hidden="true"></i>
+                        <span data-phone-text>${escapeLegalHtml(config.phoneLabel || config.phone || "Compare HVAC options")}</span>
+                    </a>
                 </div>
+
+                <p class="legal-final-ribbon-disclaimer" data-disclaimer>
+                    ${escapeLegalHtml(config.disclaimer || "")}
+                </p>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
     `;
 
     refreshLegalPage();
