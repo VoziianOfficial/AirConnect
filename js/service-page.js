@@ -1,20 +1,20 @@
 "use strict";
 
-/* ==========================================================
-   AIRCONNECT — SERVICE PAGE SCRIPT
-   File: /js/service-page.js
 
-   This renders each service page from /js/config.js
-   based on the current HTML filename.
-   ========================================================== */
+
+
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     renderServicePage();
 });
 
-/* =========================
-   SERVICE PAGE RENDER
-   ========================= */
+
+
+
 
 function renderServicePage() {
     const config = window.SITE_CONFIG;
@@ -397,9 +397,9 @@ function renderServicePage() {
     refreshAfterServiceRender();
 }
 
-/* =========================
-   HTML HELPERS
-   ========================= */
+
+
+
 
 function getEvaluationHtml(service) {
     const points = service.evaluationPoints || [];
@@ -464,9 +464,9 @@ function escapeServiceHtml(value) {
         .replaceAll("'", "&#039;");
 }
 
-/* =========================
-   REFRESH AFTER RENDER
-   ========================= */
+
+
+
 
 function refreshAfterServiceRender() {
     if (typeof injectConfigValues === "function") {

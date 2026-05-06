@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
     initContactMethodHover();
 });
 
-/* =========================
-   CONTACT PANEL HOVER
-   ========================= */
+
+
+
 
 function initContactPanelHover() {
     const items = document.querySelectorAll(".contact-panel-item");
@@ -32,9 +32,9 @@ function initContactPanelHover() {
     });
 }
 
-/* =========================
-   CONTACT METHOD FOCUS
-   ========================= */
+
+
+
 
 function initContactMethodHover() {
     const methods = document.querySelectorAll(".contact-method");

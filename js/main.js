@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshIcons();
 });
 
-/* =========================
-   HELPERS
-   ========================= */
+
+
+
 
 function getConfig() {
     return window.SITE_CONFIG || {};
@@ -92,9 +92,9 @@ function isPrimaryNavActive(item, currentPage) {
     return false;
 }
 
-/* =========================
-   PAGE META
-   ========================= */
+
+
+
 
 function applyPageMeta() {
     const config = getConfig();
@@ -123,9 +123,9 @@ function applyPageMeta() {
     }
 }
 
-/* =========================
-   CONFIG VALUE INJECTION
-   ========================= */
+
+
+
 
 function injectConfigValues() {
     const config = getConfig();
@@ -145,9 +145,9 @@ function injectConfigValues() {
     setHref("[data-email-link]", `mailto:${config.email || ""}`);
 }
 
-/* =========================
-   HEADER
-   ========================= */
+
+
+
 
 function renderHeader() {
     const config = getConfig();
@@ -325,9 +325,9 @@ function renderHeader() {
     `;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+
+
+
 
 function renderFooter() {
     const config = getConfig();
@@ -412,9 +412,9 @@ function renderFooter() {
     `;
 }
 
-/* =========================
-   MOBILE MENU
-   ========================= */
+
+
+
 
 function initMobileMenu() {
     const menu = document.querySelector("[data-mobile-menu]");
@@ -495,9 +495,9 @@ function initMobileMenu() {
     });
 }
 
-/* =========================
-   SERVICE CARDS
-   ========================= */
+
+
+
 
 function renderServiceCards() {
     const config = getConfig();
@@ -548,9 +548,9 @@ function renderServiceCards() {
     refreshIcons();
 }
 
-/* =========================
-   FAQ
-   ========================= */
+
+
+
 
 function renderFaqLists() {
     const config = getConfig();

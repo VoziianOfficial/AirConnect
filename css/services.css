@@ -1,12 +1,12 @@
-/* ==========================================================
-   AIRCONNECT — SERVICES PAGE
-   File: /css/services.css
-   Dark HVAC SaaS services page
-   ========================================================== */
 
-/* =========================
-   SERVICES HERO
-   ========================= */
+
+
+
+
+
+
+
+
 
 .services-hero {
     position: relative;
@@ -132,9 +132,9 @@
     font-weight: 800;
 }
 
-/* =========================
-   SERVICES DIRECTORY
-   ========================= */
+
+
+
 
 .services-directory {
     position: relative;
@@ -183,9 +183,9 @@
     color: var(--color-heading);
 }
 
-/* =========================
-   SERVICES MATCHING SECTION
-   ========================= */
+
+
+
 
 .services-matching {
     background: transparent;
@@ -261,9 +261,9 @@
     line-height: 1.58;
 }
 
-/* =========================
-   SERVICES CHECK SECTION
-   ========================= */
+
+
+
 
 .services-check-section {
     background: transparent;
@@ -319,9 +319,9 @@
     color: var(--color-cool);
 }
 
-/* =========================
-   SERVICES CTA
-   ========================= */
+
+
+
 
 .services-cta {
     padding-bottom: 112px;
@@ -367,9 +367,9 @@
     line-height: 1.52;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
+
+
 
 @media (max-width: 1180px) {
     .services-directory-grid {
@@ -425,10 +425,10 @@
     }
 }
 
-/* ==========================================================
-   SERVICES HERO PANEL — COMPACT PHOTO VERSION
-   MUST BE LAST IN services.css
-   ========================================================== */
+
+
+
+
 
 .services-hero-inner {
     align-items: center !important;
@@ -510,7 +510,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
 }
 
-/* list */
+
 .services-panel-list {
     position: relative !important;
     z-index: 2 !important;
@@ -523,7 +523,7 @@
     max-width: 390px !important;
 }
 
-/* clickable card */
+
 .services-panel-item {
     position: relative !important;
     overflow: hidden !important;
@@ -581,7 +581,7 @@
     background: linear-gradient(90deg, rgba(127, 232, 242, 0.18), transparent 70%) !important;
 }
 
-/* icon */
+
 .services-panel-icon {
     position: relative !important;
     z-index: 1 !important;
@@ -611,7 +611,7 @@
     transition: transform 260ms ease !important;
 }
 
-/* text */
+
 .services-panel-text {
     position: relative !important;
     z-index: 1 !important;
@@ -649,7 +649,7 @@
         color 260ms ease !important;
 }
 
-/* hover colors */
+
 .services-panel-item:hover {
     transform: translateY(-2px) !important;
     border-color: rgba(56, 200, 216, 0.28) !important;
@@ -710,9 +710,9 @@
     color: rgba(247, 250, 248, 0.82) !important;
 }
 
-/* =========================
-   TABLET
-   ========================= */
+
+
+
 
 @media (max-width: 1080px) {
     .services-hero-inner {
@@ -750,9 +750,9 @@
     }
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+
+
+
 
 @media (max-width: 720px) {
     .services-hero-inner {
@@ -810,7 +810,7 @@
     }
 }
 
-/* VERY SMALL MOBILE */
+
 @media (max-width: 420px) {
     .services-hero-panel {
         min-height: 240px !important;
@@ -845,10 +845,10 @@
     }
 }
 
-/* ==========================================================
-   SERVICES HERO PANEL — CENTER CONTENT FIX
-   MUST BE LAST IN services.css
-   ========================================================== */
+
+
+
+
 
 .services-hero-panel {
     display: flex !important;
@@ -862,7 +862,7 @@
     margin: auto !important;
 }
 
-/* сами карточки внутри тоже ровнее */
+
 .services-panel-item {
     align-items: center !important;
 }
@@ -879,7 +879,7 @@
     align-self: center !important;
 }
 
-/* TABLET */
+
 @media (max-width: 1080px) {
     .services-hero-panel {
         display: flex !important;
@@ -894,7 +894,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 720px) {
     .services-hero-panel {
         display: flex !important;
@@ -914,10 +914,10 @@
 }
 
 
-/* ==========================================================
-   SERVICES HERO — FULL REBUILD LIKE HOME HERO REFERENCE
-   MUST BE LAST IN services.css
-   ========================================================== */
+
+
+
+
 
 .services-hero.services-hero-reference {
     position: relative !important;
@@ -931,7 +931,7 @@
     display: none !important;
 }
 
-/* большая фото-секция как home hero */
+
 .services-hero-reference>.container-wide {
     position: relative !important;
     isolation: isolate !important;
@@ -1002,7 +1002,7 @@
         inset 0 80px 130px rgba(0, 0, 0, 0.18) !important;
 }
 
-/* layout внутри */
+
 .services-hero-reference .services-hero-inner {
     position: relative !important;
     z-index: 3 !important;
@@ -1025,7 +1025,7 @@
     max-width: 880px !important;
 }
 
-/* заголовок — строго 3 строки */
+
 .services-hero-reference #servicesHeroTitle {
     display: grid !important;
     gap: 0 !important;
@@ -1060,14 +1060,14 @@
     line-height: 1.55 !important;
 }
 
-/* actions */
+
 .services-hero-reference .home-hero-actions {
     display: flex !important;
     flex-wrap: wrap !important;
     gap: 12px !important;
 }
 
-/* панель теперь не отдельная карточка, а нижняя плашка */
+
 .services-hero-reference .services-hero-panel,
 .services-hero-reference .services-hero-panel:hover {
     position: relative !important;
@@ -1094,7 +1094,7 @@
     display: none !important;
 }
 
-/* одна линия внизу */
+
 .services-hero-reference .services-panel-list {
     position: relative !important;
     z-index: 3 !important;
@@ -1120,7 +1120,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
 }
 
-/* сервисные плашки */
+
 .services-hero-reference .services-panel-item {
     position: relative !important;
     overflow: hidden !important;
@@ -1241,7 +1241,7 @@
         color 260ms ease !important;
 }
 
-/* hovers */
+
 .services-hero-reference .services-panel-item:hover {
     transform: translateY(-3px) !important;
     border-color: rgba(56, 200, 216, 0.28) !important;
@@ -1298,9 +1298,9 @@
     color: rgba(247, 250, 248, 0.82) !important;
 }
 
-/* =========================
-   TABLET
-   ========================= */
+
+
+
 
 @media (max-width: 1080px) {
     .services-hero.services-hero-reference {
@@ -1384,9 +1384,9 @@
     }
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+
+
+
 
 @media (max-width: 720px) {
     .services-hero.services-hero-reference {
@@ -1528,14 +1528,14 @@
 }
 
 
-/* ==========================================================
-   SERVICES CHECK + MATCHING — PREMIUM HOVER COLOR SHIFTS
-   MUST BE LAST IN services.css
-   ========================================================== */
 
-/* =========================
-   CHECKLIST PANEL HOVERS
-   ========================= */
+
+
+
+
+
+
+
 
 .services-check-panel {
     position: relative !important;
@@ -1683,9 +1683,9 @@
 }
 
 
-/* =========================
-   MATCHING STACK HOVERS
-   ========================= */
+
+
+
 
 .matching-stack-card {
     position: relative !important;
@@ -1774,7 +1774,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.09) !important;
 }
 
-/* number circles */
+
 .matching-stack-number {
     transition:
         transform 260ms ease,
@@ -1811,7 +1811,7 @@
         0 0 0 1px rgba(244, 184, 74, 0.22) !important;
 }
 
-/* text color on hover */
+
 .matching-stack-card h3,
 .matching-stack-card p {
     transition: color 260ms ease !important;
@@ -1825,7 +1825,7 @@
     color: rgba(247, 250, 248, 0.84) !important;
 }
 
-/* button hover in matching copy */
+
 .services-matching-copy .btn-primary {
     transition:
         background 260ms ease,
@@ -1844,7 +1844,7 @@
         0 0 0 1px rgba(56, 200, 216, 0.18) !important;
 }
 
-/* touch devices */
+
 @media (hover: none) {
 
     .services-check-item:hover,
@@ -1854,10 +1854,10 @@
     }
 }
 
-/* ==========================================================
-   SERVICES FAQ — TWO COLUMNS ON DESKTOP
-   MUST BE LAST IN services.css
-   ========================================================== */
+
+
+
+
 
 .services-faq-section .container-narrow {
     width: min(calc(100% - 40px), 1120px) !important;
@@ -1905,7 +1905,7 @@
     line-height: 1.56 !important;
 }
 
-/* чтобы открытый аккордеон выглядел активным */
+
 .services-faq-section .faq-item.is-open {
     border-color: rgba(183, 255, 42, 0.2) !important;
     background: rgba(183, 255, 42, 0.045) !important;
@@ -1915,7 +1915,7 @@
     color: var(--color-accent) !important;
 }
 
-/* TABLET / MOBILE — обратно одна колонка */
+
 @media (max-width: 860px) {
     .services-faq-section .container-narrow {
         width: min(calc(100% - 28px), 760px) !important;
@@ -1937,10 +1937,10 @@
 
 
 
-/* ==========================================================
-   SERVICES CTA — SAME AS HOME FINAL RIBBON
-   MUST BE LAST IN services.css
-   ========================================================== */
+
+
+
+
 
 .services-final-ribbon {
     padding-top: 26px !important;
@@ -2026,7 +2026,7 @@
     mask-image: linear-gradient(180deg, black, transparent 72%) !important;
 }
 
-/* content */
+
 .services-final-ribbon-content {
     position: relative !important;
     z-index: 2 !important;
@@ -2063,7 +2063,7 @@
     line-height: 1.48 !important;
 }
 
-/* actions */
+
 .services-final-ribbon-actions {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -2125,7 +2125,7 @@
     line-height: 1.42 !important;
 }
 
-/* hover */
+
 .services-final-ribbon-card:hover {
     border-color: rgba(56, 200, 216, 0.26) !important;
 
@@ -2174,7 +2174,7 @@
     transform: rotate(-8deg) scale(1.06) !important;
 }
 
-/* TABLET */
+
 @media (max-width: 980px) {
     .services-final-ribbon {
         padding-top: 22px !important;
@@ -2211,7 +2211,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 680px) {
     .services-final-ribbon {
         padding-top: 8px !important;
@@ -2271,10 +2271,10 @@
 }
 
 
-/* ==========================================================
-   SERVICES DIRECTORY — BRIGHTER PHOTO CARDS
-   MUST BE LAST IN services.css
-   ========================================================== */
+
+
+
+
 
 .services-directory-grid .service-card-photo .service-card-bg,
 .services-directory-grid .service-card-bg {
@@ -2282,7 +2282,7 @@
     filter: brightness(1.08) contrast(1.08) saturate(1.16) !important;
 }
 
-/* уменьшаем тёмный градиент поверх фото */
+
 .services-directory-grid .service-card-photo .service-card-overlay,
 .services-directory-grid .service-card-overlay {
     background:
@@ -2296,12 +2296,12 @@
             rgba(3, 7, 10, 0.48) 100%) !important;
 }
 
-/* цветные свечения тоже делаем мягче, чтобы не гасили фото */
+
 .services-directory-grid .service-card-photo::before {
     opacity: 0.46 !important;
 }
 
-/* текст оставляем читаемым */
+
 .services-directory-grid .service-card-photo h3 {
     color: #ffffff !important;
     text-shadow: 0 12px 34px rgba(0, 0, 0, 0.58) !important;
@@ -2315,7 +2315,7 @@
     color: rgba(247, 250, 248, 0.76) !important;
 }
 
-/* hover — фото становится ещё ярче */
+
 .services-directory-grid .service-card-photo:hover .service-card-bg,
 .services-directory-grid .service-card:hover .service-card-bg {
     opacity: 0.96 !important;
@@ -2336,7 +2336,7 @@
             rgba(3, 7, 10, 0.4) 100%) !important;
 }
 
-/* mobile/tablet — тоже ярче, но без потери читаемости */
+
 @media (max-width: 1180px) {
 
     .services-directory-grid .service-card-photo .service-card-bg,
@@ -2373,19 +2373,19 @@
     }
 }
 
-/* ==========================================================
-   SERVICES DIRECTORY — BOTTOM TEXT READABILITY FIX
-   MUST BE LAST IN services.css
-   ========================================================== */
 
-/* фото оставляем ярким */
+
+
+
+
+
 .services-directory-grid .service-card-photo .service-card-bg,
 .services-directory-grid .service-card .service-card-bg {
     opacity: 0.88 !important;
     filter: brightness(1.05) contrast(1.08) saturate(1.14) !important;
 }
 
-/* главный фикс: сильное затемнение именно снизу */
+
 .services-directory-grid .service-card-photo .service-card-overlay,
 .services-directory-grid .service-card .service-card-overlay {
     background:
@@ -2401,7 +2401,7 @@
             rgba(3, 7, 10, 0.5) 100%) !important;
 }
 
-/* дополнительная тёмная подложка прямо под нижним текстом */
+
 .services-directory-grid .service-card-photo a::after,
 .services-directory-grid .service-card a::after {
     content: "" !important;
@@ -2420,7 +2420,7 @@
             rgba(3, 7, 10, 0.9) 100%) !important;
 }
 
-/* сам нижний текст кладём на аккуратную glass-плашку */
+
 .services-directory-grid .service-card-photo .service-card-content,
 .services-directory-grid .service-card .service-card-content {
     position: relative !important;
@@ -2444,7 +2444,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.09) !important;
 }
 
-/* label внутри нижней плашки — без лишнего белого шума */
+
 .services-directory-grid .service-card-photo .service-card-label,
 .services-directory-grid .service-card .service-card-label {
     padding: 0 !important;
@@ -2455,7 +2455,7 @@
     backdrop-filter: none !important;
 }
 
-/* заголовок и описание — максимально читаемые */
+
 .services-directory-grid .service-card-photo h3,
 .services-directory-grid .service-card h3 {
     color: #ffffff !important;
@@ -2468,7 +2468,7 @@
     text-shadow: 0 8px 22px rgba(0, 0, 0, 0.65) !important;
 }
 
-/* footer тоже должен быть выше затемнения */
+
 .services-directory-grid .service-card-photo .service-card-footer,
 .services-directory-grid .service-card .service-card-footer {
     position: relative !important;
@@ -2481,7 +2481,7 @@
     color: #ffffff !important;
 }
 
-/* hover: фото чуть ярче, но нижний текст не теряется */
+
 .services-directory-grid .service-card-photo:hover .service-card-bg,
 .services-directory-grid .service-card:hover .service-card-bg {
     opacity: 0.96 !important;
@@ -2502,7 +2502,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.11) !important;
 }
 
-/* mobile/tablet — плашку чуть компактнее */
+
 @media (max-width: 720px) {
 
     .services-directory-grid .service-card-photo .service-card-content,
@@ -2518,18 +2518,18 @@
 }
 
 
-/* ==========================================================
-   SERVICES DIRECTORY — TITLES ONLY PHOTO CARDS
-   MUST BE LAST IN services.css
-   ========================================================== */
 
-/* убираем описательный текст внутри карточек */
+
+
+
+
+
 .services-directory-grid .service-card p,
 .services-directory-grid .service-card-photo p {
     display: none !important;
 }
 
-/* нижняя текстовая зона становится компактнее */
+
 .services-directory-grid .service-card-content,
 .services-directory-grid .service-card-photo .service-card-content {
     gap: 8px !important;
@@ -2537,7 +2537,7 @@
     margin: 0 -6px -4px !important;
 }
 
-/* заголовок делаем главным элементом */
+
 .services-directory-grid .service-card h3,
 .services-directory-grid .service-card-photo h3 {
     margin: 0 !important;
@@ -2550,14 +2550,14 @@
         0 18px 46px rgba(0, 0, 0, 0.55) !important;
 }
 
-/* label оставляем маленьким и аккуратным */
+
 .services-directory-grid .service-card-label {
     color: rgba(247, 250, 248, 0.72) !important;
     font-size: 0.7rem !important;
     letter-spacing: 0.11em !important;
 }
 
-/* карточки можно сделать немного ниже, раз текста меньше */
+
 .services-directory-grid .service-card,
 .services-directory-grid .service-card-photo {
     min-height: 300px !important;
@@ -2568,19 +2568,19 @@
     min-height: 300px !important;
 }
 
-/* footer ближе к заголовку */
+
 .services-directory-grid .service-card-footer {
     margin-top: 14px !important;
     padding-top: 13px !important;
 }
 
-/* hover — плашка остаётся компактной */
+
 .services-directory-grid .service-card:hover .service-card-content,
 .services-directory-grid .service-card-photo:hover .service-card-content {
     border-color: rgba(56, 200, 216, 0.24) !important;
 }
 
-/* TABLET */
+
 @media (max-width: 1180px) {
 
     .services-directory-grid .service-card,
@@ -2596,7 +2596,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 720px) {
 
     .services-directory-grid .service-card,

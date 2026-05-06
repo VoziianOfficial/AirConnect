@@ -504,9 +504,9 @@ window.SITE_CONFIG = {
     }
 };
 
-/* ==========================================================
-   SMALL CONFIG HELPERS
-   ========================================================== */
+
+
+
 
 window.AIRCONNECT = {
     getCurrentPageName() {

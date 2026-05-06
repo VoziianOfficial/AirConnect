@@ -169,9 +169,9 @@
     letter-spacing: -0.03em;
 }
 
-/* =========================
-   SERVICE INTRO STRIP
-   ========================= */
+
+
+
 
 .service-intro-strip {
     margin-top: -26px;
@@ -240,9 +240,9 @@
     text-overflow: ellipsis;
 }
 
-/* =========================
-   SERVICE DETAIL
-   ========================= */
+
+
+
 
 .service-detail {
     background: transparent;
@@ -314,9 +314,9 @@
     line-height: 1.45;
 }
 
-/* =========================
-   SERVICE PROCESS
-   ========================= */
+
+
+
 
 .service-process {
     background: transparent;
@@ -369,9 +369,9 @@
     font-size: 0.95rem;
 }
 
-/* =========================
-   SERVICE PHOTO CTA
-   ========================= */
+
+
+
 
 .service-photo-band {
     padding: 0;
@@ -418,9 +418,9 @@
     padding: clamp(28px, 5vw, 58px);
 }
 
-/* =========================
-   SERVICE FORM SECTION
-   ========================= */
+
+
+
 
 .service-form-section {
     background: transparent;
@@ -461,17 +461,17 @@
     box-shadow: 0 0 16px rgba(56, 200, 216, 0.52);
 }
 
-/* =========================
-   SERVICE FAQ
-   ========================= */
+
+
+
 
 .service-faq-section {
     background: transparent;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
+
+
 
 @media (max-width: 1100px) {
 
@@ -575,10 +575,10 @@
     }
 }
 
-/* ==========================================================
-   SERVICE HERO — COMPACT PREMIUM PHOTO VERSION
-   MUST BE LAST IN service-page.css
-   ========================================================== */
+
+
+
+
 
 .service-hero.service-hero-compact {
     position: relative !important;
@@ -669,9 +669,9 @@
 }
 
 
-/* =========================
-   INNER LAYOUT
-   ========================= */
+
+
+
 
 .service-hero-compact .service-hero-inner {
     position: relative !important;
@@ -721,9 +721,9 @@
     margin-top: 2px !important;
 }
 
-/* =========================
-   RIGHT GLASS PANEL
-   ========================= */
+
+
+
 
 .service-hero-side {
     position: relative !important;
@@ -834,9 +834,9 @@
     line-height: 1.46 !important;
 }
 
-/* =========================
-   BOTTOM CHIPS
-   ========================= */
+
+
+
 
 .service-hero-bottom {
     position: relative !important;
@@ -933,9 +933,9 @@
     color: var(--color-warm) !important;
 }
 
-/* =========================
-   ACCENT VARIANTS
-   ========================= */
+
+
+
 
 .service-hero-card.warm .service-hero-side-icon,
 .service-hero-card.warm .service-hero-chip svg {
@@ -951,9 +951,9 @@
     background: rgba(183, 255, 42, 0.1) !important;
 }
 
-/* =========================
-   TABLET
-   ========================= */
+
+
+
 
 @media (max-width: 1080px) {
     .service-hero.service-hero-compact {
@@ -1031,9 +1031,9 @@
     }
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+
+
+
 
 @media (max-width: 720px) {
     .service-hero.service-hero-compact {
@@ -1151,9 +1151,9 @@
     }
 }
 
-/* =========================
-   SMALL MOBILE
-   ========================= */
+
+
+
 
 @media (max-width: 420px) {
     .service-hero-card {
@@ -1178,10 +1178,10 @@
 }
 
 
-/* ==========================================================
-   SERVICE INTRO STRIP — LIGHT COMPACT CONTRAST VERSION
-   MUST BE LAST IN service-page.css
-   ========================================================== */
+
+
+
+
 
 .service-intro-strip {
     position: relative !important;
@@ -1195,7 +1195,7 @@
     width: min(calc(100% - 32px), 1460px) !important;
 }
 
-/* main light panel */
+
 .service-intro-panel {
     position: relative !important;
     overflow: hidden !important;
@@ -1223,14 +1223,14 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
 }
 
-/* remove old borders */
+
 .service-intro-item,
 .service-intro-item:not(:last-child),
 .service-intro-item:nth-child(-n + 2) {
     border: 0 !important;
 }
 
-/* compact cards */
+
 .service-intro-item {
     position: relative !important;
     overflow: hidden !important;
@@ -1258,7 +1258,7 @@
         box-shadow 260ms ease !important;
 }
 
-/* hover gradient inside card */
+
 .service-intro-item::before {
     content: "" !important;
     position: absolute !important;
@@ -1300,7 +1300,7 @@
         linear-gradient(135deg, rgba(127, 232, 242, 0.12), transparent 70%) !important;
 }
 
-/* icon top right */
+
 .service-intro-icon {
     position: absolute !important;
     top: 14px !important;
@@ -1336,7 +1336,7 @@
     transition: transform 260ms ease !important;
 }
 
-/* different icon tones */
+
 .service-intro-item:nth-child(2) .service-intro-icon {
     border-color: rgba(183, 255, 42, 0.28) !important;
     background: rgba(183, 255, 42, 0.13) !important;
@@ -1355,7 +1355,7 @@
     color: #118b97 !important;
 }
 
-/* text */
+
 .service-intro-item span,
 .service-intro-item strong {
     position: relative !important;
@@ -1383,7 +1383,7 @@
     transition: color 260ms ease !important;
 }
 
-/* hover states */
+
 .service-intro-item:hover {
     transform: translateY(-3px) !important;
     border-color: rgba(56, 200, 216, 0.22) !important;
@@ -1436,9 +1436,9 @@
     transform: rotate(-6deg) scale(1.08) !important;
 }
 
-/* =========================
-   TABLET
-   ========================= */
+
+
+
 
 @media (max-width: 1080px) {
     .service-intro-strip {
@@ -1478,9 +1478,9 @@
     }
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+
+
+
 
 @media (max-width: 720px) {
     .service-intro-strip {
@@ -1531,9 +1531,9 @@
     }
 }
 
-/* =========================
-   SMALL MOBILE
-   ========================= */
+
+
+
 
 @media (max-width: 390px) {
     .service-intro-panel {
@@ -1551,7 +1551,7 @@
     }
 }
 
-/* no hover jump on touch devices */
+
 @media (hover: none) {
 
     .service-intro-item:hover,
@@ -1560,10 +1560,10 @@
     }
 }
 
-/* ==========================================================
-   SERVICE INTRO STRIP — EXTRA COMPACT CARD HEIGHT FIX
-   MUST BE LAST IN service-page.css
-   ========================================================== */
+
+
+
+
 
 .service-intro-item {
     min-height: 0 !important;
@@ -1600,7 +1600,7 @@
     line-height: 1.08 !important;
 }
 
-/* TABLET */
+
 @media (max-width: 1080px) {
     .service-intro-item {
         min-height: 0 !important;
@@ -1613,7 +1613,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 720px) {
     .service-intro-panel {
         gap: 6px !important;
@@ -1650,7 +1650,7 @@
     }
 }
 
-/* SMALL MOBILE */
+
 @media (max-width: 390px) {
     .service-intro-panel {
         grid-template-columns: 1fr !important;
@@ -1666,10 +1666,10 @@
     }
 }
 
-/* ==========================================================
-   SERVICE DETAIL — COMPACT CLEAN COMPARISON SECTION
-   MUST BE LAST IN service-page.css
-   ========================================================== */
+
+
+
+
 
 .service-detail {
     position: relative !important;
@@ -1748,7 +1748,7 @@
     z-index: 1 !important;
 }
 
-/* LEFT TEXT */
+
 
 .service-detail-copy {
     display: grid !important;
@@ -1811,7 +1811,7 @@
         0 0 0 1px rgba(56, 200, 216, 0.16) !important;
 }
 
-/* RIGHT CHECK PANEL — NO HEAVY CARD-IN-CARD LOOK */
+
 
 .service-check-panel {
     display: grid !important;
@@ -1844,7 +1844,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.09) !important;
 }
 
-/* ITEMS */
+
 
 .service-check-item {
     position: relative !important;
@@ -1992,7 +1992,7 @@
         0 0 0 1px rgba(244, 184, 74, 0.16) !important;
 }
 
-/* TABLET */
+
 
 @media (max-width: 1080px) {
     .service-detail {
@@ -2020,7 +2020,7 @@
     }
 }
 
-/* MOBILE */
+
 
 @media (max-width: 720px) {
     .service-detail {
@@ -2091,10 +2091,10 @@
 }
 
 
-/* ==========================================================
-   SERVICE PROCESS — COMPACT PREMIUM VERSION
-   MUST BE LAST IN service-page.css
-   ========================================================== */
+
+
+
+
 
 .service-process {
     padding-top: 0 !important;
@@ -2118,7 +2118,7 @@
     line-height: 1.5 !important;
 }
 
-/* GRID */
+
 
 .service-process-grid {
     display: grid !important;
@@ -2126,7 +2126,7 @@
     gap: 14px !important;
 }
 
-/* CARD */
+
 
 .service-process-card {
     position: relative !important;
@@ -2198,7 +2198,7 @@
     z-index: 1 !important;
 }
 
-/* NUMBER */
+
 
 .service-process-number {
     display: grid !important;
@@ -2241,7 +2241,7 @@
     border-color: rgba(244, 184, 74, 0.2) !important;
 }
 
-/* TEXT */
+
 
 .service-process-card h3 {
     margin: 0 !important;
@@ -2264,7 +2264,7 @@
     transition: color 260ms ease !important;
 }
 
-/* HOVERS */
+
 
 .service-process-card:hover {
     transform: translateY(-3px) !important;
@@ -2347,7 +2347,7 @@
         0 0 0 1px rgba(244, 184, 74, 0.2) !important;
 }
 
-/* TABLET — SAME AS DESKTOP, JUST COMPACTER */
+
 
 @media (min-width: 721px) and (max-width: 1100px) {
     .service-process {
@@ -2387,7 +2387,7 @@
     }
 }
 
-/* MOBILE — NUMBER IN TOP RIGHT */
+
 
 @media (max-width: 720px) {
     .service-process {
@@ -2441,7 +2441,7 @@
     }
 }
 
-/* VERY SMALL MOBILE */
+
 
 @media (max-width: 420px) {
     .service-process-card {
@@ -2466,7 +2466,7 @@
     }
 }
 
-/* TOUCH DEVICES */
+
 
 @media (hover: none) {
 
@@ -2476,40 +2476,40 @@
     }
 }
 
-/* ==========================================================
-   SERVICE PROCESS — TOP SPACING FIX
-   MUST BE LAST IN service-page.css
-   ========================================================== */
+
+
+
+
 
 .service-process {
     padding-top: 34px !important;
 }
 
-/* TABLET */
+
 @media (min-width: 721px) and (max-width: 1100px) {
     .service-process {
         padding-top: 26px !important;
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 720px) {
     .service-process {
         padding-top: 18px !important;
     }
 }
 
-/* VERY SMALL MOBILE */
+
 @media (max-width: 420px) {
     .service-process {
         padding-top: 14px !important;
     }
 }
 
-/* ==========================================================
-   SERVICE INTRO STRIP — SEMI TRANSPARENT LIGHT BACKGROUND
-   MUST BE LAST IN service-page.css
-   ========================================================== */
+
+
+
+
 
 .service-intro-panel {
     background: rgba(255, 255, 255, 0.58) !important;
@@ -2547,7 +2547,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.82) !important;
 }
 
-/* hover */
+
 .service-intro-item:hover {
     background: rgba(56, 200, 216, 0.12) !important;
     border-color: rgba(56, 200, 216, 0.2) !important;
@@ -2570,10 +2570,10 @@
     color: #071014 !important;
 }
 
-/* ==========================================================
-   SERVICE PHOTO EDITORIAL — NO INNER CARDS
-   MUST BE LAST IN service-page.css
-   ========================================================== */
+
+
+
+
 
 .service-photo-editorial {
     padding-top: 14px !important;
@@ -2659,7 +2659,7 @@
         inset 0 -110px 160px rgba(0, 0, 0, 0.62) !important;
 }
 
-/* layout */
+
 
 .service-photo-editorial-layout {
     position: relative !important;
@@ -2701,7 +2701,7 @@
     line-height: 1.55 !important;
 }
 
-/* right list — not cards */
+
 
 .service-photo-editorial-list {
     grid-area: list !important;
@@ -2775,7 +2775,7 @@
     letter-spacing: -0.035em !important;
 }
 
-/* note */
+
 
 .service-photo-editorial-note {
     grid-area: note !important;
@@ -2808,7 +2808,7 @@
     color: #f7faf8 !important;
 }
 
-/* hover */
+
 
 .service-photo-editorial-card:hover {
     border-color: rgba(56, 200, 216, 0.2) !important;
@@ -2843,7 +2843,7 @@
     color: var(--color-accent) !important;
 }
 
-/* TABLET */
+
 
 @media (max-width: 1080px) {
     .service-photo-editorial {
@@ -2891,7 +2891,7 @@
     }
 }
 
-/* MOBILE */
+
 
 @media (max-width: 720px) {
     .service-photo-editorial {
@@ -2975,10 +2975,10 @@
     }
 }
 
-/* ==========================================================
-   SERVICE MINI REQUEST — COMPACT PREMIUM FORM
-   MUST BE LAST IN service-page.css
-   ========================================================== */
+
+
+
+
 
 .service-mini-request {
     padding-top: 28px !important;
@@ -3033,7 +3033,7 @@
     z-index: 1 !important;
 }
 
-/* left copy */
+
 
 .service-mini-copy {
     display: grid !important;
@@ -3113,7 +3113,7 @@
     color: #071014 !important;
 }
 
-/* form */
+
 
 .service-mini-form {
     display: grid !important;
@@ -3182,7 +3182,7 @@
     color: var(--color-cool) !important;
 }
 
-/* fields */
+
 
 .service-mini-form-grid {
     display: grid !important;
@@ -3286,7 +3286,7 @@
         0 12px 24px rgba(56, 200, 216, 0.08) !important;
 }
 
-/* validation */
+
 
 .service-mini-form .is-invalid {
     border-color: rgba(221, 101, 56, 0.78) !important;
@@ -3301,7 +3301,7 @@
     border-color: rgba(24, 156, 93, 0.48) !important;
 }
 
-/* message */
+
 
 .service-mini-message {
     display: none !important;
@@ -3331,7 +3331,7 @@
     color: #11643d !important;
 }
 
-/* bottom */
+
 
 .service-mini-form-bottom {
     display: grid !important;
@@ -3363,7 +3363,7 @@
     line-height: 1.38 !important;
 }
 
-/* hover whole section */
+
 
 .service-mini-request-card {
     transition:
@@ -3381,7 +3381,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
 }
 
-/* TABLET */
+
 
 @media (max-width: 1080px) {
     .service-mini-request {
@@ -3423,7 +3423,7 @@
     }
 }
 
-/* MOBILE */
+
 
 @media (max-width: 720px) {
     .service-mini-request {
@@ -3525,10 +3525,10 @@
 }
 
 
-/* ==========================================================
-   SERVICE FAQ — 2 COLUMNS / 4 QUESTIONS
-   MUST BE LAST IN service-page.css
-   ========================================================== */
+
+
+
+
 
 .service-faq-grid-section {
     padding-top: 34px !important;
@@ -3603,7 +3603,7 @@
     color: var(--color-accent) !important;
 }
 
-/* TABLET / MOBILE */
+
 @media (max-width: 860px) {
     .service-faq-grid-section {
         padding-top: 28px !important;
@@ -3633,10 +3633,10 @@
         padding: 0 18px 18px !important;
     }
 }
-/* ==========================================================
-   SERVICE HERO — DISABLE PHOTO / GRADIENT HOVER CHANGE
-   MUST BE LAST IN service-page.css
-   ========================================================== */
+
+
+
+
 
 .service-hero-card {
     transition:

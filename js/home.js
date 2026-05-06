@@ -1,15 +1,15 @@
 "use strict";
 
-/* ==========================================================
-   AIRCONNECT — HOME PAGE SCRIPT
-   File: /js/home.js
 
-   Home-only behavior:
-   - subtle hero visual parallax
-   - floating badge depth movement
-   - intro strip active item
-   - review cards soft focus
-   ========================================================== */
+
+
+
+
+
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initHomeHeroParallax();
@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     initReviewFocus();
 });
 
-/* =========================
-   HERO PARALLAX
-   ========================= */
+
+
+
 
 function initHomeHeroParallax() {
     const wrap = document.querySelector(".home-hero-visual-wrap");
@@ -54,9 +54,9 @@ function initHomeHeroParallax() {
     });
 }
 
-/* =========================
-   INTRO STRIP INTERACTION
-   ========================= */
+
+
+
 
 function initIntroStripInteraction() {
     const items = document.querySelectorAll(".intro-strip-item");
@@ -75,9 +75,9 @@ function initIntroStripInteraction() {
     });
 }
 
-/* =========================
-   REVIEW FOCUS
-   ========================= */
+
+
+
 
 function initReviewFocus() {
     const cards = document.querySelectorAll(".review-card");

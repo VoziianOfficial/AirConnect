@@ -1,7 +1,7 @@
-/* ==========================================================
-   AIRCONNECT — LEGAL PAGES
-   File: /css/legal.css
-   ========================================================== */
+
+
+
+
 
 .legal-hero {
     position: relative;
@@ -61,9 +61,9 @@
     height: 15px;
 }
 
-/* =========================
-   LEGAL BODY
-   ========================= */
+
+
+
 
 .legal-section {
     background: transparent;
@@ -158,9 +158,9 @@
     height: 16px;
 }
 
-/* =========================
-   LEGAL CONTENT
-   ========================= */
+
+
+
 
 .legal-content-card {
     overflow: hidden;
@@ -250,9 +250,9 @@
     line-height: 1.6;
 }
 
-/* =========================
-   LEGAL CTA
-   ========================= */
+
+
+
 
 .legal-cta {
     padding-bottom: 112px;
@@ -297,9 +297,9 @@
     line-height: 1.52;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
+
+
 
 @media (max-width: 1000px) {
     .legal-layout {
@@ -336,10 +336,10 @@
     }
 }
 
-/* ==========================================================
-   LEGAL CTA — SAME AS HOME FINAL RIBBON
-   MUST BE LAST IN legal.css
-   ========================================================== */
+
+
+
+
 
 .legal-final-ribbon {
     padding-top: 26px !important;
@@ -425,7 +425,7 @@
     mask-image: linear-gradient(180deg, black, transparent 72%) !important;
 }
 
-/* CONTENT */
+
 
 .legal-final-ribbon-content {
     position: relative !important;
@@ -463,7 +463,7 @@
     line-height: 1.48 !important;
 }
 
-/* ACTIONS */
+
 
 .legal-final-ribbon-actions {
     display: flex !important;
@@ -529,7 +529,7 @@
     line-height: 1.42 !important;
 }
 
-/* HOVERS */
+
 
 .legal-final-ribbon-card:hover {
     border-color: rgba(56, 200, 216, 0.26) !important;
@@ -579,7 +579,7 @@
     transform: rotate(-8deg) scale(1.06) !important;
 }
 
-/* TABLET */
+
 
 @media (max-width: 980px) {
     .legal-final-ribbon {
@@ -617,7 +617,7 @@
     }
 }
 
-/* MOBILE */
+
 
 @media (max-width: 680px) {
     .legal-final-ribbon {
@@ -678,10 +678,10 @@
 }
 
 
-/* ==========================================================
-   LEGAL HERO — BACKGROUND PHOTO VERSION
-   MUST BE LAST IN legal.css
-   ========================================================== */
+
+
+
+
 
 .legal-hero {
     position: relative !important;
@@ -825,7 +825,7 @@
     color: var(--color-cool) !important;
 }
 
-/* HOVER */
+
 
 .legal-hero>.container-wide {
     transition:
@@ -834,7 +834,7 @@
         background 280ms ease !important;
 }
 
-/* TABLET */
+
 
 @media (max-width: 980px) {
     .legal-hero {
@@ -875,7 +875,7 @@
     }
 }
 
-/* MOBILE */
+
 
 @media (max-width: 680px) {
     .legal-hero {

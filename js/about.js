@@ -1,17 +1,17 @@
 "use strict";
 
-/* ==========================================================
-   AIRCONNECT — ABOUT PAGE SCRIPT
-   File: /js/about.js
-   ========================================================== */
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initAboutPanelHover();
 });
 
-/* =========================
-   ABOUT PANEL HOVER
-   ========================= */
+
+
+
 
 function initAboutPanelHover() {
     const items = document.querySelectorAll(".about-panel-item");

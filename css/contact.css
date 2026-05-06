@@ -128,9 +128,9 @@
     font-weight: 800;
 }
 
-/* =========================
-   CONTACT MAIN
-   ========================= */
+
+
+
 
 .contact-main-section {
     background: transparent;
@@ -249,9 +249,9 @@
     line-height: 1.55;
 }
 
-/* =========================
-   FORM SIDE
-   ========================= */
+
+
+
 
 .contact-form-shell {
     display: grid;
@@ -297,9 +297,9 @@
     font-size: 0.92rem;
 }
 
-/* =========================
-   MAP SECTION
-   ========================= */
+
+
+
 
 .contact-map-section {
     background: transparent;
@@ -354,9 +354,9 @@
     font-weight: 800;
 }
 
-/* =========================
-   CONTACT CTA
-   ========================= */
+
+
+
 
 .contact-cta {
     padding-bottom: 112px;
@@ -402,9 +402,9 @@
     line-height: 1.52;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
+
+
 
 @media (max-width: 1100px) {
 
@@ -452,10 +452,10 @@
     }
 }
 
-/* ==========================================================
-   CONTACT HERO — SAME AS ABOUT HERO REFERENCE
-   MUST BE LAST IN contact.css
-   ========================================================== */
+
+
+
+
 
 .contact-hero.contact-hero-reference {
     position: relative !important;
@@ -539,7 +539,7 @@
         inset 0 80px 130px rgba(0, 0, 0, 0.18) !important;
 }
 
-/* layout */
+
 
 .contact-hero-reference .contact-hero-inner {
     position: relative !important;
@@ -603,7 +603,7 @@
     gap: 12px !important;
 }
 
-/* bottom panel */
+
 
 .contact-hero-reference .contact-hero-panel,
 .contact-hero-reference .contact-hero-panel:hover {
@@ -653,7 +653,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
 }
 
-/* panel items */
+
 
 .contact-hero-reference .contact-panel-item {
     position: relative !important;
@@ -761,7 +761,7 @@
     line-height: 1.18 !important;
 }
 
-/* hover */
+
 
 .contact-hero-reference .contact-panel-item:hover {
     transform: translateY(-3px) !important;
@@ -814,9 +814,9 @@
     color: rgba(247, 250, 248, 0.82) !important;
 }
 
-/* =========================
-   TABLET
-   ========================= */
+
+
+
 
 @media (max-width: 1080px) {
     .contact-hero.contact-hero-reference {
@@ -895,9 +895,9 @@
     }
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+
+
+
 
 @media (max-width: 720px) {
     .contact-hero.contact-hero-reference {
@@ -998,9 +998,9 @@
     }
 }
 
-/* =========================
-   SMALL MOBILE
-   ========================= */
+
+
+
 
 @media (max-width: 420px) {
     .contact-hero-reference>.container-wide {
@@ -1041,10 +1041,10 @@
     }
 }
 
-/* ==========================================================
-   CONTACT REQUEST FORM — COMPACT PREMIUM SECTION
-   MUST BE LAST IN contact.css
-   ========================================================== */
+
+
+
+
 
 .contact-request-section {
     padding-top: 34px !important;
@@ -1289,7 +1289,7 @@
     font-weight: 800;
 }
 
-/* TABLET */
+
 @media (max-width: 1080px) {
     .contact-request-section {
         padding-top: 24px !important;
@@ -1331,7 +1331,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 720px) {
     .contact-request-section {
         padding-top: 14px !important;
@@ -1420,10 +1420,10 @@
     }
 }
 
-/* ==========================================================
-   CONTACT REQUEST FORM — LIGHT CONTRAST VERSION
-   MUST BE LAST IN contact.css
-   ========================================================== */
+
+
+
+
 
 .contact-request-section {
     position: relative !important;
@@ -1479,7 +1479,7 @@
     z-index: 1 !important;
 }
 
-/* LEFT COPY */
+
 
 .contact-request-copy {
     display: grid !important;
@@ -1542,7 +1542,7 @@
     color: #0f9daf !important;
 }
 
-/* FORM */
+
 
 .contact-request-form {
     display: grid !important;
@@ -1666,7 +1666,7 @@
         0 12px 24px rgba(56, 200, 216, 0.08) !important;
 }
 
-/* VALIDATION */
+
 
 .contact-request-form .is-invalid {
     border-color: rgba(221, 101, 56, 0.78) !important;
@@ -1681,7 +1681,7 @@
     border-color: rgba(24, 156, 93, 0.48) !important;
 }
 
-/* BOTTOM */
+
 
 .contact-request-bottom {
     display: grid !important;
@@ -1713,7 +1713,7 @@
     line-height: 1.42 !important;
 }
 
-/* STATUS MESSAGE */
+
 
 .contact-request-status {
     display: none !important;
@@ -1741,7 +1741,7 @@
     color: #9b3f1f !important;
 }
 
-/* HOVERS */
+
 
 .contact-request-card {
     transition:
@@ -1774,7 +1774,7 @@
     color: #071014 !important;
 }
 
-/* TABLET */
+
 
 @media (max-width: 1080px) {
     .contact-request-section {
@@ -1813,7 +1813,7 @@
     }
 }
 
-/* MOBILE */
+
 
 @media (max-width: 720px) {
     .contact-request-section {
@@ -1900,10 +1900,10 @@
     }
 }
 
-/* ==========================================================
-   CONTACT STATIC MAP CARD — NO GOOGLE IFRAME WARNINGS
-   MUST BE LAST IN contact.css
-   ========================================================== */
+
+
+
+
 
 .real-map-card-static {
     position: relative !important;
@@ -1950,7 +1950,7 @@
     line-height: 1.5 !important;
 }
 
-/* карта-превью без iframe */
+
 .real-map-static-preview {
     position: relative !important;
 
@@ -2141,7 +2141,7 @@
     color: var(--color-cool) !important;
 }
 
-/* hover */
+
 .real-map-static-preview:hover::after {
     opacity: 0.42 !important;
 }
@@ -2168,7 +2168,7 @@
     color: #061004 !important;
 }
 
-/* bottom */
+
 .real-map-card-static .map-card-bottom {
     display: grid !important;
     grid-template-columns: auto minmax(0, 1fr) auto !important;
@@ -2241,7 +2241,7 @@
     color: var(--color-cool) !important;
 }
 
-/* TABLET */
+
 @media (max-width: 980px) {
     .real-map-card-static {
         border-radius: 28px !important;
@@ -2252,7 +2252,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 640px) {
     .real-map-card-static {
         gap: 12px !important;
@@ -2296,10 +2296,10 @@
     }
 }
 
-/* ==========================================================
-   CONTACT FAQ — TWO COLUMNS DESKTOP
-   MUST BE LAST IN contact.css
-   ========================================================== */
+
+
+
+
 
 .contact-faq-section {
     padding-top: 54px !important;
@@ -2400,10 +2400,10 @@
     }
 }
 
-/* ==========================================================
-   CONTACT CTA — SAME AS ABOUT FINAL RIBBON
-   MUST BE LAST IN contact.css
-   ========================================================== */
+
+
+
+
 
 .contact-final-ribbon {
     padding-top: 26px !important;
@@ -2489,7 +2489,7 @@
     mask-image: linear-gradient(180deg, black, transparent 72%) !important;
 }
 
-/* content */
+
 
 .contact-final-ribbon-content {
     position: relative !important;
@@ -2527,7 +2527,7 @@
     line-height: 1.48 !important;
 }
 
-/* actions */
+
 
 .contact-final-ribbon-actions {
     display: flex !important;
@@ -2592,7 +2592,7 @@
     line-height: 1.42 !important;
 }
 
-/* hover */
+
 
 .contact-final-ribbon-card:hover {
     border-color: rgba(56, 200, 216, 0.26) !important;
@@ -2642,7 +2642,7 @@
     transform: rotate(-8deg) scale(1.06) !important;
 }
 
-/* TABLET */
+
 
 @media (max-width: 980px) {
     .contact-final-ribbon {
@@ -2680,7 +2680,7 @@
     }
 }
 
-/* MOBILE */
+
 
 @media (max-width: 680px) {
     .contact-final-ribbon {

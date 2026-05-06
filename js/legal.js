@@ -1,17 +1,17 @@
 "use strict";
 
-/* ==========================================================
-   AIRCONNECT — LEGAL PAGE SCRIPT
-   File: /js/legal.js
-   ========================================================== */
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     renderLegalPage();
 });
 
-/* =========================
-   LEGAL DATA
-   ========================= */
+
+
+
 
 const LEGAL_PAGES = {
     "privacy-policy.html": {
@@ -203,9 +203,9 @@ const LEGAL_PAGES = {
     }
 };
 
-/* =========================
-   RENDER
-   ========================= */
+
+
+
 
 function renderLegalPage() {
     const config = window.SITE_CONFIG || {};
@@ -323,9 +323,9 @@ function renderLegalPage() {
     refreshLegalPage();
 }
 
-/* =========================
-   HTML HELPERS
-   ========================= */
+
+
+
 
 function getLegalLinksHtml(currentPage) {
     const links = [

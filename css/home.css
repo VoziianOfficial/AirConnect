@@ -149,7 +149,7 @@
     height: 20px;
 }
 
-/* trust row */
+
 
 .hero-reference-trust {
     position: absolute;
@@ -207,7 +207,7 @@
         linear-gradient(135deg, #efd2b0, #4f6a75 62%, #0c1418);
 }
 
-/* badges */
+
 
 .hero-reference-badge {
     position: absolute;
@@ -264,7 +264,7 @@
     animation-delay: -1.2s;
 }
 
-/* air lines */
+
 
 .hero-reference-air {
     position: absolute;
@@ -303,7 +303,7 @@
     transform: rotate(-8deg);
 }
 
-/* remove old hero visuals inside this hero */
+
 
 .hero-reference .home-hero-visual-wrap,
 .hero-reference .home-hero-chips,
@@ -324,9 +324,9 @@
     }
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
+
+
 
 @media (max-width: 1200px) {
     .hero-reference-card {
@@ -508,9 +508,9 @@
     }
 }
 
-/* =========================
-   INTRO STRIP
-   ========================= */
+
+
+
 
 .home-intro-strip {
     z-index: 3;
@@ -599,9 +599,9 @@
     background: rgba(56, 200, 216, 0.13);
 }
 
-/* =========================
-   SERVICES
-   ========================= */
+
+
+
 
 .home-services {
     position: relative;
@@ -768,9 +768,9 @@
     transform: translate(3px, -3px);
 }
 
-/* =========================
-   PROCESS
-   ========================= */
+
+
+
 
 .home-process {
     position: relative;
@@ -858,9 +858,9 @@
     font-size: 0.95rem;
 }
 
-/* =========================
-   COMPARISON
-   ========================= */
+
+
+
 
 .home-comparison {
     background: transparent;
@@ -949,9 +949,9 @@
     font-weight: 800;
 }
 
-/* =========================
-   PHOTO FEATURE
-   ========================= */
+
+
+
 
 .home-photo-feature {
     padding: 0;
@@ -1025,9 +1025,9 @@
     box-shadow: 0 0 16px rgba(56, 200, 216, 0.52);
 }
 
-/* =========================
-   WHY SECTION — DARK VERSION
-   ========================= */
+
+
+
 
 .home-why-light {
     background: transparent;
@@ -1088,9 +1088,9 @@
     font-size: 0.94rem;
 }
 
-/* =========================
-   REVIEWS
-   ========================= */
+
+
+
 
 .home-reviews {
     position: relative;
@@ -1173,9 +1173,9 @@
     font-size: 0.84rem;
 }
 
-/* =========================
-   FINAL CTA
-   ========================= */
+
+
+
 
 .home-final-cta {
     position: relative;
@@ -1238,9 +1238,9 @@
     line-height: 1.52;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
+
+
 
 @media (max-width: 1180px) {
     .home-hero-inner {
@@ -1503,10 +1503,10 @@
     }
 }
 
-/* ==========================================================
-   HERO TRUST ROW — FINAL NO-OVERLAP FIX
-   Trust row is now part of the content flow, not absolute.
-   ========================================================== */
+
+
+
+
 
 .hero-reference-card {
     min-height: 690px;
@@ -1518,7 +1518,7 @@
     padding-left: 74px;
 }
 
-/* главный фикс: trust больше НЕ absolute */
+
 .hero-reference-trust {
     position: relative !important;
     left: auto !important;
@@ -1538,14 +1538,14 @@
     gap: 15px;
 }
 
-/* чтобы trust не прыгал из-за reveal-анимации */
+
 .hero-reference-trust.reveal-up,
 .hero-reference-trust.reveal-up.is-visible {
     opacity: 1 !important;
     transform: none !important;
 }
 
-/* на широких экранах НЕ меняем trust через bottom */
+
 @media (min-width: 1440px) {
     .hero-reference-card {
         min-height: 700px;
@@ -1593,7 +1593,7 @@
     }
 }
 
-/* планшет */
+
 @media (max-width: 860px) {
     .hero-reference-card {
         min-height: 760px;
@@ -1616,7 +1616,7 @@
     }
 }
 
-/* телефон */
+
 @media (max-width: 520px) {
     .hero-reference-card {
         min-height: 700px;
@@ -1634,9 +1634,9 @@
     }
 }
 
-/* ==========================================================
-   HERO TRUST ROW — BOTTOM BREATHING FIX
-   ========================================================== */
+
+
+
 
 .hero-reference-card {
     min-height: 730px;
@@ -1687,17 +1687,17 @@
     }
 }
 
-/* ==========================================================
-   HERO — WIDER TEXT / COMPACT PHOTO BALANCE
-   ========================================================== */
 
-/* фото справа делаем компактнее */
+
+
+
+
 .hero-reference-bg {
     width: 70%;
     object-position: center right;
 }
 
-/* затемнение чуть шире, чтобы текст комфортно читался */
+
 .hero-reference-shade {
     background:
         linear-gradient(90deg,
@@ -1713,32 +1713,32 @@
             rgba(2, 6, 8, 0.82) 100%);
 }
 
-/* тексту даем больше ширины */
+
 .hero-reference-content {
     width: min(620px, 52vw);
     max-width: 620px;
     padding-left: 82px;
 }
 
-/* заголовок шире и чуть спокойнее по размеру */
+
 .hero-reference-content h1 {
     max-width: 610px;
     font-size: clamp(3.8rem, 4.85vw, 5.65rem);
     line-height: 0.96;
 }
 
-/* описание тоже шире */
+
 .hero-reference-content p {
     max-width: 470px;
 }
 
-/* trust row выравниваем по новому левому отступу */
+
 .hero-reference-trust {
     margin-left: 82px;
     max-width: calc(100% - 164px);
 }
 
-/* badges чуть сдвигаем правее, чтобы не мешали расширенному тексту */
+
 .hero-reference-badge-cool {
     left: 56%;
 }
@@ -1751,7 +1751,7 @@
     right: 10%;
 }
 
-/* airflow тоже чуть правее */
+
 .hero-reference-air span {
     left: 42%;
     width: 28%;
@@ -1822,7 +1822,7 @@
     }
 }
 
-/* планшет — фото снова на всю ширину */
+
 @media (max-width: 860px) {
     .hero-reference-bg {
         width: 100%;
@@ -1849,7 +1849,7 @@
     }
 }
 
-/* телефон */
+
 @media (max-width: 520px) {
     .hero-reference-content {
         padding-left: 20px;
@@ -1865,13 +1865,13 @@
     }
 }
 
-/* ==========================================================
-   HERO REFERENCE — COMPACT TABLET / MOBILE FINAL
-   Cards stay on the right, no overlap.
-   MUST BE LAST IN home.css
-   ========================================================== */
 
-/* TABLET LANDSCAPE / SMALL DESKTOP */
+
+
+
+
+
+
 @media (min-width: 861px) and (max-width: 1180px) {
     .hero-reference {
         padding-top: 98px !important;
@@ -2000,7 +2000,7 @@
     }
 }
 
-/* TABLET PORTRAIT + MOBILE */
+
 @media (max-width: 860px) {
     .hero-reference {
         padding-top: 92px !important;
@@ -2137,7 +2137,7 @@
     }
 }
 
-/* SMALL MOBILE */
+
 @media (max-width: 520px) {
     .hero-reference {
         padding-top: 88px !important;
@@ -2235,12 +2235,12 @@
     }
 }
 
-/* ==========================================================
-   HERO REFERENCE — BETTER TABLET CHAOS + MOBILE CENTER
-   MUST BE LAST IN home.css
-   ========================================================== */
 
-/* TABLET: карточки справа, но живее / хаотичнее */
+
+
+
+
+
 @media (min-width: 861px) and (max-width: 1180px) {
     .hero-reference-card {
         min-height: 565px !important;
@@ -2282,7 +2282,7 @@
         line-height: 1.08 !important;
     }
 
-    /* хаотичная диагональ справа */
+    
     .hero-reference-badge-cool {
         top: 78px !important;
         right: 126px !important;
@@ -2311,7 +2311,7 @@
     }
 }
 
-/* MOBILE / SMALL TABLET: текст по центру, карточки ниже */
+
 @media (max-width: 860px) {
     .hero-reference-card {
         min-height: 640px !important;
@@ -2386,7 +2386,7 @@
         line-height: 1.06 !important;
     }
 
-    /* карточки ниже, но не ровной стопкой */
+    
     .hero-reference-badge-cool {
         top: 342px !important;
         left: 24px !important;
@@ -2418,7 +2418,7 @@
     }
 }
 
-/* SMALL MOBILE: компактнее, текст центр, карточки ниже */
+
 @media (max-width: 520px) {
     .hero-reference-card {
         min-height: 585px !important;
@@ -2501,18 +2501,18 @@
     }
 }
 
-/* ==========================================================
-   AIRCONNECT HERO — FINAL RESPONSIVE COMPOSITION
-   Desktop: text left / badges over photo
-   Tablet wide: text left / badges relaxed right
-   Tablet portrait: centered text / compact badge row
-   Mobile: centered compact stack
-   MUST BE LAST IN home.css
-   ========================================================== */
 
-/* =========================
-   BASE / DESKTOP
-   ========================= */
+
+
+
+
+
+
+
+
+
+
+
 
 .hero-reference {
     position: relative !important;
@@ -2823,10 +2823,10 @@
     }
 }
 
-/* =========================
-   TABLET WIDE 901–1180
-   красивый desktop-like layout
-   ========================= */
+
+
+
+
 
 @media (min-width: 901px) and (max-width: 1180px) {
     .hero-reference {
@@ -2952,10 +2952,10 @@
     }
 }
 
-/* =========================
-   TABLET PORTRAIT 721–900
-   центр, крупный заголовок, badges снизу рядом
-   ========================= */
+
+
+
+
 
 @media (min-width: 721px) and (max-width: 900px) {
     .hero-reference {
@@ -3093,10 +3093,10 @@
     }
 }
 
-/* =========================
-   MOBILE <=720
-   аккуратно, компактно, без наложений
-   ========================= */
+
+
+
+
 
 @media (max-width: 720px) {
     .hero-reference {
@@ -3239,12 +3239,12 @@
     }
 }
 
-/* ==========================================================
-   HERO TITLE — DESKTOP 2 LINES + TABLET CENTER
-   MUST BE LAST IN home.css
-   ========================================================== */
 
-/* DESKTOP: больше места заголовку, 2 строки */
+
+
+
+
+
 @media (min-width: 1181px) {
     .hero-reference-bg {
         width: 60% !important;
@@ -3298,7 +3298,7 @@
     }
 }
 
-/* TABLET: текст по центру */
+
 @media (min-width: 721px) and (max-width: 1180px) {
     .hero-reference-card {
         min-height: auto !important;
@@ -3359,11 +3359,11 @@
     }
 }
 
-/* ==========================================================
-   HERO REFERENCE — TABLET VERSION REBUILD
-   Applies only to tablet: 721px–1180px
-   MUST BE LAST IN home.css
-   ========================================================== */
+
+
+
+
+
 
 @media (min-width: 721px) and (max-width: 1180px) {
     .home-hero.hero-reference {
@@ -3608,7 +3608,7 @@
     }
 }
 
-/* narrower tablet: badges become 2 + 1, still compact */
+
 @media (min-width: 721px) and (max-width: 820px) {
     .hero-reference-card {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -3652,12 +3652,12 @@
 }
 
 
-/* ==========================================================
-   HERO BADGES — COMPACT 3-IN-A-ROW TABLET / MOBILE
-   MUST BE LAST IN home.css
-   ========================================================== */
 
-/* TABLET */
+
+
+
+
+
 @media (min-width: 721px) and (max-width: 1180px) {
     .hero-reference-card {
         display: grid !important;
@@ -3743,7 +3743,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 720px) {
     .hero-reference-card {
         display: grid !important;
@@ -3830,7 +3830,7 @@
     }
 }
 
-/* VERY SMALL MOBILE */
+
 @media (max-width: 420px) {
     .hero-reference-badge {
         min-height: 32px !important;
@@ -3848,9 +3848,9 @@
     }
 }
 
-/* ==========================================================
-   HERO TRUST AVATARS — PREMIUM ABSTRACT HOMEOWNER FACES
-   ========================================================== */
+
+
+
 
 .hero-reference-avatars {
     display: flex !important;
@@ -3904,7 +3904,7 @@
         linear-gradient(135deg, #1c2b33, #7fe8f2) !important;
 }
 
-/* маленький premium-glow сверху */
+
 .hero-reference-avatars span::after {
     content: "";
     position: absolute;
@@ -3916,13 +3916,13 @@
     pointer-events: none;
 }
 
-/* ==========================================================
-   HERO REFERENCE — PREMIUM HOVERS / COLOR SHIFT
-   Buttons, badges, trust avatars
-   MUST BE LAST IN home.css
-   ========================================================== */
 
-/* основная кнопка */
+
+
+
+
+
+
 .hero-reference-btn {
     position: relative !important;
     overflow: hidden !important;
@@ -3969,7 +3969,7 @@
     transition: transform 260ms ease;
 }
 
-/* общая анимация плашек */
+
 .hero-reference-badge {
     cursor: default;
     transition:
@@ -3992,7 +3992,7 @@
     filter: saturate(1.08) brightness(1.06);
 }
 
-/* cooling badge hover */
+
 .hero-reference-badge-cool:hover {
     background: linear-gradient(135deg, #7FE8F2, #38C8D8) !important;
     color: #031014 !important;
@@ -4006,7 +4006,7 @@
     filter: drop-shadow(0 0 10px rgba(56, 200, 216, 0.45));
 }
 
-/* heating badge hover */
+
 .hero-reference-badge-warm:hover {
     background: linear-gradient(135deg, #FFD37A, #F4B84A) !important;
     color: #2A1700 !important;
@@ -4020,7 +4020,7 @@
     filter: drop-shadow(0 0 10px rgba(244, 184, 74, 0.45));
 }
 
-/* lime badge hover */
+
 .hero-reference-badge-lime:hover {
     background: linear-gradient(135deg, #D5FF68, #B7FF2A) !important;
     color: #061004 !important;
@@ -4034,7 +4034,7 @@
     filter: drop-shadow(0 0 10px rgba(183, 255, 42, 0.42));
 }
 
-/* trust row hover */
+
 .hero-reference-trust {
     transition:
         opacity 260ms ease,
@@ -4053,7 +4053,7 @@
     transition: color 260ms ease;
 }
 
-/* avatars hover */
+
 .hero-reference-avatars span {
     transition:
         transform 260ms ease,
@@ -4075,13 +4075,13 @@
     filter: saturate(1.12) brightness(1.08);
 }
 
-/* airflow lines чуть активнее при наведении на hero */
+
 .hero-reference-card:hover .hero-reference-air span {
     opacity: 0.78 !important;
     box-shadow: 0 0 24px rgba(56, 200, 216, 0.38) !important;
 }
 
-/* мягкая подсветка всей карточки hero */
+
 .hero-reference-card {
     transition:
         box-shadow 320ms ease,
@@ -4096,7 +4096,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
 }
 
-/* на mobile hover не нужен, чтобы не было странных tap-эффектов */
+
 @media (hover: none) {
 
     .hero-reference-btn:hover,
@@ -4113,12 +4113,12 @@
     }
 }
 
-/* ==========================================================
-   HERO PHOTO — BRIGHTER TABLET / MOBILE
-   MUST BE LAST IN home.css
-   ========================================================== */
 
-/* TABLET */
+
+
+
+
+
 @media (min-width: 721px) and (max-width: 1180px) {
     .hero-reference-bg {
         opacity: 0.74 !important;
@@ -4135,7 +4135,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 720px) {
     .hero-reference-bg {
         opacity: 0.68 !important;
@@ -4152,7 +4152,7 @@
     }
 }
 
-/* VERY SMALL MOBILE */
+
 @media (max-width: 420px) {
     .hero-reference-bg {
         opacity: 0.72 !important;
@@ -4170,9 +4170,9 @@
 }
 
 
-/* ==========================================================
-   SERVICE CARDS — PHOTO BACKGROUND VERSION
-   ========================================================== */
+
+
+
 
 .service-card-photo {
     position: relative;
@@ -4299,7 +4299,7 @@
     background: rgba(56, 200, 216, 0.13);
 }
 
-/* warm hover */
+
 .service-card-photo[data-accent="warm"]:hover {
     border-color: rgba(244, 184, 74, 0.3);
 }
@@ -4309,7 +4309,7 @@
     background: rgba(244, 184, 74, 0.14);
 }
 
-/* mobile/tablet */
+
 @media (max-width: 1180px) {
 
     .service-card-photo,
@@ -4335,9 +4335,9 @@
 }
 
 
-/* ==========================================================
-   HOW IT WORKS — EXACT REFERENCE STYLE
-   ========================================================== */
+
+
+
 
 .process-exact {
     background: transparent;
@@ -4559,9 +4559,9 @@
     box-shadow: 0 22px 52px rgba(183, 255, 42, 0.22);
 }
 
-/* =========================
-   TABLET
-   ========================= */
+
+
+
 
 @media (max-width: 980px) {
     .process-exact-card {
@@ -4623,9 +4623,9 @@
     }
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+
+
+
 
 @media (max-width: 720px) {
     .process-exact {
@@ -4698,9 +4698,9 @@
     }
 }
 
-/* ==========================================================
-   HOW IT WORKS — PREMIUM HOVERS / COLOR SHIFT
-   ========================================================== */
+
+
+
 
 .process-exact-card {
     transition:
@@ -4750,7 +4750,7 @@
         filter 280ms ease;
 }
 
-/* lime step hover */
+
 .step-lime:hover .process-exact-icon-wrap {
     background: rgba(183, 255, 42, 0.06);
     box-shadow:
@@ -4772,7 +4772,7 @@
     filter: drop-shadow(0 0 10px rgba(183, 255, 42, 0.46));
 }
 
-/* cool step hover */
+
 .step-cool:hover .process-exact-icon-wrap {
     background: rgba(56, 200, 216, 0.06);
     box-shadow:
@@ -4794,7 +4794,7 @@
     filter: drop-shadow(0 0 10px rgba(56, 200, 216, 0.46));
 }
 
-/* warm step hover */
+
 .step-warm:hover .process-exact-icon-wrap {
     background: rgba(244, 184, 74, 0.06);
     box-shadow:
@@ -4816,7 +4816,7 @@
     filter: drop-shadow(0 0 10px rgba(244, 184, 74, 0.46));
 }
 
-/* number dots hover */
+
 .process-exact-dot {
     transition:
         transform 260ms ease,
@@ -4847,7 +4847,7 @@
         0 0 20px rgba(244, 184, 74, 0.3);
 }
 
-/* headings/text hover */
+
 .process-exact-step h3,
 .process-exact-step p {
     transition: color 260ms ease;
@@ -4861,7 +4861,7 @@
     color: rgba(247, 250, 248, 0.9);
 }
 
-/* line glow when hovering whole panel */
+
 .process-exact-line {
     transition:
         background 280ms ease,
@@ -4878,7 +4878,7 @@
     box-shadow: 0 0 20px rgba(56, 200, 216, 0.16);
 }
 
-/* button hover with cyan shift */
+
 .process-exact-btn {
     position: relative;
     overflow: hidden;
@@ -4917,7 +4917,7 @@
     transform: translateX(130%);
 }
 
-/* no strange tap-hover on touch devices */
+
 @media (hover: none) {
 
     .process-exact-step:hover,
@@ -4932,9 +4932,9 @@
     }
 }
 
-/* ==========================================================
-   REVIEWS — AUTHOR ICONS + COMPACT RESPONSIVE VERSION
-   ========================================================== */
+
+
+
 
 .review-avatar {
     display: grid;
@@ -4994,9 +4994,9 @@
         box-shadow 260ms ease;
 }
 
-/* =========================
-   TABLET — cards are much smaller
-   ========================= */
+
+
+
 
 @media (min-width: 721px) and (max-width: 1180px) {
     .home-reviews {
@@ -5058,9 +5058,9 @@
     }
 }
 
-/* =========================
-   MOBILE — compact stacked cards
-   ========================= */
+
+
+
 
 @media (max-width: 720px) {
     .home-reviews {
@@ -5119,7 +5119,7 @@
     }
 }
 
-/* очень маленькие телефоны */
+
 @media (max-width: 420px) {
     .review-card {
         padding: 13px;
@@ -5135,9 +5135,9 @@
     }
 }
 
-/* ==========================================================
-   REVIEWS — AVATAR ICON CENTER FIX
-   ========================================================== */
+
+
+
 
 .review-avatar {
     display: inline-flex !important;
@@ -5161,10 +5161,10 @@
 }
 
 
-/* ==========================================================
-   FINAL CTA — REAL COMPACT RIBBON FIX
-   MUST BE LAST IN home.css
-   ========================================================== */
+
+
+
+
 
 .home-final-cta.final-ribbon,
 .home-final-cta.final-ribbon.section-sm {
@@ -5351,7 +5351,7 @@
     line-height: 1.35 !important;
 }
 
-/* hover */
+
 .final-ribbon-card,
 .final-ribbon-bg,
 .final-ribbon-phone {
@@ -5383,7 +5383,7 @@
     color: #f7faf8 !important;
 }
 
-/* TABLET */
+
 @media (max-width: 980px) {
     .home-final-cta.final-ribbon,
     .home-final-cta.final-ribbon.section-sm {
@@ -5416,7 +5416,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 680px) {
     .home-final-cta.final-ribbon,
     .home-final-cta.final-ribbon.section-sm {
@@ -5489,7 +5489,7 @@
     }
 }
 
-/* VERY SMALL MOBILE */
+
 @media (max-width: 420px) {
     .final-ribbon-content h2,
     #homeFinalCtaTitle {
@@ -5499,10 +5499,10 @@
     .final-ribbon-content p {
         font-size: 0.72rem !important;
     }
-}/* ==========================================================
-   FINAL CTA — REAL COMPACT RIBBON FIX
-   MUST BE LAST IN home.css
-   ========================================================== */
+}
+
+
+
 
 .home-final-cta.final-ribbon,
 .home-final-cta.final-ribbon.section-sm {
@@ -5687,7 +5687,7 @@
     line-height: 1.35 !important;
 }
 
-/* hover */
+
 .final-ribbon-card,
 .final-ribbon-bg,
 .final-ribbon-phone {
@@ -5719,7 +5719,7 @@
     color: #f7faf8 !important;
 }
 
-/* TABLET */
+
 @media (max-width: 980px) {
 
     .home-final-cta.final-ribbon,
@@ -5753,7 +5753,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 680px) {
 
     .home-final-cta.final-ribbon,
@@ -5827,7 +5827,7 @@
     }
 }
 
-/* VERY SMALL MOBILE */
+
 @media (max-width: 420px) {
 
     .final-ribbon-content h2,
@@ -5840,9 +5840,9 @@
     }
 }
 
-/* ==========================================================
-   FINAL CTA — BACKGROUND IMAGE DIRECTLY ON CARD
-   ========================================================== */
+
+
+
 
 .final-ribbon-card {
     background:
@@ -5855,17 +5855,17 @@
         url("../assets/images/home/final-cta-hvac.jpg") center right / cover no-repeat !important;
 }
 
-/* если img остался в HTML — скрываем, чтобы не дублировался */
+
 .final-ribbon-bg {
     display: none !important;
 }
 
-/* overlay можно оставить, но сделать мягче */
+
 .final-ribbon-shade {
     display: none !important;
 }
 
-/* hover — чуть ярче фото */
+
 .final-ribbon-card:hover {
     background:
         radial-gradient(circle at 15% 20%, rgba(56, 200, 216, 0.16), transparent 28%),
@@ -5877,7 +5877,7 @@
         url("../assets/images/home/final-cta-hvac.jpg") center right / cover no-repeat !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .final-ribbon-card {
         background:
@@ -5890,7 +5890,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 680px) {
     .final-ribbon-card {
         background:
@@ -5903,10 +5903,10 @@
 }
 
 
-/* ==========================================================
-   WHY AIRCONNECT — CLEAN LIGHT PROOF STRIP
-   MUST BE LAST IN home.css
-   ========================================================== */
+
+
+
+
 
 .home-proof-clean {
     padding-top: 42px !important;
@@ -6107,7 +6107,7 @@
     line-height: 1.38 !important;
 }
 
-/* right photo */
+
 .proof-clean-media {
     position: relative !important;
     overflow: hidden !important;
@@ -6181,7 +6181,7 @@
     color: #087d88 !important;
 }
 
-/* HOVERS */
+
 .proof-clean-card,
 .proof-clean-media,
 .proof-clean-badge {
@@ -6256,7 +6256,7 @@
     color: rgba(7, 16, 20, 0.76) !important;
 }
 
-/* TABLET */
+
 @media (max-width: 1080px) {
     .home-proof-clean {
         padding-top: 38px !important;
@@ -6308,7 +6308,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 720px) {
     .home-proof-clean {
         padding-top: 30px !important;
@@ -6374,10 +6374,10 @@
     }
 }
 
-/* ==========================================================
-   WHY AIRCONNECT — BACKGROUND PHOTO ON CARD
-   MUST BE LAST IN home.css
-   ========================================================== */
+
+
+
+
 
 .proof-clean-card {
     position: relative !important;
@@ -6411,7 +6411,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.92) !important;
 }
 
-/* скрываем старое отдельное фото справа, если оно осталось в HTML */
+
 .proof-clean-media {
     display: none !important;
 }
@@ -6432,13 +6432,13 @@
     max-width: 720px !important;
 }
 
-/* делаем карточки чуть прозрачнее, чтобы секция выглядела легче */
+
 .proof-clean-item {
     background: rgba(255, 255, 255, 0.66) !important;
     backdrop-filter: blur(16px) !important;
 }
 
-/* hover — фото становится чуть заметнее */
+
 .proof-clean-card {
     transition:
         border-color 280ms ease,
@@ -6470,7 +6470,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.94) !important;
 }
 
-/* TABLET */
+
 @media (max-width: 1080px) {
     .proof-clean-card {
         min-height: auto !important;
@@ -6501,7 +6501,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 720px) {
     .proof-clean-card {
         padding: 22px !important;
@@ -6529,10 +6529,10 @@
     }
 }
 
-/* ==========================================================
-   HOW IT WORKS — MOBILE SAME AS DESKTOP, BUT COMPACT
-   MUST BE LAST IN home.css
-   ========================================================== */
+
+
+
+
 
 @media (max-width: 720px) {
 
@@ -6648,7 +6648,7 @@
     }
 }
 
-/* очень маленькие телефоны */
+
 @media (max-width: 420px) {
     .process-exact-card {
         padding: 20px 8px 16px !important;
@@ -6699,10 +6699,10 @@
 }
 
 
-/* ==========================================================
-   FINAL CTA — MOBILE REBUILD / CLEAN CARD
-   MUST BE LAST IN home.css
-   ========================================================== */
+
+
+
+
 
 @media (max-width: 680px) {
 
@@ -6907,7 +6907,7 @@
     }
 }
 
-/* VERY SMALL MOBILE */
+
 @media (max-width: 420px) {
     .final-ribbon-card {
         padding: 118px 14px 14px !important;
@@ -6956,10 +6956,10 @@
     }
 }
 
-/* ==========================================================
-   FINAL CTA — MOBILE TOP PADDING REMOVE
-   MUST BE LAST IN home.css
-   ========================================================== */
+
+
+
+
 
 @media (max-width: 680px) {
 
@@ -7001,10 +7001,10 @@
     }
 }
 
-/* ==========================================================
-   PROOF CLEAN — BLACK GRADIENT + IMAGE SHIFT RIGHT
-   MUST BE LAST
-   ========================================================== */
+
+
+
+
 
 .proof-clean-card {
     background:
