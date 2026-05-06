@@ -610,18 +610,328 @@ function renderRequestForms() {
     const config = getConfig();
     const mounts = document.querySelectorAll("[data-request-form]");
 
-    if (!mounts.length) return;
-
     mounts.forEach((mount) => {
         if (mount.dataset.formRendered === "true") return;
 
         requestFormCounter += 1;
         mount.dataset.formRendered = "true";
         mount.innerHTML = getRequestFormHtml(config, requestFormCounter);
-        initSingleForm(mount.querySelector("form"));
     });
 
-    refreshIcons();
+    document.querySelectorAll(".request-form").forEach(initSingleForm);
+    initContactRequestForm();
+}
+
+/* ==========================================================
+   CONTACT REQUEST FORM — LIGHT FORM VALIDATION
+   Works with:
+   1) <form id="requestForm" class="contact-request-form">
+   2) <section id="requestForm"> ... <form class="contact-request-form">
+   ========================================================== */
+
+function initContactRequestForm() {
+    const directForm = document.querySelector("form#requestForm");
+    const sectionForm = document.querySelector("#requestForm form");
+    const classForm = document.querySelector("form.contact-request-form");
+
+    const form = directForm || sectionForm || classForm;
+
+    if (!form || form.dataset.contactFormReady === "true") return;
+
+    form.dataset.contactFormReady = "true";
+
+    const status =
+        form.querySelector(".contact-request-status") ||
+        document.querySelector(".contact-request-status");
+
+    const fields = Array.from(form.querySelectorAll("input, select, textarea"));
+
+    function showStatus(message, type) {
+        if (!status) return;
+
+        status.textContent = message;
+        status.classList.remove("is-success", "is-error");
+        status.classList.add(type === "success" ? "is-success" : "is-error");
+    }
+
+    function clearStatus() {
+        if (!status) return;
+
+        status.textContent = "";
+        status.classList.remove("is-success", "is-error");
+    }
+
+    function validateEmail(value) {
+        if (!value.trim()) return true;
+
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+    }
+
+    function validateField(field) {
+        const value = field.value.trim();
+        let isValid = true;
+
+        if (field.hasAttribute("required") && !value) {
+            isValid = false;
+        }
+
+        if (field.type === "email" && value && !validateEmail(value)) {
+            isValid = false;
+        }
+
+        if (field.name === "zip" && value && !/^\d{5}(-\d{4})?$/.test(value)) {
+            isValid = false;
+        }
+
+        field.classList.remove("is-valid", "is-invalid");
+        field.removeAttribute("aria-invalid");
+
+        if (!value && field.hasAttribute("required")) {
+            field.classList.add("is-invalid");
+            field.setAttribute("aria-invalid", "true");
+            return false;
+        }
+
+        if (value) {
+            field.classList.toggle("is-valid", isValid);
+            field.classList.toggle("is-invalid", !isValid);
+
+            if (!isValid) {
+                field.setAttribute("aria-invalid", "true");
+            }
+        }
+
+        return isValid;
+    }
+
+    function validateForm() {
+        let isValid = true;
+
+        fields.forEach((field) => {
+            const fieldIsValid = validateField(field);
+
+            if (!fieldIsValid) {
+                isValid = false;
+            }
+        });
+
+        return isValid;
+    }
+
+    fields.forEach((field) => {
+        field.addEventListener("input", () => {
+            field.classList.remove("is-invalid", "is-valid");
+            field.removeAttribute("aria-invalid");
+            clearStatus();
+        });
+
+        field.addEventListener("change", () => {
+            field.classList.remove("is-invalid", "is-valid");
+            field.removeAttribute("aria-invalid");
+            clearStatus();
+        });
+
+        field.addEventListener("blur", () => {
+            validateField(field);
+        });
+    });
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        clearStatus();
+
+        const isValid = validateForm();
+
+        if (!isValid) {
+            showStatus("Please complete the required fields correctly before sending.", "error");
+
+            const firstInvalidField = form.querySelector(".is-invalid");
+
+            if (firstInvalidField) {
+                firstInvalidField.focus();
+            }
+
+            return;
+        }
+
+        showStatus("Success! Your HVAC matching request details were sent successfully.", "success");
+
+        form.reset();
+
+        fields.forEach((field) => {
+            field.classList.remove("is-valid", "is-invalid");
+            field.removeAttribute("aria-invalid");
+        });
+
+        refreshIcons();
+    });
+}
+
+function getRequestFormHtml(config, formId) {
+    const serviceOptions = (config.forms?.serviceTypes || [])
+        .map((type) => `<option value="${escapeHtml(type)}">${escapeHtml(type)}</option>`)
+        .join("");
+
+    const nameId = `request-name-${formId}`;
+    const phoneId = `request-phone-${formId}`;
+    const emailId = `request-email-${formId}`;
+    const zipId = `request-zip-${formId}`;
+    const serviceId = `request-service-${formId}`;
+    const notesId = `request-notes-${formId}`;
+
+    return `
+        <div class="form-card">
+            <div class="form-card-inner">
+                <div>
+                    <p class="section-kicker">Request flow</p>
+                    <h3>${escapeHtml(config.forms?.requestTitle || "Start request")}</h3>
+                    <p class="text-muted">${escapeHtml(config.forms?.requestText || "")}</p>
+                </div>
+
+                <form class="request-form" novalidate>
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="${nameId}">Name</label>
+                            <div class="input-wrap">
+                                <input class="form-control" id="${nameId}" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+                                <span class="input-status">${createIcon("check")}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="${phoneId}">Phone</label>
+                            <div class="input-wrap">
+                                <input class="form-control" id="${phoneId}" name="phone" type="tel" autocomplete="tel" placeholder="Phone number" required>
+                                <span class="input-status">${createIcon("check")}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="${emailId}">Email</label>
+                            <div class="input-wrap">
+                                <input class="form-control" id="${emailId}" name="email" type="email" autocomplete="email" placeholder="Email address" required>
+                                <span class="input-status">${createIcon("check")}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="${zipId}">ZIP code</label>
+                            <div class="input-wrap">
+                                <input class="form-control" id="${zipId}" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="ZIP code" required minlength="5">
+                                <span class="input-status">${createIcon("check")}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-field full">
+                            <label for="${serviceId}">Service type</label>
+                            <div class="select-wrap">
+                                <select class="form-control" id="${serviceId}" name="service" required>
+                                    <option value="">Choose service type</option>
+                                    ${serviceOptions}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-field full">
+                            <label for="${notesId}">Project notes</label>
+                            <div class="textarea-wrap">
+                                <textarea class="form-control" id="${notesId}" name="notes" placeholder="Describe the HVAC issue, timing, system notes, or provider preferences." required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-message" data-form-message role="status" aria-live="polite"></div>
+
+                    <button class="btn btn-primary" type="submit">
+                        <span>${escapeHtml(config.forms?.submitLabel || "Submit request")}</span>
+                        ${createIcon("arrow-right")}
+                    </button>
+
+                    <p class="form-disclaimer">${escapeHtml(config.disclaimer || "")}</p>
+                </form>
+            </div>
+        </div>
+    `;
+}
+
+function initSingleForm(form) {
+    const config = getConfig();
+
+    if (!form || form.dataset.formReady === "true") return;
+
+    form.dataset.formReady = "true";
+
+    const fields = Array.from(form.querySelectorAll(".form-control"));
+    const message = form.querySelector("[data-form-message]");
+
+    fields.forEach((field) => {
+        field.addEventListener("input", () => {
+            updateFieldState(field);
+        });
+
+        field.addEventListener("blur", () => {
+            updateFieldState(field);
+        });
+
+        field.addEventListener("change", () => {
+            updateFieldState(field);
+        });
+    });
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        let isValid = true;
+
+        fields.forEach((field) => {
+            const fieldValid = updateFieldState(field);
+
+            if (!fieldValid) {
+                isValid = false;
+            }
+        });
+
+        if (!message) return;
+
+        message.classList.add("is-visible");
+
+        if (!isValid) {
+            message.classList.add("error");
+            message.textContent = config.forms?.errorMessage || "Please complete the required fields.";
+            return;
+        }
+
+        message.classList.remove("error");
+        message.textContent =
+            config.forms?.successMessage ||
+            "Success! Your HVAC matching request details were sent successfully.";
+
+        form.reset();
+
+        fields.forEach((field) => {
+            field.classList.remove("is-valid", "is-invalid");
+        });
+    });
+}
+
+function updateFieldState(field) {
+    const value = field.value.trim();
+    let isValid = field.checkValidity();
+
+    if (field.name === "zip") {
+        isValid = /^\d{5}(-\d{4})?$/.test(value);
+    }
+
+    if (!value) {
+        field.classList.remove("is-valid", "is-invalid");
+        return false;
+    }
+
+    field.classList.toggle("is-valid", isValid);
+    field.classList.toggle("is-invalid", !isValid);
+
+    return isValid;
 }
 
 function getRequestFormHtml(config, formId) {
@@ -791,7 +1101,7 @@ function updateFieldState(field) {
 }
 
 /* =========================
-   MAP CARD
+   REAL MAP CARD
    ========================= */
 
 function renderMapCards() {
@@ -805,37 +1115,79 @@ function renderMapCards() {
 
         mount.dataset.mapRendered = "true";
 
+        const mapAddress =
+            config.mapCard?.address ||
+            config.address?.full ||
+            "600 Congress Avenue, Austin, TX 78701, USA";
+
+        const encodedAddress = encodeURIComponent(mapAddress);
+
+        const mapEmbedUrl =
+            config.mapCard?.embedUrl ||
+            `https://www.google.com/maps?q=${encodedAddress}&output=embed`;
+
+        const mapOpenUrl =
+            config.mapCard?.openUrl ||
+            `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
+
         mount.innerHTML = `
-            <div class="map-card">
+            <article class="map-card real-map-card">
                 <div class="map-card-top">
-                    <p class="section-kicker">${escapeHtml(config.mapCard?.eyebrow || "Address")}</p>
-                    <h3>${escapeHtml(config.mapCard?.title || config.companyName)}</h3>
-                    <p>${escapeHtml(config.mapCard?.text || "")}</p>
+                    <p class="section-kicker">
+                        ${escapeHtml(config.mapCard?.eyebrow || "Platform address")}
+                    </p>
+
+                    <h3>
+                        ${escapeHtml(config.mapCard?.title || config.companyName || "AirConnect")}
+                    </h3>
+
+                    <p>
+                        ${escapeHtml(config.mapCard?.text || "The address is shown for platform contact context. HVAC provider availability may vary by ZIP code.")}
+                    </p>
                 </div>
 
-                <div class="map-visual" aria-label="${escapeHtml(config.mapCard?.regionLabel || "Map visual")}">
-                    <div class="map-grid"></div>
-                    <div class="map-route route-one"></div>
-                    <div class="map-route route-two"></div>
+                <a class="real-map-frame-link"
+                    href="${escapeHtml(mapOpenUrl)}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open ${escapeHtml(mapAddress)} in Google Maps">
 
-                    <div class="map-pin main-pin">
-                        ${createIcon("map-pin")}
-                    </div>
+                    <iframe
+                        class="real-map-frame"
+                        title="Map for ${escapeHtml(mapAddress)}"
+                        src="${escapeHtml(mapEmbedUrl)}"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        aria-hidden="true">
+                    </iframe>
 
-                    <div class="map-dot dot-one"></div>
-                    <div class="map-dot dot-two"></div>
-                    <div class="map-dot dot-three"></div>
-
-                    <span class="map-label">${escapeHtml(config.mapCard?.regionLabel || "")}</span>
-                </div>
+                    <span class="real-map-open-badge">
+                        ${createIcon("external-link")}
+                        <span>Open map</span>
+                    </span>
+                </a>
 
                 <div class="map-card-bottom">
-                    <span>${createIcon("building-2")}</span>
-                    <p>${escapeHtml(config.mapCard?.address || config.address?.full || "")}</p>
+                    <span>${createIcon("map-pin")}</span>
+
+                    <div>
+                        <strong>${escapeHtml(config.mapCard?.regionLabel || "USA address")}</strong>
+                        <p>${escapeHtml(mapAddress)}</p>
+                    </div>
+
+                    <a class="map-card-open-link"
+                        href="${escapeHtml(mapOpenUrl)}"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Open in Google Maps
+                        ${createIcon("arrow-up-right")}
+                    </a>
                 </div>
-            </div>
+            </article>
         `;
     });
+
+    refreshIcons();
 }
 
 /* =========================

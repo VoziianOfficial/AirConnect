@@ -1068,3 +1068,1543 @@
         font-size: 0.48rem !important;
     }
 }
+
+/* ==========================================================
+   CONTACT REQUEST FORM — COMPACT PREMIUM SECTION
+   MUST BE LAST IN contact.css
+   ========================================================== */
+
+.contact-request-section {
+    padding-top: 34px !important;
+    padding-bottom: 58px !important;
+    background: transparent !important;
+}
+
+.contact-request-card {
+    position: relative;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: minmax(0, 0.78fr) minmax(420px, 0.82fr);
+    gap: clamp(24px, 4vw, 48px);
+    align-items: center;
+
+    padding: clamp(22px, 4vw, 36px);
+
+    border: 1px solid rgba(56, 200, 216, 0.16);
+    border-radius: 28px;
+
+    background:
+        radial-gradient(circle at 12% 14%,
+            rgba(56, 200, 216, 0.13),
+            transparent 30%),
+        radial-gradient(circle at 88% 12%,
+            rgba(183, 255, 42, 0.055),
+            transparent 28%),
+        linear-gradient(180deg,
+            rgba(14, 24, 29, 0.96),
+            rgba(6, 12, 15, 0.98));
+
+    box-shadow:
+        0 26px 78px rgba(0, 0, 0, 0.42),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.contact-request-card::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    pointer-events: none;
+    border-radius: 27px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(56, 200, 216, 0.16),
+            transparent);
+
+    opacity: 0.34;
+    mask-image: linear-gradient(180deg, black, transparent 72%);
+}
+
+.contact-request-copy,
+.contact-request-form {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-request-copy {
+    display: grid;
+    gap: 16px;
+}
+
+.contact-request-copy h2 {
+    max-width: 620px;
+    color: #f7faf8;
+    font-size: clamp(2.25rem, 3.8vw, 4.15rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.contact-request-copy .lead {
+    max-width: 520px;
+    color: rgba(247, 250, 248, 0.72);
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+
+.contact-request-points {
+    display: grid;
+    gap: 9px;
+    margin-top: 6px;
+}
+
+.contact-request-points span {
+    display: inline-flex;
+    width: max-content;
+    max-width: 100%;
+    align-items: center;
+    gap: 9px;
+
+    min-height: 38px;
+    padding: 0 13px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.045);
+    color: rgba(247, 250, 248, 0.78);
+
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.contact-request-points svg {
+    width: 16px;
+    height: 16px;
+    color: var(--color-cool);
+}
+
+.contact-request-form {
+    display: grid;
+    gap: 12px;
+
+    padding: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: 22px;
+
+    background: rgba(3, 7, 10, 0.48);
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 18px 48px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.contact-request-form label {
+    display: grid;
+    gap: 7px;
+}
+
+.contact-request-form label span {
+    color: rgba(247, 250, 248, 0.68);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.contact-request-form input,
+.contact-request-form select,
+.contact-request-form textarea {
+    width: 100%;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.055);
+    color: #f7faf8;
+
+    font-family: inherit;
+    font-size: 0.92rem;
+    font-weight: 700;
+
+    transition:
+        border-color 220ms ease,
+        background 220ms ease,
+        box-shadow 220ms ease;
+}
+
+.contact-request-form input,
+.contact-request-form select {
+    height: 48px;
+    padding: 0 13px;
+}
+
+.contact-request-form textarea {
+    min-height: 92px;
+    max-height: 160px;
+    padding: 13px;
+    resize: vertical;
+}
+
+.contact-request-form input::placeholder,
+.contact-request-form textarea::placeholder {
+    color: rgba(247, 250, 248, 0.38);
+}
+
+.contact-request-form select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.contact-request-form input:focus,
+.contact-request-form select:focus,
+.contact-request-form textarea:focus {
+    border-color: rgba(56, 200, 216, 0.42);
+    background: rgba(56, 200, 216, 0.08);
+    box-shadow:
+        0 0 0 3px rgba(56, 200, 216, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.contact-request-form .is-invalid {
+    border-color: rgba(244, 184, 74, 0.58) !important;
+    box-shadow: 0 0 0 3px rgba(244, 184, 74, 0.08) !important;
+}
+
+.contact-request-bottom {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 14px;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.contact-request-submit {
+    min-height: 46px !important;
+    padding-inline: 18px !important;
+}
+
+.contact-request-submit:hover {
+    background: var(--color-cool) !important;
+    color: #031014 !important;
+    box-shadow:
+        0 20px 48px rgba(56, 200, 216, 0.22),
+        0 0 0 1px rgba(56, 200, 216, 0.16) !important;
+}
+
+.contact-request-disclaimer {
+    margin: 0;
+    color: rgba(247, 250, 248, 0.46);
+    font-size: 0.68rem;
+    line-height: 1.42;
+}
+
+.contact-request-status {
+    min-height: 18px;
+    margin: 0;
+    color: var(--color-accent);
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+/* TABLET */
+@media (max-width: 1080px) {
+    .contact-request-section {
+        padding-top: 24px !important;
+        padding-bottom: 46px !important;
+    }
+
+    .contact-request-card {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 26px;
+        border-radius: 24px;
+    }
+
+    .contact-request-card::before {
+        border-radius: 23px;
+    }
+
+    .contact-request-copy {
+        text-align: center;
+        justify-items: center;
+    }
+
+    .contact-request-copy h2 {
+        max-width: 760px;
+    }
+
+    .contact-request-copy .lead {
+        max-width: 560px;
+    }
+
+    .contact-request-points {
+        grid-template-columns: repeat(3, auto);
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .contact-request-points span {
+        width: auto;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 720px) {
+    .contact-request-section {
+        padding-top: 14px !important;
+        padding-bottom: 34px !important;
+    }
+
+    .contact-request-card {
+        padding: 18px;
+        border-radius: 20px;
+    }
+
+    .contact-request-card::before {
+        border-radius: 19px;
+    }
+
+    .contact-request-copy {
+        gap: 12px;
+    }
+
+    .contact-request-copy h2 {
+        max-width: 360px;
+        font-size: clamp(2rem, 9vw, 2.85rem);
+        line-height: 1;
+    }
+
+    .contact-request-copy .lead {
+        max-width: 320px;
+        font-size: 0.84rem;
+        line-height: 1.42;
+    }
+
+    .contact-request-points {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 7px;
+    }
+
+    .contact-request-points span {
+        width: 100%;
+        justify-content: center;
+        min-height: 36px;
+        font-size: 0.74rem;
+    }
+
+    .contact-request-form {
+        padding: 14px;
+        border-radius: 18px;
+        gap: 10px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .contact-request-form input,
+    .contact-request-form select {
+        height: 44px;
+        border-radius: 12px;
+        font-size: 0.86rem;
+    }
+
+    .contact-request-form textarea {
+        min-height: 84px;
+        border-radius: 12px;
+        font-size: 0.86rem;
+    }
+
+    .contact-request-bottom {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .contact-request-submit {
+        width: 100%;
+        min-height: 44px !important;
+    }
+
+    .contact-request-disclaimer {
+        text-align: center;
+        font-size: 0.62rem;
+    }
+
+    .contact-request-status {
+        text-align: center;
+    }
+}
+
+/* ==========================================================
+   CONTACT REQUEST FORM — LIGHT CONTRAST VERSION
+   MUST BE LAST IN contact.css
+   ========================================================== */
+
+.contact-request-section {
+    position: relative !important;
+    padding-top: 34px !important;
+    padding-bottom: 58px !important;
+    background: transparent !important;
+}
+
+.contact-request-card {
+    position: relative !important;
+    overflow: hidden !important;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.78fr) minmax(420px, 0.82fr) !important;
+    gap: clamp(24px, 4vw, 48px) !important;
+    align-items: center !important;
+
+    padding: clamp(24px, 4vw, 38px) !important;
+
+    border: 1px solid rgba(6, 16, 20, 0.08) !important;
+    border-radius: 30px !important;
+
+    background:
+        radial-gradient(circle at 12% 12%,
+            rgba(56, 200, 216, 0.14),
+            transparent 28%),
+        radial-gradient(circle at 92% 12%,
+            rgba(183, 255, 42, 0.12),
+            transparent 26%),
+        linear-gradient(135deg, #ffffff 0%, #f4f8f7 56%, #eef5f3 100%) !important;
+
+    box-shadow:
+        0 28px 80px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+.contact-request-card::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+
+    background:
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.92) 0%,
+            rgba(255, 255, 255, 0.78) 42%,
+            rgba(255, 255, 255, 0.3) 100%) !important;
+}
+
+.contact-request-copy,
+.contact-request-form {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* LEFT COPY */
+
+.contact-request-copy {
+    display: grid !important;
+    gap: 16px !important;
+}
+
+.contact-request-copy .section-kicker {
+    color: #0f8fa0 !important;
+}
+
+.contact-request-copy h2 {
+    max-width: 640px !important;
+    color: #071014 !important;
+
+    font-size: clamp(2.25rem, 3.8vw, 4.1rem) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.055em !important;
+}
+
+.contact-request-copy .lead {
+    max-width: 520px !important;
+    color: rgba(7, 16, 20, 0.66) !important;
+    font-size: 0.98rem !important;
+    line-height: 1.55 !important;
+}
+
+.contact-request-points {
+    display: grid !important;
+    gap: 9px !important;
+    margin-top: 6px !important;
+}
+
+.contact-request-points span {
+    display: inline-flex !important;
+    width: max-content !important;
+    max-width: 100% !important;
+    align-items: center !important;
+    gap: 9px !important;
+
+    min-height: 38px !important;
+    padding: 0 13px !important;
+
+    border: 1px solid rgba(7, 16, 20, 0.08) !important;
+    border-radius: 999px !important;
+
+    background: rgba(255, 255, 255, 0.76) !important;
+    color: rgba(7, 16, 20, 0.72) !important;
+
+    font-size: 0.82rem !important;
+    font-weight: 850 !important;
+
+    box-shadow:
+        0 10px 24px rgba(7, 16, 20, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.86) !important;
+}
+
+.contact-request-points svg {
+    width: 16px !important;
+    height: 16px !important;
+    color: #0f9daf !important;
+}
+
+/* FORM */
+
+.contact-request-form {
+    display: grid !important;
+    gap: 12px !important;
+
+    padding: 18px !important;
+
+    border: 1px solid rgba(7, 16, 20, 0.08) !important;
+    border-radius: 24px !important;
+
+    background: rgba(255, 255, 255, 0.86) !important;
+    backdrop-filter: blur(18px) !important;
+
+    box-shadow:
+        0 22px 54px rgba(7, 16, 20, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.92) !important;
+}
+
+.form-row {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+}
+
+.contact-request-form label {
+    display: grid !important;
+    gap: 7px !important;
+}
+
+.contact-request-form label span {
+    color: rgba(7, 16, 20, 0.58) !important;
+    font-size: 0.72rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+}
+
+.contact-request-form input,
+.contact-request-form select,
+.contact-request-form textarea {
+    width: 100% !important;
+
+    border: 1px solid rgba(7, 16, 20, 0.12) !important;
+    border-radius: 14px !important;
+    outline: none !important;
+
+    background: #ffffff !important;
+    color: #071014 !important;
+
+    font-family: inherit !important;
+    font-size: 0.92rem !important;
+    font-weight: 750 !important;
+
+    box-shadow:
+        0 8px 18px rgba(7, 16, 20, 0.035),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+
+    transition:
+        border-color 220ms ease,
+        background 220ms ease,
+        box-shadow 220ms ease,
+        transform 220ms ease !important;
+}
+
+.contact-request-form input,
+.contact-request-form select {
+    height: 48px !important;
+    padding: 0 13px !important;
+}
+
+.contact-request-form textarea {
+    min-height: 92px !important;
+    max-height: 160px !important;
+    padding: 13px !important;
+    resize: vertical !important;
+}
+
+.contact-request-form input::placeholder,
+.contact-request-form textarea::placeholder {
+    color: rgba(7, 16, 20, 0.34) !important;
+}
+
+.contact-request-form select {
+    appearance: none !important;
+    cursor: pointer !important;
+
+    background:
+        linear-gradient(45deg, transparent 50%, rgba(7, 16, 20, 0.48) 50%),
+        linear-gradient(135deg, rgba(7, 16, 20, 0.48) 50%, transparent 50%),
+        #ffffff !important;
+    background-position:
+        calc(100% - 18px) 50%,
+        calc(100% - 13px) 50%,
+        0 0 !important;
+    background-size:
+        5px 5px,
+        5px 5px,
+        100% 100% !important;
+    background-repeat: no-repeat !important;
+}
+
+.contact-request-form option {
+    color: #071014 !important;
+    background: #ffffff !important;
+}
+
+.contact-request-form input:hover,
+.contact-request-form select:hover,
+.contact-request-form textarea:hover {
+    border-color: rgba(56, 200, 216, 0.34) !important;
+}
+
+.contact-request-form input:focus,
+.contact-request-form select:focus,
+.contact-request-form textarea:focus {
+    border-color: rgba(56, 200, 216, 0.62) !important;
+    background: #ffffff !important;
+
+    box-shadow:
+        0 0 0 4px rgba(56, 200, 216, 0.13),
+        0 12px 24px rgba(56, 200, 216, 0.08) !important;
+}
+
+/* VALIDATION */
+
+.contact-request-form .is-invalid {
+    border-color: rgba(221, 101, 56, 0.78) !important;
+    background: #fff8f4 !important;
+
+    box-shadow:
+        0 0 0 4px rgba(221, 101, 56, 0.12),
+        0 10px 20px rgba(221, 101, 56, 0.06) !important;
+}
+
+.contact-request-form .is-valid {
+    border-color: rgba(24, 156, 93, 0.48) !important;
+}
+
+/* BOTTOM */
+
+.contact-request-bottom {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    gap: 14px !important;
+    align-items: center !important;
+    margin-top: 2px !important;
+}
+
+.contact-request-submit {
+    min-height: 46px !important;
+    padding-inline: 18px !important;
+    border-radius: 999px !important;
+}
+
+.contact-request-submit:hover {
+    background: #38c8d8 !important;
+    color: #031014 !important;
+
+    box-shadow:
+        0 20px 48px rgba(56, 200, 216, 0.24),
+        0 0 0 1px rgba(56, 200, 216, 0.18) !important;
+}
+
+.contact-request-disclaimer {
+    margin: 0 !important;
+    color: rgba(7, 16, 20, 0.48) !important;
+    font-size: 0.68rem !important;
+    line-height: 1.42 !important;
+}
+
+/* STATUS MESSAGE */
+
+.contact-request-status {
+    display: none !important;
+    margin: 0 !important;
+    padding: 12px 14px !important;
+
+    border-radius: 15px !important;
+
+    font-size: 0.82rem !important;
+    font-weight: 850 !important;
+    line-height: 1.35 !important;
+}
+
+.contact-request-status.is-success {
+    display: block !important;
+    border: 1px solid rgba(24, 156, 93, 0.22) !important;
+    background: rgba(24, 156, 93, 0.1) !important;
+    color: #11643d !important;
+}
+
+.contact-request-status.is-error {
+    display: block !important;
+    border: 1px solid rgba(221, 101, 56, 0.24) !important;
+    background: rgba(221, 101, 56, 0.1) !important;
+    color: #9b3f1f !important;
+}
+
+/* HOVERS */
+
+.contact-request-card {
+    transition:
+        transform 280ms ease,
+        border-color 280ms ease,
+        box-shadow 280ms ease !important;
+}
+
+.contact-request-card:hover {
+    border-color: rgba(56, 200, 216, 0.22) !important;
+
+    box-shadow:
+        0 34px 96px rgba(0, 0, 0, 0.22),
+        0 0 0 1px rgba(56, 200, 216, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+}
+
+.contact-request-points span {
+    transition:
+        transform 240ms ease,
+        border-color 240ms ease,
+        background 240ms ease,
+        color 240ms ease !important;
+}
+
+.contact-request-points span:hover {
+    transform: translateY(-2px) !important;
+    border-color: rgba(56, 200, 216, 0.22) !important;
+    background: rgba(56, 200, 216, 0.08) !important;
+    color: #071014 !important;
+}
+
+/* TABLET */
+
+@media (max-width: 1080px) {
+    .contact-request-section {
+        padding-top: 24px !important;
+        padding-bottom: 46px !important;
+    }
+
+    .contact-request-card {
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+        padding: 26px !important;
+        border-radius: 24px !important;
+    }
+
+    .contact-request-copy {
+        text-align: center !important;
+        justify-items: center !important;
+    }
+
+    .contact-request-copy h2 {
+        max-width: 760px !important;
+    }
+
+    .contact-request-copy .lead {
+        max-width: 560px !important;
+    }
+
+    .contact-request-points {
+        grid-template-columns: repeat(3, auto) !important;
+        justify-content: center !important;
+        gap: 8px !important;
+    }
+
+    .contact-request-points span {
+        width: auto !important;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 720px) {
+    .contact-request-section {
+        padding-top: 12px !important;
+        padding-bottom: 34px !important;
+    }
+
+    .contact-request-card {
+        padding: 18px !important;
+        border-radius: 20px !important;
+    }
+
+    .contact-request-copy {
+        gap: 12px !important;
+    }
+
+    .contact-request-copy h2 {
+        max-width: 360px !important;
+        font-size: clamp(2rem, 9vw, 2.85rem) !important;
+        line-height: 1 !important;
+    }
+
+    .contact-request-copy .lead {
+        max-width: 320px !important;
+        font-size: 0.84rem !important;
+        line-height: 1.42 !important;
+    }
+
+    .contact-request-points {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        gap: 7px !important;
+    }
+
+    .contact-request-points span {
+        width: 100% !important;
+        justify-content: center !important;
+        min-height: 36px !important;
+        font-size: 0.74rem !important;
+    }
+
+    .contact-request-form {
+        padding: 14px !important;
+        border-radius: 18px !important;
+        gap: 10px !important;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    .contact-request-form input,
+    .contact-request-form select {
+        height: 44px !important;
+        border-radius: 12px !important;
+        font-size: 0.86rem !important;
+    }
+
+    .contact-request-form textarea {
+        min-height: 84px !important;
+        border-radius: 12px !important;
+        font-size: 0.86rem !important;
+    }
+
+    .contact-request-bottom {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    .contact-request-submit {
+        width: 100% !important;
+        min-height: 44px !important;
+    }
+
+    .contact-request-disclaimer {
+        text-align: center !important;
+        font-size: 0.62rem !important;
+    }
+
+    .contact-request-status {
+        text-align: center !important;
+        font-size: 0.76rem !important;
+    }
+}
+
+/* ==========================================================
+   CONTACT REAL MAP CARD
+   MUST BE LAST IN contact.css
+   ========================================================== */
+
+.real-map-card {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    gap: 16px;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: 32px;
+    background:
+        radial-gradient(circle at 18% 0%, rgba(56, 200, 216, 0.1), transparent 34%),
+        linear-gradient(180deg, rgba(14, 24, 29, 0.96), rgba(6, 12, 15, 0.98));
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+}
+
+.real-map-card .map-card-top {
+    display: grid;
+    gap: 10px;
+    padding: 8px 8px 0;
+}
+
+.real-map-card .map-card-top h3 {
+    margin: 0;
+    color: var(--color-heading);
+    font-size: clamp(1.45rem, 2vw, 2rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.real-map-card .map-card-top p {
+    max-width: 520px;
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.real-map-frame-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    min-height: 330px;
+    border: 1px solid rgba(255, 255, 255, 0.085);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.real-map-frame-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(180deg, rgba(3, 7, 10, 0.02), rgba(3, 7, 10, 0.18)),
+        radial-gradient(circle at 80% 12%, rgba(56, 200, 216, 0.08), transparent 28%);
+    opacity: 0.7;
+    transition: opacity 260ms ease;
+}
+
+.real-map-frame {
+    display: block;
+    width: 100%;
+    height: 330px;
+    border: 0;
+    filter: saturate(0.95) contrast(1.04) brightness(0.92);
+    transition:
+        filter 280ms ease,
+        transform 420ms ease;
+}
+
+.real-map-open-badge {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 0 14px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    background: rgba(3, 7, 10, 0.72);
+    color: #f7faf8;
+    font-size: 0.82rem;
+    font-weight: 900;
+    backdrop-filter: blur(14px);
+    transition:
+        background 260ms ease,
+        color 260ms ease,
+        transform 260ms ease,
+        border-color 260ms ease;
+}
+
+.real-map-open-badge svg {
+    width: 15px;
+    height: 15px;
+    color: var(--color-cool);
+}
+
+.real-map-frame-link:hover .real-map-frame {
+    filter: saturate(1.06) contrast(1.06) brightness(1);
+    transform: scale(1.015);
+}
+
+.real-map-frame-link:hover::after {
+    opacity: 0.35;
+}
+
+.real-map-frame-link:hover .real-map-open-badge {
+    transform: translateY(-2px);
+    border-color: rgba(183, 255, 42, 0.32);
+    background: #b7ff2a;
+    color: #061004;
+}
+
+.real-map-frame-link:hover .real-map-open-badge svg {
+    color: #061004;
+}
+
+.real-map-card .map-card-bottom {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: center;
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.real-map-card .map-card-bottom>span {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border-radius: 14px;
+    background: rgba(56, 200, 216, 0.09);
+    color: var(--color-cool);
+}
+
+.real-map-card .map-card-bottom>span svg {
+    width: 18px;
+    height: 18px;
+}
+
+.real-map-card .map-card-bottom strong {
+    display: block;
+    color: var(--color-heading);
+    font-size: 0.92rem;
+    line-height: 1.15;
+}
+
+.real-map-card .map-card-bottom p {
+    margin: 2px 0 0;
+    color: var(--color-muted);
+    font-size: 0.78rem;
+    line-height: 1.3;
+}
+
+.map-card-open-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--color-accent);
+    font-size: 0.78rem;
+    font-weight: 900;
+    white-space: nowrap;
+    transition:
+        color 260ms ease,
+        transform 260ms ease;
+}
+
+.map-card-open-link svg {
+    width: 14px;
+    height: 14px;
+}
+
+.map-card-open-link:hover {
+    transform: translateY(-1px);
+    color: var(--color-cool);
+}
+
+/* TABLET */
+@media (max-width: 980px) {
+    .real-map-card {
+        border-radius: 28px;
+    }
+
+    .real-map-frame-link,
+    .real-map-frame {
+        min-height: 300px;
+        height: 300px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+    .real-map-card {
+        gap: 12px;
+        padding: 14px;
+        border-radius: 24px;
+    }
+
+    .real-map-frame-link,
+    .real-map-frame {
+        min-height: 260px;
+        height: 260px;
+        border-radius: 20px;
+    }
+
+    .real-map-card .map-card-bottom {
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+    }
+
+    .map-card-open-link {
+        grid-column: 1 / -1;
+        justify-content: center;
+        min-height: 40px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.055);
+    }
+}
+
+/* ==========================================================
+   CONTACT FAQ — TWO COLUMNS DESKTOP
+   MUST BE LAST IN contact.css
+   ========================================================== */
+
+.contact-faq-section {
+    padding-top: 54px !important;
+    padding-bottom: 62px !important;
+}
+
+.contact-faq-section .container-narrow {
+    width: min(calc(100% - 40px), 1120px) !important;
+}
+
+.contact-faq-section .section-heading {
+    margin-bottom: 34px !important;
+}
+
+.contact-faq-section #contactFaqTitle {
+    max-width: none !important;
+    width: 100% !important;
+    font-size: clamp(2.45rem, 3.6vw, 4rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -0.055em !important;
+    white-space: nowrap !important;
+}
+
+.contact-faq-section .faq-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    align-items: start !important;
+}
+
+.contact-faq-section .faq-item {
+    height: fit-content !important;
+    border-radius: 22px !important;
+    transition:
+        transform 260ms ease,
+        border-color 260ms ease,
+        background 260ms ease,
+        box-shadow 260ms ease !important;
+}
+
+.contact-faq-section .faq-item:hover {
+    transform: translateY(-2px) !important;
+    border-color: rgba(56, 200, 216, 0.22) !important;
+    background: rgba(56, 200, 216, 0.055) !important;
+    box-shadow:
+        0 18px 46px rgba(0, 0, 0, 0.28),
+        0 0 0 1px rgba(56, 200, 216, 0.04) !important;
+}
+
+.contact-faq-section .faq-question {
+    min-height: 70px !important;
+    padding: 20px 22px !important;
+}
+
+.contact-faq-section .faq-question span {
+    font-size: 0.98rem !important;
+    line-height: 1.3 !important;
+}
+
+.contact-faq-section .faq-answer p {
+    padding: 0 22px 22px !important;
+    font-size: 0.92rem !important;
+    line-height: 1.56 !important;
+}
+
+
+.contact-faq-section .faq-item.is-open {
+    border-color: rgba(183, 255, 42, 0.2) !important;
+    background: rgba(183, 255, 42, 0.045) !important;
+}
+
+.contact-faq-section .faq-item.is-open .faq-question svg {
+    color: var(--color-accent) !important;
+}
+
+
+@media (max-width: 860px) {
+    .contact-faq-section {
+        padding-top: 38px !important;
+        padding-bottom: 44px !important;
+    }
+
+    .contact-faq-section .container-narrow {
+        width: min(calc(100% - 28px), 760px) !important;
+    }
+
+    .contact-faq-section #contactFaqTitle {
+        font-size: clamp(2rem, 8vw, 3rem) !important;
+        white-space: normal !important;
+        text-wrap: balance !important;
+    }
+
+    .contact-faq-section .faq-list {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    .contact-faq-section .faq-question {
+        min-height: 62px !important;
+        padding: 18px !important;
+    }
+
+    .contact-faq-section .faq-answer p {
+        padding: 0 18px 18px !important;
+    }
+}
+
+/* ==========================================================
+   CONTACT CTA — SAME AS ABOUT FINAL RIBBON
+   MUST BE LAST IN contact.css
+   ========================================================== */
+
+.contact-final-ribbon {
+    padding-top: 26px !important;
+    padding-bottom: 52px !important;
+    background: transparent !important;
+}
+
+.contact-final-ribbon .container-wide {
+    position: relative !important;
+}
+
+.contact-final-ribbon-card {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    min-height: 220px !important;
+    padding: 28px 34px !important;
+
+    display: grid !important;
+    align-items: center !important;
+
+    border: 1px solid rgba(56, 200, 216, 0.18) !important;
+    border-radius: 24px !important;
+
+    background:
+        radial-gradient(circle at 12% 16%,
+            rgba(56, 200, 216, 0.14),
+            transparent 30%),
+
+        linear-gradient(90deg,
+            rgba(3, 7, 10, 0.98) 0%,
+            rgba(3, 7, 10, 0.92) 34%,
+            rgba(3, 7, 10, 0.72) 54%,
+            rgba(3, 7, 10, 0.34) 76%,
+            rgba(3, 7, 10, 0.08) 100%),
+
+        url("../assets/images/home/final-cta-hvac.jpg") 78% center / cover no-repeat !important;
+
+    box-shadow:
+        0 28px 86px rgba(0, 0, 0, 0.48),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+
+    transition:
+        border-color 280ms ease,
+        box-shadow 280ms ease,
+        background 280ms ease,
+        transform 280ms ease !important;
+}
+
+.contact-final-ribbon-card::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+
+    background:
+        linear-gradient(180deg,
+            rgba(3, 7, 10, 0.04) 0%,
+            rgba(3, 7, 10, 0.18) 48%,
+            rgba(3, 7, 10, 0.74) 100%),
+        radial-gradient(circle at 86% 10%,
+            rgba(183, 255, 42, 0.08),
+            transparent 26%) !important;
+}
+
+.contact-final-ribbon-card::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 1px !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+    border-radius: 23px !important;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(56, 200, 216, 0.18),
+            transparent) !important;
+
+    opacity: 0.36 !important;
+    mask-image: linear-gradient(180deg, black, transparent 72%) !important;
+}
+
+/* content */
+
+.contact-final-ribbon-content {
+    position: relative !important;
+    z-index: 2 !important;
+
+    display: grid !important;
+    gap: 12px !important;
+
+    max-width: 760px !important;
+}
+
+.contact-final-ribbon-content .section-kicker {
+    margin-bottom: 0 !important;
+}
+
+.contact-final-ribbon-content h2 {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+
+    color: #f7faf8 !important;
+    font-size: clamp(2rem, 3.2vw, 3.35rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -0.045em !important;
+
+    white-space: nowrap !important;
+}
+
+.contact-final-ribbon-content p {
+    max-width: 620px !important;
+    margin: 0 !important;
+
+    color: rgba(247, 250, 248, 0.76) !important;
+    font-size: 0.94rem !important;
+    line-height: 1.48 !important;
+}
+
+/* actions */
+
+.contact-final-ribbon-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-top: 2px !important;
+}
+
+.contact-final-ribbon-btn {
+    min-height: 44px !important;
+    padding-inline: 18px !important;
+}
+
+.contact-final-ribbon-phone {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 9px !important;
+
+    min-height: 44px !important;
+    padding: 0 16px !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.13) !important;
+    border-radius: var(--radius-full) !important;
+
+    background: rgba(255, 255, 255, 0.055) !important;
+    color: #f7faf8 !important;
+
+    font-size: 0.88rem !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    text-decoration: none !important;
+
+    backdrop-filter: blur(14px) !important;
+
+    transition:
+        transform 260ms ease,
+        border-color 260ms ease,
+        background 260ms ease,
+        color 260ms ease,
+        box-shadow 260ms ease !important;
+}
+
+.contact-final-ribbon-phone svg {
+    width: 17px !important;
+    height: 17px !important;
+    color: var(--color-cool) !important;
+
+    transition:
+        color 260ms ease,
+        transform 260ms ease !important;
+}
+
+.contact-final-ribbon-disclaimer {
+    display: block !important;
+    max-width: 760px !important;
+    margin-top: 0 !important;
+
+    color: rgba(247, 250, 248, 0.48) !important;
+    font-size: 0.66rem !important;
+    line-height: 1.42 !important;
+}
+
+/* hover */
+
+.contact-final-ribbon-card:hover {
+    border-color: rgba(56, 200, 216, 0.26) !important;
+
+    background:
+        radial-gradient(circle at 12% 16%,
+            rgba(56, 200, 216, 0.2),
+            transparent 30%),
+
+        linear-gradient(90deg,
+            rgba(3, 7, 10, 0.96) 0%,
+            rgba(3, 7, 10, 0.88) 34%,
+            rgba(3, 7, 10, 0.62) 54%,
+            rgba(3, 7, 10, 0.24) 76%,
+            rgba(3, 7, 10, 0.04) 100%),
+
+        url("../assets/images/home/final-cta-hvac.jpg") 82% center / cover no-repeat !important;
+
+    box-shadow:
+        0 34px 100px rgba(0, 0, 0, 0.58),
+        0 0 0 1px rgba(56, 200, 216, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+.contact-final-ribbon-btn:hover {
+    background: var(--color-cool) !important;
+    color: #031014 !important;
+
+    box-shadow:
+        0 22px 54px rgba(56, 200, 216, 0.24),
+        0 0 0 1px rgba(56, 200, 216, 0.18) !important;
+}
+
+.contact-final-ribbon-phone:hover {
+    transform: translateY(-2px) !important;
+    border-color: rgba(183, 255, 42, 0.34) !important;
+    background: rgba(183, 255, 42, 0.1) !important;
+    color: var(--color-accent) !important;
+
+    box-shadow:
+        0 18px 42px rgba(183, 255, 42, 0.12),
+        0 0 0 1px rgba(183, 255, 42, 0.06) !important;
+}
+
+.contact-final-ribbon-phone:hover svg {
+    color: var(--color-accent) !important;
+    transform: rotate(-8deg) scale(1.06) !important;
+}
+
+/* TABLET */
+
+@media (max-width: 980px) {
+    .contact-final-ribbon {
+        padding-top: 22px !important;
+        padding-bottom: 42px !important;
+    }
+
+    .contact-final-ribbon-card {
+        min-height: 210px !important;
+        padding: 26px 28px !important;
+        border-radius: 22px !important;
+
+        background:
+            radial-gradient(circle at 12% 16%,
+                rgba(56, 200, 216, 0.16),
+                transparent 30%),
+
+            linear-gradient(90deg,
+                rgba(3, 7, 10, 0.96) 0%,
+                rgba(3, 7, 10, 0.86) 42%,
+                rgba(3, 7, 10, 0.52) 70%,
+                rgba(3, 7, 10, 0.1) 100%),
+
+            url("../assets/images/home/final-cta-hvac.jpg") 78% center / cover no-repeat !important;
+    }
+
+    .contact-final-ribbon-content h2 {
+        font-size: clamp(1.8rem, 4vw, 2.85rem) !important;
+        white-space: nowrap !important;
+    }
+
+    .contact-final-ribbon-content p {
+        max-width: 560px !important;
+        font-size: 0.88rem !important;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 680px) {
+    .contact-final-ribbon {
+        padding-top: 8px !important;
+        padding-bottom: 32px !important;
+    }
+
+    .contact-final-ribbon-card {
+        min-height: auto !important;
+        padding: 20px !important;
+        border-radius: 20px !important;
+
+        background:
+            linear-gradient(180deg,
+                rgba(3, 7, 10, 0.94) 0%,
+                rgba(3, 7, 10, 0.74) 52%,
+                rgba(3, 7, 10, 0.94) 100%),
+
+            url("../assets/images/home/final-cta-hvac.jpg") 76% center / cover no-repeat !important;
+    }
+
+    .contact-final-ribbon-card::after {
+        border-radius: 19px !important;
+    }
+
+    .contact-final-ribbon-content {
+        gap: 11px !important;
+        text-align: left !important;
+    }
+
+    .contact-final-ribbon-content h2 {
+        font-size: clamp(1.65rem, 8vw, 2.45rem) !important;
+        line-height: 1.02 !important;
+        white-space: normal !important;
+    }
+
+    .contact-final-ribbon-content p {
+        max-width: 100% !important;
+        font-size: 0.82rem !important;
+        line-height: 1.42 !important;
+    }
+
+    .contact-final-ribbon-actions {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+    .contact-final-ribbon-btn,
+    .contact-final-ribbon-phone {
+        width: 100% !important;
+        min-height: 42px !important;
+    }
+
+    .contact-final-ribbon-disclaimer {
+        font-size: 0.62rem !important;
+    }
+}

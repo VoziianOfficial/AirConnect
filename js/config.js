@@ -30,6 +30,14 @@ window.SITE_CONFIG = {
         full: "401 Congress Avenue, Austin, TX 78701, USA"
     },
 
+    mapCard: {
+        eyebrow: "Platform address",
+        title: "AirConnect contact location",
+        text: "This address is provided for platform contact context. Local HVAC provider availability may vary by ZIP code and service category.",
+        regionLabel: "Austin, TX",
+        address: "600 Congress Avenue, Austin, TX 78701, USA"
+    },
+
     serviceArea: "Independent HVAC provider matching across the United States",
 
     footerText:

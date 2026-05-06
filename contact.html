@@ -102,6 +102,114 @@
     </div>
 </section>
 
+<!-- ================= COMPACT REQUEST FORM ================= -->
+<section class="contact-request-section section-sm" aria-labelledby="contactRequestTitle">
+    <div class="container-wide">
+        <div class="contact-request-card reveal-up">
+            <div class="contact-request-copy">
+                <p class="section-kicker">Request form</p>
+
+                <h2 id="contactRequestTitle">
+                    Send a quick HVAC matching request.
+                </h2>
+
+                <p class="lead">
+                    Add the basic details so the request is easier to review before comparing independent local HVAC
+                    provider options.
+                </p>
+
+                <div class="contact-request-points">
+                    <span>
+                        <i data-lucide="shield-check" aria-hidden="true"></i>
+                        Independent provider options
+                    </span>
+
+                    <span>
+                        <i data-lucide="map-pin" aria-hidden="true"></i>
+                        Availability may vary by ZIP
+                    </span>
+
+                    <span>
+                        <i data-lucide="file-search" aria-hidden="true"></i>
+                        Verify details before hiring
+                    </span>
+                </div>
+            </div>
+
+            <form class="contact-request-form" id="requestForm" novalidate>
+                <div class="form-row">
+                    <label>
+                        <span>Name</span>
+                        <input type="text" name="name" placeholder="Your name" required>
+                    </label>
+
+                    <label>
+                        <span>Phone</span>
+                        <input type="tel" name="phone" placeholder="Phone number" required>
+                    </label>
+                </div>
+
+                <div class="form-row">
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email" placeholder="Email address">
+                    </label>
+
+                    <label>
+                        <span>ZIP code</span>
+                        <input type="text" name="zip" placeholder="ZIP code" required>
+                    </label>
+                </div>
+
+                <div class="form-row">
+                    <label>
+                        <span>Service type</span>
+                        <select name="service" required>
+                            <option value="">Choose service</option>
+                            <option value="AC repair">AC repair</option>
+                            <option value="Cooling installation">Cooling installation</option>
+                            <option value="Heating repair">Heating repair</option>
+                            <option value="Ventilation">Ventilation</option>
+                            <option value="Not sure">Not sure yet</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        <span>Timing</span>
+                        <select name="timing" required>
+                            <option value="">Choose timing</option>
+                            <option value="As soon as possible">As soon as possible</option>
+                            <option value="This week">This week</option>
+                            <option value="This month">This month</option>
+                            <option value="Flexible">Flexible</option>
+                        </select>
+                    </label>
+                </div>
+
+                <label>
+                    <span>Project notes</span>
+                    <textarea name="message" rows="4"
+                        placeholder="Briefly describe the HVAC issue or project notes"></textarea>
+                </label>
+
+                <div class="contact-request-bottom">
+                    <button class="btn btn-primary contact-request-submit" type="submit">
+                        <span>Send request</span>
+                        <i data-lucide="send" aria-hidden="true"></i>
+                    </button>
+
+                    <p class="contact-request-disclaimer">
+                        AirConnect does not perform HVAC work directly. Provider availability, pricing, licensing,
+                        response times, and service details vary by location and provider.
+                    </p>
+                </div>
+
+                <p class="contact-request-status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+</section>
+
 
             <!-- ================= MAP / COVERAGE ================= -->
             <section class="contact-map-section section" aria-labelledby="contactMapTitle">
@@ -141,50 +249,57 @@
                 </div>
             </section>
 
-            <!-- ================= FAQ ================= -->
-            <section class="section-sm" aria-labelledby="contactFaqTitle">
-                <div class="container-narrow">
-                    <div class="section-heading center reveal-up">
-                        <p class="section-kicker">FAQ</p>
-                        <h2 id="contactFaqTitle">
-                            Contact and request questions.
+    <!-- ================= FAQ ================= -->
+    <section class="contact-faq-section section-sm" aria-labelledby="contactFaqTitle">
+        <div class="container-narrow">
+            <div class="section-heading center reveal-up">
+                <p class="section-kicker">FAQ</p>
+                <h2 id="contactFaqTitle">
+                    Contact and request questions.
+                </h2>
+            </div>
+    
+            <div class="faq-list reveal-up" data-faq-list></div>
+            <script type="application/ld+json" data-faq-schema></script>
+        </div>
+    </section>
+
+        <!-- ================= CTA ================= -->
+        <section class="contact-cta contact-final-ribbon final-ribbon section-sm" aria-labelledby="contactCtaTitle">
+            <div class="container-wide">
+                <div class="contact-final-ribbon-card reveal-up">
+                    <div class="contact-final-ribbon-content">
+                        <p class="section-kicker">Ready to compare?</p>
+        
+                        <h2 id="contactCtaTitle">
+                            Start with a structured HVAC request.
                         </h2>
-                    </div>
-
-                    <div class="faq-list reveal-up" data-faq-list></div>
-                    <script type="application/ld+json" data-faq-schema></script>
-                </div>
-            </section>
-
-            <!-- ================= CTA ================= -->
-            <section class="contact-cta section-sm" aria-labelledby="contactCtaTitle">
-                <div class="container-wide">
-                    <div class="contact-cta-card reveal-up">
-                        <div class="contact-cta-content">
-                            <p class="section-kicker">Ready to compare?</p>
-                            <h2 id="contactCtaTitle">
-                                Start with a structured HVAC request.
-                            </h2>
-                            <p class="lead">
-                                Use the request form to organize your project type, ZIP code, timing, and notes before
-                                comparing independent local provider options.
-                            </p>
-                        </div>
-
-                        <div class="contact-cta-actions">
-                            <a class="btn btn-primary" href="#requestForm">
+        
+                        <p class="lead">
+                            Organize your service type, ZIP code, timing, and notes before comparing independent local HVAC
+                            provider options.
+                        </p>
+        
+                        <div class="contact-final-ribbon-actions">
+                            <a class="btn btn-primary contact-final-ribbon-btn" href="#requestForm">
                                 <span>Prepare request</span>
                                 <i data-lucide="arrow-up" aria-hidden="true"></i>
                             </a>
-
-                            <p class="contact-cta-disclaimer" data-disclaimer>
-                                AirConnect is an independent HVAC provider matching platform. AirConnect does not
-                                perform HVAC work directly.
-                            </p>
+        
+                            <a class="contact-final-ribbon-phone" href="tel:+18886142096" data-phone-link>
+                                <i data-lucide="phone" aria-hidden="true"></i>
+                                <span data-phone-text>Compare HVAC Providers</span>
+                            </a>
                         </div>
+        
+                        <small class="contact-final-ribbon-disclaimer" data-disclaimer>
+                            AirConnect is an independent HVAC provider matching platform. AirConnect does not perform HVAC work
+                            directly.
+                        </small>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
         </main>
 
         <div data-site-footer></div>

@@ -1,9 +1,5 @@
 "use strict";
 
-/* ==========================================================
-   AIRCONNECT — CONTACT PAGE SCRIPT
-   File: /js/contact.js
-   ========================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
     initContactPanelHover();
