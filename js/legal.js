@@ -203,6 +203,28 @@ const LEGAL_PAGES = {
     }
 };
 
+function deepReplaceString(value, searchValue, replacement) {
+    if (typeof value === "string") {
+        return value.split(searchValue).join(replacement);
+    }
+
+    if (Array.isArray(value)) {
+        return value.map((item) => deepReplaceString(item, searchValue, replacement));
+    }
+
+    if (value && typeof value === "object") {
+        const next = {};
+
+        Object.keys(value).forEach((key) => {
+            next[key] = deepReplaceString(value[key], searchValue, replacement);
+        });
+
+        return next;
+    }
+
+    return value;
+}
+
 
 
 
@@ -214,7 +236,9 @@ function renderLegalPage() {
     if (!mount) return;
 
     const currentPage = getLegalCurrentPageName();
-    const page = LEGAL_PAGES[currentPage] || LEGAL_PAGES["privacy-policy.html"];
+    const companyName = config.companyName || "AirConnect";
+    const pages = deepReplaceString(LEGAL_PAGES, "AirConnect", companyName);
+    const page = pages[currentPage] || pages["privacy-policy.html"];
 
     mount.innerHTML = `
         <section class="legal-hero" aria-labelledby="legalHeroTitle">
@@ -223,7 +247,7 @@ function renderLegalPage() {
                     <div>
                         <p class="eyebrow">${escapeLegalHtml(page.eyebrow)}</p>
                         <h1 id="legalHeroTitle">
-                            ${escapeLegalHtml(page.title)} <span>${escapeLegalHtml(config.companyName || "AirConnect")}</span>
+                            ${escapeLegalHtml(page.title)} <span>${escapeLegalHtml(companyName)}</span>
                         </h1>
                     </div>
 
@@ -253,7 +277,7 @@ function renderLegalPage() {
                         <div class="legal-nav-card">
                             <h2>Legal pages</h2>
                             <nav class="legal-nav-list" aria-label="Legal navigation">
-                                ${getLegalLinksHtml(currentPage)}
+                                ${getLegalLinksHtml(currentPage, config)}
                             </nav>
                         </div>
 
@@ -288,7 +312,7 @@ function renderLegalPage() {
     <div class="container-wide">
         <div class="legal-final-ribbon-card reveal-up">
             <div class="legal-final-ribbon-content">
-                <p class="section-kicker">Back to AirConnect</p>
+                <p class="section-kicker">Back to ${escapeLegalHtml(companyName)}</p>
 
                 <h2 id="legalCtaTitle">
                     Start a structured HVAC provider matching request.
@@ -327,21 +351,23 @@ function renderLegalPage() {
 
 
 
-function getLegalLinksHtml(currentPage) {
-    const links = [
-        {
-            label: "Privacy Policy",
-            href: "privacy-policy.html"
-        },
-        {
-            label: "Cookie Policy",
-            href: "cookie-policy.html"
-        },
-        {
-            label: "Terms of Service",
-            href: "terms-of-service.html"
-        }
-    ];
+function getLegalLinksHtml(currentPage, config) {
+    const links = Array.isArray(config?.legalLinks) && config.legalLinks.length
+        ? config.legalLinks
+        : [
+              {
+                  label: "Privacy Policy",
+                  href: "privacy-policy.html"
+              },
+              {
+                  label: "Cookie Policy",
+                  href: "cookie-policy.html"
+              },
+              {
+                  label: "Terms of Service",
+                  href: "terms-of-service.html"
+              }
+          ];
 
     return links
         .map((link) => {

@@ -32,9 +32,8 @@ window.SITE_CONFIG = {
 
     mapCard: {
         eyebrow: "Platform address",
-        title: "AirConnect contact location",
+        title: `${companyName} contact location`,
         text: "This address is shown for platform contact context. HVAC provider availability may vary by ZIP code.",
-        address: "600 Congress Avenue, Austin, TX 78701, USA",
         regionLabel: "Austin, TX",
         openUrl: ""
     },
@@ -102,10 +101,10 @@ window.SITE_CONFIG = {
             heroTitle:
                 "Compare AC repair provider options with clearer project details.",
             heroText:
-                "Use AirConnect to organize cooling issues, ZIP code context, and service preferences before comparing independent local provider options.",
+                `Use ${companyName} to organize cooling issues, ZIP code context, and service preferences before comparing independent local provider options.`,
             pageKicker: "AC repair matching",
             pageIntro:
-                "Cooling issues can vary by system age, property layout, timing, and provider availability. AirConnect helps homeowners start with a clearer request so they can compare independent HVAC provider options more confidently.",
+                `Cooling issues can vary by system age, property layout, timing, and provider availability. ${companyName} helps homeowners start with a clearer request so they can compare independent HVAC provider options more confidently.`,
             evaluationPoints: [
                 "Describe cooling symptoms, system age, and urgency.",
                 "Compare provider availability by service area.",
@@ -114,9 +113,9 @@ window.SITE_CONFIG = {
             ],
             faq: [
                 {
-                    question: "Does AirConnect repair AC systems directly?",
+                    question: `Does ${companyName} repair AC systems directly?`,
                     answer:
-                        "No. AirConnect is not an HVAC contractor and does not perform AC repair work. The platform helps homeowners compare independent local provider options."
+                        `No. ${companyName} is not an HVAC contractor and does not perform AC repair work. The platform helps homeowners compare independent local provider options.`
                 },
                 {
                     question: "Can I request help for urgent cooling issues?",
@@ -143,10 +142,10 @@ window.SITE_CONFIG = {
             heroTitle:
                 "Find cooling installation provider options for your home.",
             heroText:
-                "AirConnect helps homeowners organize installation needs and compare independent local HVAC provider options before moving forward.",
+                `${companyName} helps homeowners organize installation needs and compare independent local HVAC provider options before moving forward.`,
             pageKicker: "Cooling installation matching",
             pageIntro:
-                "A cooling installation request may involve system sizing, property layout, efficiency preferences, quote details, and warranty terms. AirConnect helps structure the request so homeowners know what to compare.",
+                `A cooling installation request may involve system sizing, property layout, efficiency preferences, quote details, and warranty terms. ${companyName} helps structure the request so homeowners know what to compare.`,
             evaluationPoints: [
                 "Compare quote details and included equipment scope.",
                 "Ask about system sizing, efficiency ratings, and project timeline.",
@@ -155,9 +154,9 @@ window.SITE_CONFIG = {
             ],
             faq: [
                 {
-                    question: "Does AirConnect install cooling systems?",
+                    question: `Does ${companyName} install cooling systems?`,
                     answer:
-                        "No. AirConnect does not install HVAC equipment. Homeowners can use the platform to compare independent provider options."
+                        `No. ${companyName} does not install HVAC equipment. Homeowners can use the platform to compare independent provider options.`
                 },
                 {
                     question: "Can I compare more than one installation quote?",
@@ -184,10 +183,10 @@ window.SITE_CONFIG = {
             heroTitle:
                 "Compare heating repair provider options without direct-service claims.",
             heroText:
-                "AirConnect helps homeowners describe heating concerns, timing, and property context before reviewing independent provider options.",
+                `${companyName} helps homeowners describe heating concerns, timing, and property context before reviewing independent provider options.`,
             pageKicker: "Heating repair matching",
             pageIntro:
-                "Heating issues can involve comfort, safety, energy use, system age, and scheduling urgency. AirConnect helps homeowners organize the details needed to compare provider options.",
+                `Heating issues can involve comfort, safety, energy use, system age, and scheduling urgency. ${companyName} helps homeowners organize the details needed to compare provider options.`,
             evaluationPoints: [
                 "Note whether heating is inconsistent, noisy, delayed, or unavailable.",
                 "Compare response timing and service area availability.",
@@ -196,9 +195,9 @@ window.SITE_CONFIG = {
             ],
             faq: [
                 {
-                    question: "Does AirConnect provide furnace repair?",
+                    question: `Does ${companyName} provide furnace repair?`,
                     answer:
-                        "No. AirConnect does not repair furnaces or heating systems directly. It helps users compare independent local provider options."
+                        `No. ${companyName} does not repair furnaces or heating systems directly. It helps users compare independent local provider options.`
                 },
                 {
                     question: "Can I mention emergency heating concerns?",
@@ -225,7 +224,7 @@ window.SITE_CONFIG = {
             heroTitle:
                 "Start a clearer ventilation provider matching request.",
             heroText:
-                "AirConnect helps homeowners organize ventilation concerns and compare independent local HVAC provider options.",
+                `${companyName} helps homeowners organize ventilation concerns and compare independent local HVAC provider options.`,
             pageKicker: "Ventilation matching",
             pageIntro:
                 "Ventilation requests may involve airflow comfort, duct layout, stale air, humidity, or indoor air movement. A structured request can make provider conversations easier.",
@@ -237,9 +236,9 @@ window.SITE_CONFIG = {
             ],
             faq: [
                 {
-                    question: "Is AirConnect a ventilation contractor?",
+                    question: `Is ${companyName} a ventilation contractor?`,
                     answer:
-                        "No. AirConnect is an independent provider matching platform and does not perform ventilation work directly."
+                        `No. ${companyName} is an independent provider matching platform and does not perform ventilation work directly.`
                 },
                 {
                     question: "Can I include duct or airflow notes?",
@@ -255,7 +254,7 @@ window.SITE_CONFIG = {
             eyebrow: "Independent HVAC provider matching",
             title: "Compare HVAC providers for cleaner comfort.",
             text:
-                "AirConnect helps homeowners start a structured HVAC request and compare independent local provider options for AC repair, cooling installation, heating repair, and ventilation projects.",
+                `${companyName} helps homeowners start a structured HVAC request and compare independent local provider options for AC repair, cooling installation, heating repair, and ventilation projects.`,
             primaryCta: "Start request",
             secondaryCta: "View services",
             trustText: "Independent HVAC provider matching across the U.S."
@@ -331,7 +330,7 @@ window.SITE_CONFIG = {
             {
                 icon: "shield-check",
                 title: "No direct-service claims",
-                text: "AirConnect is a matching platform, not an HVAC contractor."
+                text: `${companyName} is a matching platform, not an HVAC contractor.`
             },
             {
                 icon: "list-checks",
@@ -382,14 +381,14 @@ window.SITE_CONFIG = {
 
     faq: [
         {
-            question: "Is AirConnect an HVAC contractor?",
+            question: `Is ${companyName} an HVAC contractor?`,
             answer:
-                "No. AirConnect is an independent HVAC provider matching platform. AirConnect does not perform heating, cooling, ventilation, repair, installation, or maintenance work directly."
+                `No. ${companyName} is an independent HVAC provider matching platform. ${companyName} does not perform heating, cooling, ventilation, repair, installation, or maintenance work directly.`
         },
         {
             question: "Can I compare HVAC provider options?",
             answer:
-                "Yes. AirConnect helps homeowners start a structured request and compare independent local provider options where available."
+                `Yes. ${companyName} helps homeowners start a structured request and compare independent local provider options where available.`
         },
         {
             question: "Should I verify provider credentials?",
@@ -407,7 +406,7 @@ window.SITE_CONFIG = {
         storageKey: "airconnect_policy_choice",
         title: "Privacy preferences",
         text:
-            "AirConnect uses basic site functionality and may use cookies or similar technologies to improve the browsing experience. Please review our policies before continuing.",
+            `${companyName} uses basic site functionality and may use cookies or similar technologies to improve the browsing experience. Please review our policies before continuing.`,
         accept: "Accept",
         decline: "Decline",
         links: [
@@ -426,20 +425,11 @@ window.SITE_CONFIG = {
         ]
     },
 
-    mapCard: {
-        eyebrow: "Platform address",
-        title: "AirConnect request hub",
-        text:
-            "A central business address is shown for platform contact context. Service availability depends on independent local providers.",
-        address: "401 Congress Avenue, Austin, TX 78701, USA",
-        regionLabel: "U.S. provider matching coverage"
-    },
-
     pageMeta: {
         "index.html": {
             title: `${companyName} | Compare HVAC Provider Options`,
             description:
-                "AirConnect helps homeowners compare independent local HVAC provider options for AC repair, cooling installation, heating repair, ventilation, and related HVAC requests."
+                `${companyName} helps homeowners compare independent local HVAC provider options for AC repair, cooling installation, heating repair, ventilation, and related HVAC requests.`
         },
 
         "services.html": {
@@ -451,13 +441,13 @@ window.SITE_CONFIG = {
         "about.html": {
             title: `About ${companyName} | Independent HVAC Provider Matching`,
             description:
-                "Learn how AirConnect helps homeowners start structured HVAC requests and compare independent local provider options before choosing."
+                `Learn how ${companyName} helps homeowners start structured HVAC requests and compare independent local provider options before choosing.`
         },
 
         "contact.html": {
             title: `Contact ${companyName} | Start an HVAC Matching Request`,
             description:
-                "Contact AirConnect to start a structured HVAC provider matching request for AC repair, cooling installation, heating repair, ventilation, or related HVAC needs."
+                `Contact ${companyName} to start a structured HVAC provider matching request for AC repair, cooling installation, heating repair, ventilation, or related HVAC needs.`
         },
 
         "ac-repair.html": {
@@ -487,19 +477,19 @@ window.SITE_CONFIG = {
         "privacy-policy.html": {
             title: `Privacy Policy | ${companyName}`,
             description:
-                "Read the AirConnect Privacy Policy for information about how the platform handles user-submitted information."
+                `Read the ${companyName} Privacy Policy for information about how the platform handles user-submitted information.`
         },
 
         "cookie-policy.html": {
             title: `Cookie Policy | ${companyName}`,
             description:
-                "Read the AirConnect Cookie Policy for information about cookies and similar technologies."
+                `Read the ${companyName} Cookie Policy for information about cookies and similar technologies.`
         },
 
         "terms-of-service.html": {
             title: `Terms of Service | ${companyName}`,
             description:
-                "Read the AirConnect Terms of Service for use of the independent HVAC provider matching platform."
+                `Read the ${companyName} Terms of Service for use of the independent HVAC provider matching platform.`
         }
     }
 };

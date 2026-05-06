@@ -708,6 +708,7 @@ function initContactRequestForm() {
     const classForm = document.querySelector("form.contact-request-form");
 
     const form = directForm || sectionForm || classForm;
+    const config = getConfig();
 
     if (!form || form.dataset.contactFormReady === "true") return;
 
@@ -817,7 +818,10 @@ function initContactRequestForm() {
         const isValid = validateForm();
 
         if (!isValid) {
-            showStatus("Please complete the required fields correctly before sending.", "error");
+            showStatus(
+                config.forms?.errorMessage || "Please complete the required fields correctly before sending.",
+                "error"
+            );
 
             const firstInvalidField = form.querySelector(".is-invalid");
 
@@ -828,7 +832,11 @@ function initContactRequestForm() {
             return;
         }
 
-        showStatus("Success! Your HVAC matching request details were sent successfully.", "success");
+        showStatus(
+            config.forms?.successMessage ||
+                "Success! Your HVAC matching request details were sent successfully.",
+            "success"
+        );
 
         form.reset();
 
@@ -1024,7 +1032,9 @@ function renderMapCards() {
         const mapAddress =
             config.mapCard?.address ||
             config.address?.full ||
-            "600 Congress Avenue, Austin, TX 78701, USA";
+            "";
+
+        if (!mapAddress) return;
 
         const encodedAddress = encodeURIComponent(mapAddress);
 
@@ -1040,7 +1050,7 @@ function renderMapCards() {
                     </p>
 
                     <h3>
-                        ${escapeHtml(config.mapCard?.title || config.companyName || "AirConnect")}
+                        ${escapeHtml(config.mapCard?.title || config.companyName || "")}
                     </h3>
 
                     <p>
